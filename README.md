@@ -31,8 +31,8 @@
 
 # Deploy with capistrano
 
-gem install capistrano-drupal
-# After installation update the script with https://github.com/antistatique/capistrano-drupal
+gem install capdrupal
+# After installation update the script with https://github.com/antistatique/capdrupal
 
 ## Documentations
 

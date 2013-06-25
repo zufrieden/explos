@@ -4,8 +4,7 @@
 ## Quick install
     $ cd drupal
     $ drush site-install minimal --db-url=mysql://explos:explos@localhost/explos --db-su=root --db-su-pw=XXX --site-name=explos
-    $ drush en explos_site
-    $ drush en explos_lessons
+    $ drush en ligue_site
     $ drush cc all
     $ drush fra
 

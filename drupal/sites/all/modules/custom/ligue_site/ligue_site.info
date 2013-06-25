@@ -8,6 +8,7 @@ dependencies[] = admin_menu
 dependencies[] = backup_migrate
 dependencies[] = bible
 dependencies[] = features
+dependencies[] = ligue_lesson
 dependencies[] = media
 dependencies[] = media_internet
 dependencies[] = media_youtube

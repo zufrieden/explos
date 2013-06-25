@@ -557,6 +557,59 @@ function ligue_lesson_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-period-field_date_start_end'
+  $field_instances['node-period-field_date_start_end'] = array(
+    'bundle' => 'period',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'long',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_date_start_end',
+    'label' => 'Date',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'blank',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'd/m/Y - H:i:s',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'text_parts' => array(),
+        'year_range' => '-2000:+0',
+      ),
+      'type' => 'date_text',
+      'weight' => -3,
+    ),
+  );
+
   // Exported field_instance: 'node-poeple-body'
   $field_instances['node-poeple-body'] = array(
     'bundle' => 'poeple',
@@ -605,6 +658,7 @@ function ligue_lesson_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Activities');
   t('Body');
+  t('Date');
   t('Description');
   t('Duration');
   t('Goal');

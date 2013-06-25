@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Ligue Lesson feature.
+ */
+
+include_once 'ligue_lesson.features.inc';

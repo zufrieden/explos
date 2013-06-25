@@ -27,6 +27,30 @@ function ligue_lesson_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'location' => array(
+      'name' => t('Location'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Name'),
+      'help' => '',
+    ),
+    'period' => array(
+      'name' => t('Period'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Name'),
+      'help' => '',
+    ),
+    'poeple' => array(
+      'name' => t('Poeple'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Name'),
+      'help' => '',
+    ),
   );
   return $items;
 }

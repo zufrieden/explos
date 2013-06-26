@@ -267,6 +267,27 @@ function ligue_lesson_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_location';
+  $strongarm->value = '0';
+  $export['language_content_type_location'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_period';
+  $strongarm->value = '0';
+  $export['language_content_type_period'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_content_type_poeple';
+  $strongarm->value = '0';
+  $export['language_content_type_poeple'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_lesson';
   $strongarm->value = array();
   $export['menu_options_lesson'] = $strongarm;
@@ -336,6 +357,7 @@ function ligue_lesson_strongarm() {
   $strongarm->name = 'node_options_location';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_location'] = $strongarm;
 
@@ -345,6 +367,7 @@ function ligue_lesson_strongarm() {
   $strongarm->name = 'node_options_period';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_period'] = $strongarm;
 
@@ -354,6 +377,7 @@ function ligue_lesson_strongarm() {
   $strongarm->name = 'node_options_poeple';
   $strongarm->value = array(
     0 => 'status',
+    1 => 'revision',
   );
   $export['node_options_poeple'] = $strongarm;
 

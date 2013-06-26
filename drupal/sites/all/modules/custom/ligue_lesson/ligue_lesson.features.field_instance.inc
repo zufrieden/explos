@@ -786,23 +786,22 @@ function ligue_lesson_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-period-field_date_start_end'
-  $field_instances['node-period-field_date_start_end'] = array(
+  // Exported field_instance: 'node-period-field_date_perdiod'
+  $field_instances['node-period-field_date_perdiod'] = array(
     'bundle' => 'period',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'date',
+        'module' => 'partial_date',
         'settings' => array(
-          'format_type' => 'long',
-          'fromto' => 'both',
-          'multiple_from' => '',
-          'multiple_number' => '',
-          'multiple_to' => '',
+          'component_settings' => array(),
+          'format' => 'medium',
+          'use_override' => 'none',
         ),
-        'type' => 'date_default',
+        'type' => 'partial_date_default',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -813,28 +812,78 @@ function ligue_lesson_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_date_start_end',
-    'label' => 'Date',
+    'field_name' => 'field_date_perdiod',
+    'label' => 'Date perdiod',
     'required' => 0,
     'settings' => array(
-      'default_value' => 'blank',
-      'default_value2' => 'same',
-      'default_value_code' => '',
-      'default_value_code2' => '',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'date',
+      'module' => 'partial_date',
       'settings' => array(
-        'increment' => 15,
-        'input_format' => 'd/m/Y - H:i:s',
-        'input_format_custom' => '',
-        'label_position' => 'above',
-        'text_parts' => array(),
-        'year_range' => '-2000:+0',
+        0 => FALSE,
+        'estimates' => array(
+          'from' => array(
+            'day' => 0,
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 'month',
+            'second' => 0,
+            'year' => 0,
+          ),
+          'to' => array(
+            'day' => 0,
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 'month',
+            'second' => 0,
+            'year' => 0,
+          ),
+        ),
+        'granularity' => array(
+          'from' => array(
+            'day' => 0,
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 0,
+            'second' => 0,
+            'timezone' => 0,
+            'year' => 'year',
+          ),
+          'to' => array(
+            'day' => 0,
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 0,
+            'second' => 0,
+            'timezone' => 0,
+            'year' => 'year',
+          ),
+        ),
+        'help_txt' => array(
+          'und' => array(
+            '_remove' => '',
+            'check_approximate' => '',
+            'components' => '',
+            'txt_long' => 'Longer description of date',
+            'txt_short' => 'Short description of date',
+          ),
+        ),
+        'hide_remove' => 1,
+        'increments' => array(
+          'minute' => 1,
+          'second' => 1,
+        ),
+        'theme_overrides' => array(
+          'check_approximate' => 0,
+          'range_inline' => 0,
+          'txt_long' => 0,
+          'txt_short' => 0,
+        ),
+        'tz_handling' => 'none',
       ),
-      'type' => 'date_text',
+      'type' => 'partial_date',
       'weight' => -3,
     ),
   );
@@ -887,7 +936,7 @@ function ligue_lesson_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Activities');
   t('Body');
-  t('Date');
+  t('Date perdiod');
   t('Description');
   t('Duration');
   t('Goal');

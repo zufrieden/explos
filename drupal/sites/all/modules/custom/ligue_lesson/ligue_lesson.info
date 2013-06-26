@@ -55,7 +55,6 @@ features[field_instance][] = node-lesson-body
 features[field_instance][] = node-lesson-field_activities
 features[field_instance][] = node-lesson-field_goal
 features[field_instance][] = node-lesson-field_locations
-features[field_instance][] = node-lesson-field_media
 features[field_instance][] = node-lesson-field_peridods
 features[field_instance][] = node-lesson-field_poeples
 features[field_instance][] = node-lesson-field_prayer

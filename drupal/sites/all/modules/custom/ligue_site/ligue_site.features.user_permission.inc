@@ -28,6 +28,13 @@ function ligue_site_user_default_permissions() {
     'module' => 'system',
   );
 
+  // Exported permission: access all views.
+  $permissions['access all views'] = array(
+    'name' => 'access all views',
+    'roles' => array(),
+    'module' => 'views',
+  );
+
   // Exported permission: access backup and migrate.
   $permissions['access backup and migrate'] = array(
     'name' => 'access backup and migrate',
@@ -44,6 +51,46 @@ function ligue_site_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'backup_migrate',
+  );
+
+  // Exported permission: access comments.
+  $permissions['access comments'] = array(
+    'name' => 'access comments',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'comment',
+  );
+
+  // Exported permission: access content.
+  $permissions['access content'] = array(
+    'name' => 'access content',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: access content overview.
+  $permissions['access content overview'] = array(
+    'name' => 'access content overview',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: access contextual links.
+  $permissions['access contextual links'] = array(
+    'name' => 'access contextual links',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'contextual',
   );
 
   // Exported permission: access site in maintenance mode.
@@ -91,6 +138,24 @@ function ligue_site_user_default_permissions() {
     'module' => 'backup_migrate',
   );
 
+  // Exported permission: administer comments.
+  $permissions['administer comments'] = array(
+    'name' => 'administer comments',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'comment',
+  );
+
+  // Exported permission: administer content types.
+  $permissions['administer content types'] = array(
+    'name' => 'administer content types',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: administer features.
   $permissions['administer features'] = array(
     'name' => 'administer features',
@@ -100,6 +165,83 @@ function ligue_site_user_default_permissions() {
     'module' => 'features',
   );
 
+  // Exported permission: administer field collections.
+  $permissions['administer field collections'] = array(
+    'name' => 'administer field collections',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'field_collection',
+  );
+
+  // Exported permission: administer file types.
+  $permissions['administer file types'] = array(
+    'name' => 'administer file types',
+    'roles' => array(),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: administer files.
+  $permissions['administer files'] = array(
+    'name' => 'administer files',
+    'roles' => array(),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: administer filters.
+  $permissions['administer filters'] = array(
+    'name' => 'administer filters',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: administer image styles.
+  $permissions['administer image styles'] = array(
+    'name' => 'administer image styles',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'image',
+  );
+
+  // Exported permission: administer imagecrop.
+  $permissions['administer imagecrop'] = array(
+    'name' => 'administer imagecrop',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'imagecrop',
+  );
+
+  // Exported permission: administer languages.
+  $permissions['administer languages'] = array(
+    'name' => 'administer languages',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'locale',
+  );
+
+  // Exported permission: administer menu.
+  $permissions['administer menu'] = array(
+    'name' => 'administer menu',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'menu',
+  );
+
+  // Exported permission: administer module filter.
+  $permissions['administer module filter'] = array(
+    'name' => 'administer module filter',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'module_filter',
+  );
+
   // Exported permission: administer modules.
   $permissions['administer modules'] = array(
     'name' => 'administer modules',
@@ -107,6 +249,15 @@ function ligue_site_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'system',
+  );
+
+  // Exported permission: administer nodes.
+  $permissions['administer nodes'] = array(
+    'name' => 'administer nodes',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: administer permissions.
@@ -181,6 +332,13 @@ function ligue_site_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: administer views.
+  $permissions['administer views'] = array(
+    'name' => 'administer views',
+    'roles' => array(),
+    'module' => 'views',
+  );
+
   // Exported permission: block IP addresses.
   $permissions['block IP addresses'] = array(
     'name' => 'block IP addresses',
@@ -188,6 +346,22 @@ function ligue_site_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'system',
+  );
+
+  // Exported permission: bypass file access.
+  $permissions['bypass file access'] = array(
+    'name' => 'bypass file access',
+    'roles' => array(),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: bypass node access.
+  $permissions['bypass node access'] = array(
+    'name' => 'bypass node access',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: cancel account.
@@ -208,6 +382,13 @@ function ligue_site_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: create files.
+  $permissions['create files'] = array(
+    'name' => 'create files',
+    'roles' => array(),
+    'module' => 'file_entity',
+  );
+
   // Exported permission: create url aliases.
   $permissions['create url aliases'] = array(
     'name' => 'create url aliases',
@@ -215,6 +396,31 @@ function ligue_site_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'path',
+  );
+
+  // Exported permission: crop any image.
+  $permissions['crop any image'] = array(
+    'name' => 'crop any image',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'imagecrop',
+  );
+
+  // Exported permission: crop own images.
+  $permissions['crop own images'] = array(
+    'name' => 'crop own images',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'imagecrop',
+  );
+
+  // Exported permission: delete any files.
+  $permissions['delete any files'] = array(
+    'name' => 'delete any files',
+    'roles' => array(),
+    'module' => 'file_entity',
   );
 
   // Exported permission: delete backup files.
@@ -226,6 +432,22 @@ function ligue_site_user_default_permissions() {
     'module' => 'backup_migrate',
   );
 
+  // Exported permission: delete own files.
+  $permissions['delete own files'] = array(
+    'name' => 'delete own files',
+    'roles' => array(),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: delete revisions.
+  $permissions['delete revisions'] = array(
+    'name' => 'delete revisions',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
   // Exported permission: display drupal links.
   $permissions['display drupal links'] = array(
     'name' => 'display drupal links',
@@ -235,6 +457,29 @@ function ligue_site_user_default_permissions() {
     'module' => 'admin_menu',
   );
 
+  // Exported permission: edit any files.
+  $permissions['edit any files'] = array(
+    'name' => 'edit any files',
+    'roles' => array(),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: edit own comments.
+  $permissions['edit own comments'] = array(
+    'name' => 'edit own comments',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'comment',
+  );
+
+  // Exported permission: edit own files.
+  $permissions['edit own files'] = array(
+    'name' => 'edit own files',
+    'roles' => array(),
+    'module' => 'file_entity',
+  );
+
   // Exported permission: flush caches.
   $permissions['flush caches'] = array(
     'name' => 'flush caches',
@@ -242,6 +487,15 @@ function ligue_site_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'admin_menu',
+  );
+
+  // Exported permission: import media.
+  $permissions['import media'] = array(
+    'name' => 'import media',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'media',
   );
 
   // Exported permission: manage features.
@@ -262,6 +516,16 @@ function ligue_site_user_default_permissions() {
     'module' => 'backup_migrate',
   );
 
+  // Exported permission: post comments.
+  $permissions['post comments'] = array(
+    'name' => 'post comments',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'comment',
+  );
+
   // Exported permission: restore from backup.
   $permissions['restore from backup'] = array(
     'name' => 'restore from backup',
@@ -269,6 +533,15 @@ function ligue_site_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'backup_migrate',
+  );
+
+  // Exported permission: revert revisions.
+  $permissions['revert revisions'] = array(
+    'name' => 'revert revisions',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: search content.
@@ -289,6 +562,43 @@ function ligue_site_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: skip comment approval.
+  $permissions['skip comment approval'] = array(
+    'name' => 'skip comment approval',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'comment',
+  );
+
+  // Exported permission: translate admin strings.
+  $permissions['translate admin strings'] = array(
+    'name' => 'translate admin strings',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'i18n_string',
+  );
+
+  // Exported permission: translate interface.
+  $permissions['translate interface'] = array(
+    'name' => 'translate interface',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'locale',
+  );
+
+  // Exported permission: translate user-defined strings.
+  $permissions['translate user-defined strings'] = array(
+    'name' => 'translate user-defined strings',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'i18n_string',
+  );
+
   // Exported permission: use advanced search.
   $permissions['use advanced search'] = array(
     'name' => 'use advanced search',
@@ -296,6 +606,65 @@ function ligue_site_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'search',
+  );
+
+  // Exported permission: use text format filtered_html.
+  $permissions['use text format filtered_html'] = array(
+    'name' => 'use text format filtered_html',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: use text format full_html.
+  $permissions['use text format full_html'] = array(
+    'name' => 'use text format full_html',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: view files.
+  $permissions['view files'] = array(
+    'name' => 'view files',
+    'roles' => array(),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: view own files.
+  $permissions['view own files'] = array(
+    'name' => 'view own files',
+    'roles' => array(),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: view own private files.
+  $permissions['view own private files'] = array(
+    'name' => 'view own private files',
+    'roles' => array(),
+    'module' => 'file_entity',
+  );
+
+  // Exported permission: view own unpublished content.
+  $permissions['view own unpublished content'] = array(
+    'name' => 'view own unpublished content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: view revisions.
+  $permissions['view revisions'] = array(
+    'name' => 'view revisions',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: view the administration theme.

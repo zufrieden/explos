@@ -47,14 +47,6 @@ function ligue_lesson_node_info() {
       'title_label' => t('Name'),
       'help' => '',
     ),
-    'poeple' => array(
-      'name' => t('Poeple'),
-      'base' => 'node_content',
-      'description' => '',
-      'has_title' => '1',
-      'title_label' => t('Name'),
-      'help' => '',
-    ),
   );
   return $items;
 }

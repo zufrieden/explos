@@ -34,13 +34,6 @@ function ligue_lesson_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_anonymous_poeple';
-  $strongarm->value = 0;
-  $export['comment_anonymous_poeple'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_lesson';
   $strongarm->value = 0;
   $export['comment_default_mode_lesson'] = $strongarm;
@@ -58,13 +51,6 @@ function ligue_lesson_strongarm() {
   $strongarm->name = 'comment_default_mode_period';
   $strongarm->value = 1;
   $export['comment_default_mode_period'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_mode_poeple';
-  $strongarm->value = 1;
-  $export['comment_default_mode_poeple'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -90,13 +76,6 @@ function ligue_lesson_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_default_per_page_poeple';
-  $strongarm->value = '50';
-  $export['comment_default_per_page_poeple'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_form_location_lesson';
   $strongarm->value = 1;
   $export['comment_form_location_lesson'] = $strongarm;
@@ -114,13 +93,6 @@ function ligue_lesson_strongarm() {
   $strongarm->name = 'comment_form_location_period';
   $strongarm->value = 1;
   $export['comment_form_location_period'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_form_location_poeple';
-  $strongarm->value = 1;
-  $export['comment_form_location_poeple'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -146,13 +118,6 @@ function ligue_lesson_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_poeple';
-  $strongarm->value = '0';
-  $export['comment_poeple'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_lesson';
   $strongarm->value = '0';
   $export['comment_preview_lesson'] = $strongarm;
@@ -174,13 +139,6 @@ function ligue_lesson_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'comment_preview_poeple';
-  $strongarm->value = '1';
-  $export['comment_preview_poeple'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'comment_subject_field_lesson';
   $strongarm->value = 0;
   $export['comment_subject_field_lesson'] = $strongarm;
@@ -198,13 +156,6 @@ function ligue_lesson_strongarm() {
   $strongarm->name = 'comment_subject_field_period';
   $strongarm->value = 1;
   $export['comment_subject_field_period'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'comment_subject_field_poeple';
-  $strongarm->value = 1;
-  $export['comment_subject_field_poeple'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -243,23 +194,6 @@ function ligue_lesson_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_node__poeple';
-  $strongarm->value = array(
-    'view_modes' => array(),
-    'extra_fields' => array(
-      'form' => array(
-        'title' => array(
-          'weight' => '0',
-        ),
-      ),
-      'display' => array(),
-    ),
-  );
-  $export['field_bundle_settings_node__poeple'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_lesson';
   $strongarm->value = '0';
   $export['language_content_type_lesson'] = $strongarm;
@@ -277,13 +211,6 @@ function ligue_lesson_strongarm() {
   $strongarm->name = 'language_content_type_period';
   $strongarm->value = '0';
   $export['language_content_type_period'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'language_content_type_poeple';
-  $strongarm->value = '0';
-  $export['language_content_type_poeple'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -309,13 +236,6 @@ function ligue_lesson_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_poeple';
-  $strongarm->value = array();
-  $export['menu_options_poeple'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'menu_parent_lesson';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_lesson'] = $strongarm;
@@ -333,13 +253,6 @@ function ligue_lesson_strongarm() {
   $strongarm->name = 'menu_parent_period';
   $strongarm->value = 'main-menu:0';
   $export['menu_parent_period'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_poeple';
-  $strongarm->value = 'main-menu:0';
-  $export['menu_parent_poeple'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -374,16 +287,6 @@ function ligue_lesson_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_poeple';
-  $strongarm->value = array(
-    0 => 'status',
-    1 => 'revision',
-  );
-  $export['node_options_poeple'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'node_preview_lesson';
   $strongarm->value = '1';
   $export['node_preview_lesson'] = $strongarm;
@@ -405,13 +308,6 @@ function ligue_lesson_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_poeple';
-  $strongarm->value = '1';
-  $export['node_preview_poeple'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_lesson';
   $strongarm->value = 0;
   $export['node_submitted_lesson'] = $strongarm;
@@ -429,13 +325,6 @@ function ligue_lesson_strongarm() {
   $strongarm->name = 'node_submitted_period';
   $strongarm->value = 0;
   $export['node_submitted_period'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_poeple';
-  $strongarm->value = 0;
-  $export['node_submitted_poeple'] = $strongarm;
 
   return $export;
 }

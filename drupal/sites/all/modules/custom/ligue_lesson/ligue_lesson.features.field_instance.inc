@@ -782,7 +782,7 @@ function ligue_lesson_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => -4,
+      'weight' => 2,
     ),
   );
 
@@ -884,7 +884,7 @@ function ligue_lesson_field_default_field_instances() {
         'tz_handling' => 'none',
       ),
       'type' => 'partial_date',
-      'weight' => -3,
+      'weight' => 1,
     ),
   );
 
@@ -928,15 +928,187 @@ function ligue_lesson_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => -4,
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-poeple-field_birthdate'
+  $field_instances['node-poeple-field_birthdate'] = array(
+    'bundle' => 'poeple',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'partial_date',
+        'settings' => array(
+          'component_settings' => array(),
+          'format' => 'medium',
+          'use_override' => 'none',
+        ),
+        'type' => 'partial_date_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_birthdate',
+    'label' => 'Birthdate',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'partial_date',
+      'settings' => array(
+        0 => FALSE,
+        'estimates' => array(
+          'from' => array(
+            'day' => 0,
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 0,
+            'second' => 0,
+            'year' => 0,
+          ),
+        ),
+        'granularity' => array(
+          'from' => array(
+            'day' => 'day',
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 'month',
+            'second' => 0,
+            'timezone' => 0,
+            'year' => 'year',
+          ),
+        ),
+        'help_txt' => array(
+          'und' => array(
+            '_remove' => '',
+            'check_approximate' => '',
+            'components' => '',
+            'txt_long' => 'Longer description of date',
+            'txt_short' => 'Short description of date',
+          ),
+        ),
+        'hide_remove' => 1,
+        'increments' => array(
+          'minute' => 1,
+          'second' => 1,
+        ),
+        'theme_overrides' => array(
+          'check_approximate' => 0,
+          'range_inline' => 0,
+          'txt_long' => 0,
+          'txt_short' => 0,
+        ),
+        'tz_handling' => 'none',
+      ),
+      'type' => 'partial_date',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-poeple-field_deathdate'
+  $field_instances['node-poeple-field_deathdate'] = array(
+    'bundle' => 'poeple',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'partial_date',
+        'settings' => array(
+          'component_settings' => array(),
+          'format' => 'medium',
+          'use_override' => 'none',
+        ),
+        'type' => 'partial_date_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_deathdate',
+    'label' => 'Deathdate',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'partial_date',
+      'settings' => array(
+        0 => FALSE,
+        'estimates' => array(
+          'from' => array(
+            'day' => 0,
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 0,
+            'second' => 0,
+            'year' => 0,
+          ),
+        ),
+        'granularity' => array(
+          'from' => array(
+            'day' => 'day',
+            'hour' => 0,
+            'minute' => 0,
+            'month' => 'month',
+            'second' => 0,
+            'timezone' => 0,
+            'year' => 'year',
+          ),
+        ),
+        'help_txt' => array(
+          'und' => array(
+            '_remove' => '',
+            'check_approximate' => '',
+            'components' => '',
+            'txt_long' => 'Longer description of date',
+            'txt_short' => 'Short description of date',
+          ),
+        ),
+        'hide_remove' => 1,
+        'increments' => array(
+          'minute' => 1,
+          'second' => 1,
+        ),
+        'theme_overrides' => array(
+          'check_approximate' => 0,
+          'range_inline' => 0,
+          'txt_long' => 0,
+          'txt_short' => 0,
+        ),
+        'tz_handling' => 'none',
+      ),
+      'type' => 'partial_date',
+      'weight' => 2,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Activities');
+  t('Birthdate');
   t('Body');
   t('Date perdiod');
+  t('Deathdate');
   t('Description');
   t('Duration');
   t('Goal');

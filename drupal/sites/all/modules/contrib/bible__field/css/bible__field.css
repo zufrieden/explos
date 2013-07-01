@@ -1,0 +1,13 @@
+.field-type-bible--field-bible .form-item {
+  overflow: hidden;
+}
+
+.field-type-bible--field-bible .bible--field-book,
+.field-type-bible--field-bible .form-item label .form-required {
+  float: left;
+}
+
+.field-type-bible--field-bible .bible--field-other {
+  float: left;
+  margin-left: 5px;
+}

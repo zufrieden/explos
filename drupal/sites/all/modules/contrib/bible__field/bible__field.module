@@ -1,0 +1,687 @@
+<?php
+
+/**
+ * @file
+ * An example field using the Field API.
+ *
+ * This is updated from Barry Jaspan's presentation at Drupalcon Paris,
+ * @link http://acquia.com/community/resources/acquia-tv/intro-field-api-module-developers Video Presentation @endlink
+ *
+ * Providing a field requires:
+ * - Defining a field
+ *   - hook_field_info()
+ *   - hook_field_schema()
+ *   - hook_field_validate()
+ *   - hook_field_is_empty()
+ *
+ * - Defining a formatter for the field (the portion that outputs the field for
+ *   display)
+ *   - hook_field_formatter_info()
+ *   - hook_field_formatter_view()
+ *
+ * - Defining a widget for the edit form
+ *   - hook_field_widget_info()
+ *   - hook_field_widget_form()
+ *
+ * *
+ * See @link field_types Field Types API @endlink
+ */
+
+/***************************************************************
+ * Field Type API hooks
+ ***************************************************************/
+
+/**
+ * Implements hook_field_info().
+ *
+ * Provides the description of the field.
+ */
+function bible__field_field_info() {
+  return array(
+    'bible__field_bible' => array(
+      'label' => t('Bible Reference'),
+      'description' => t('References Bible books, chapters, and verses.'),
+      'default_widget' => 'bible__field_dropdown',
+      'default_formatter' => 'bible__field_ref_list',
+      'settings' => array(
+        'showending' => 'verse',
+        'book_display' => 'fname',
+        'granularity' => 'verse',
+      ),
+    ),
+  );
+}
+
+/**************************************************************************
+ * Field Type API: Widget
+ *
+ * The widget is the form element used to receive input from the user
+ * when the field is being populated.
+ **************************************************************************/
+
+/**
+ * Implements hook_field_widget_info().
+ */
+function bible__field_field_widget_info() {
+  return array(
+    'bible__field_dropdown' => array(
+      'label' => t('Select dropdowns'),
+      'field types' => array('bible__field_bible'),
+    ),
+  );
+}
+
+function bible__field_field_settings_form($field, $instance, $has_data) {
+  $settings = $field['settings'];
+
+  // find what bibles are avalible to us
+  $bibles = db_select('bible_list','b')
+              ->fields('b',array('bid','bname'))
+              ->execute();
+
+  while ($bible = $bibles->fetchAssoc()) {
+    $options[$bible['bid']] = $bible['bname'];
+  }
+
+  $form['bible'] = array(
+    '#type' => 'select', 
+    '#title' => t('Bible'), 
+    '#default_value' => count($options) > 1 ? $settings['bible']: key($options), 
+    '#required' => TRUE, 
+    '#options' => $options,
+  );
+
+  $form['showending'] = array(
+    '#type' => 'select',
+    '#title' => t('Show ending verse/chapter'),
+    '#default_value' => $settings['showending'],
+    '#options' => array('' => 'Never', 'verse' => 'Verse', 'chapter' => 'Chapter & Verse'),
+    '#description' => t('Selecting verse allows John 3:16-18. Selecting chapter allows John 3:16-4:3'),
+    '#disabled' => $has_data,
+  );
+
+  $form['granularity'] = array(
+    '#type' => 'select',
+    '#title' => t('Granularity'),
+    '#required' => TRUE, 
+    '#default_value' => $settings['granularity'],
+    '#options' => array('book' => 'Book', 'chapter' => 'Chapter', 'verse' => 'Verse'),
+    '#disabled' => $has_data,
+  );
+
+  return $form;
+}
+
+
+/**
+ * Implements hook_field_widget_form()
+ */
+function bible__field_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $element) {
+  // add css
+  drupal_add_css(drupal_get_path('module', 'bible__field') . '/css/bible__field.css');
+
+  // get field settings
+  $settings = $field['settings'];
+
+  // get a list of all the books in the selected bible
+  $books_query = db_select('bible_book_name', 'b')
+                   ->fields('b', array('bkid', 'fname', 'sname'))
+                   ->condition('bid', $settings['bible'], '=');
+
+  $result = $books_query->execute();
+
+  // build select list array for users to choose book
+  while ($book = $result->fetchAssoc()) {
+    $books_options[$book['bkid']] = $book['sname'] . ' - ' . $book['fname'];
+  }
+
+  // build up 200 options for the chapter and verse forms
+  $num_options = array();
+  for($i=1;$i<=200;$i++) $num_options[$i] = $i;
+
+  //$values = array();
+
+  if (isset($items[$delta])) {
+    $values = $items[$delta];
+  }
+
+  $element += array(
+    '#delta' => $delta,
+    '#type' => 'item',
+    '#title' => 'Bible verse',
+  );
+
+  $element['book'] = array(
+    '#type' => 'select',
+    '#required' => TRUE,
+    '#default_value' => isset($values['book']) ? $values['book'] : '',
+    '#options' => array_merge(array('0'=>t('Book <empty>')),$books_options),
+    '#prefix' => '<div class="bible--field-book">',
+    '#suffix' => '</div>',
+  );
+ 
+  if ($settings['granularity'] !== 'book') {
+ 
+    $element['chapter_range_start'] = array(
+      '#type' => 'select',
+      '#default_value' => isset($values['chapter_range_start']) ? $values['chapter_range_start'] : '',
+      '#options' => array_merge(array('0'=>t('Chapter')),$num_options),
+      '#prefix' => '<div class="bible--field-other">',
+      '#suffix' => '</div>',
+    );
+ 
+    if ($settings['granularity'] === 'verse') {
+      $element['verse_range_start'] = array(
+        '#type' => 'select',
+        '#default_value' => isset($values['verse_range_start']) ? $values['verse_range_start'] : '',
+        '#options' => array_merge(array('0'=>t('Verse')),$num_options),
+        '#prefix' => '<div class="bible--field-other">',
+        '#suffix' => '</div>',
+      );
+    }
+ 
+    if (!empty($settings['showending'])) {
+      $element['to'] = array(
+        '#markup' => 'to',
+        '#prefix' => '<div class="bible--field-other">',
+        '#suffix' => '</div>',
+      );
+ 
+      if ($settings['granularity'] !== 'book' && $settings['showending'] === 'chapter') {
+        $element['chapter_range_end'] = array(
+          '#type' => 'select',
+          '#default_value' => isset($values['chapter_range_end']) ? $values['chapter_range_end'] : '',
+          '#options' => array_merge(array('0'=>t('Chapter')),$num_options),
+          '#prefix' => '<div class="bible--field-other">',
+          '#suffix' => '</div>',
+        );
+      }
+ 
+      if ($settings['granularity'] === 'verse') {
+        $element['verse_range_end'] = array(
+          '#type' => 'select',
+          '#default_value' => isset($values['verse_range_end']) ? $values['verse_range_end'] : '',
+          '#options' => array_merge(array('0'=>t('Verse')),$num_options),
+          '#prefix' => '<div class="bible--field-other">',
+          '#suffix' => '</div>',
+        );
+      }
+    }
+  }
+
+  return $element;
+}
+
+/**
+ * Implements hook_field_validate().
+ *
+ * Verifies that the RGB field as combined is valid
+ * (6 hex digits with a # at the beginning).
+ */
+function bible__field_field_validate($entity_type, $entity, $field, $instance, $langcode, $items, &$errors) {
+  $settings = $field['settings'];
+
+  foreach ($items as $delta => $item) {
+    // if book is not set just return empty field
+    if($item['book'] == 0) return;
+
+    if ($settings['granularity'] !== 'book') {
+      if ($item['chapter_range_start'] == 0) {
+        $errors[$field['field_name']][$langcode][$delta][] = array(
+          'error' => 'bible__field_invalid',
+          'message' => t('You must select an begining chapter.'),
+        );
+      }
+
+      if ($settings['granularity'] === 'verse') {
+        if ($item['verse_range_start'] == 0) {
+          $errors[$field['field_name']][$langcode][$delta][] = array(
+            'error' => 'bible__field_invalid',
+            'message' => t('You must select an begining verse.'),
+          );
+        }
+      }
+
+      // if we are not tracking endings skip all validation
+      if (empty($settings['showending'])) return;
+
+      $skip = FALSE;
+
+      if ($settings['granularity'] === 'verse') {
+        if (!isset($item['verse_range_end'])
+           || (isset($item['verse_range_end']) && $item['verse_range_end'] == 0)
+           ) {
+             $skip = TRUE;
+        }
+      }
+
+      if ($settings['showending'] === 'chapter' && $skip == TRUE) {
+        if (!isset($item['chapter_range_end'])
+           || (isset($item['chapter_range_end']) && $item['chapter_range_end'] == 0)
+         ) {
+           $skip = TRUE;
+        }
+      }
+
+      if ($skip) return;
+
+      if ($settings['showending'] === 'chapter') {
+        if ($item['verse_range_end'] > 0 && $item['chapter_range_end'] == 0) {
+          $errors[$field['field_name']][$langcode][$delta][] = array(
+            'error' => 'bible__field_invalid',
+            'message' => t('You must select an end chapter.'),
+          );
+        }
+
+        if($item['chapter_range_start'] > $item['chapter_range_end']) {
+          $errors[$field['field_name']][$langcode][$delta][] = array(
+            'error' => 'bible__field_invalid',
+            'message' => t('The ending chapter must not be before the start chapter.'),
+          );
+        }
+      }
+      else {
+        // if we are not tracking the ending chapter range set the end chapter
+        // to the same as the first so we can still do efficent table lookups
+        $item['chapter_range_end'] = $item['chapter_range_start'];
+      }
+
+      if($item['verse_range_start'] > $item['verse_range_end']) {
+        $errors[$field['field_name']][$langcode][$delta][] = array(
+          'error' => 'bible__field_invalid',
+          'message' => t('The ending verse must not be before the start verse.'),
+        );
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_field_is_empty().
+ */
+function bible__field_field_is_empty($item, $field) {
+  return $item['book'] == 0 ? TRUE : FALSE;
+}
+
+/**
+ * Implements hook_field_widget_error().
+ */
+function bible__field_field_widget_error($element, $error, $form, &$form_state) {
+  switch ($error['error']) {
+    case 'bible__field_invalid':
+      form_error($element, $error['message']);
+      break;
+  }
+}
+
+/***********************************************************************
+ *  Field Type API: Formatter
+ *
+ *  These are the api hooks that present formatted (themed) output to the
+ *  user.
+ **********************************************************************/
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function bible__field_field_formatter_info() {
+  return array(
+    // This formatter just displays the verses as a list
+    'bible__field_ref_list' => array(
+      'label' => t('List references'),
+      'field types' => array('bible__field_bible'),
+      'settings' => array('book_display' => 'fname', 'granularity' => 'verse'),
+    ),
+    // This formatter list of the verse text from the selected bible.
+    //'bible__field_verse_text' => array(
+    //  'label' => t('Verse text'),
+    //  'field types' => array('bible__field_bible'),
+    //),
+  );
+}
+
+function bible__field_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+
+  $element = array();
+
+  if ($display['type'] == 'bible__field_ref_list') {
+    $element['book_display'] = array(
+      '#title' => t('Book name format'), 
+      '#type' => 'select', 
+      '#default_value' => $settings['book_display'], 
+      '#options' => array('fname' => 'Full name', 'sname' => 'Short name'),
+      '#required' => TRUE,
+    );
+
+    if (isset($settings['granularity'])) {
+      $default_value = $settings['granularity'];
+    }
+    else {
+      $default_value =  $field['settings']['granularity'];
+    }
+
+    $element['granularity'] = array(
+      '#title' => t('Display granularity'), 
+      '#type' => 'select',
+      '#default_value' => $default_value, 
+      '#options' => bible__field_granularity($field['settings']['granularity']),
+      '#disabled' => $field['settings']['granularity'] == 'book' ? TRUE : FALSE,
+      '#required' => TRUE,
+    );
+  }
+
+  return $element;
+}
+
+function bible__field_field_formatter_settings_summary($field, $instance, $view_mode) {
+  $display = $instance['display'][$view_mode];
+  $settings = $display['settings'];
+
+  $summary = '';
+  $book_displays = array('fname' => 'Full name',
+                         'sname' => 'Short name');
+
+  $granularity_options = array('book' => t('Book'),
+                               'chapter' => t('Chapter'),
+                               'verse' => t('Verse'));
+
+  $book_format = $book_displays[$settings['book_display']];
+  $granularity_format = $granularity_options[$settings['granularity']];
+
+
+  if($settings['granularity']) $book_format = $book_displays[$settings['book_display']];
+  else $book_format = $book_displays['fname'];
+
+  if ($display['type'] == 'bible__field_ref_list') {
+    $summary = t('Book format: @bformat<br/>Granularity: @granularity',
+                 array('@bformat' => $book_format,
+                       '@granularity' => $granularity_format));
+  }
+
+  return $summary;
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ *
+ * Two formatters are implemented.
+ * - bible__field_simple_text just outputs markup indicating the color that
+ *   was entered and uses an inline style to set the text color to that value.
+ * - bible__field_color_background does the same but also changes the
+ *   background color of div.region-content.
+ */
+function bible__field_field_formatter_view($entity_type, $entity, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+  $field_settings = $field['settings'];
+  $display_settings = $display['settings'];
+
+  switch ($display['type']) {
+    // This formatter simply outputs the field as text and with a color.
+    case 'bible__field_ref_list':
+      // build an array that is built by book
+      $ref_list = $verses_by_book = array();
+
+      // if the display doesn't happen to have granularity set copy it from the field
+      if (!isset($display_settings['granularity']))
+        $display_settings['granularity'] = $field_settings['granularity'];
+
+      // go through each verse stored
+      foreach ($items as $delta => $item) {
+        // we need to get the title of the book
+        $book_info = bible__field_get_book_by_id($field_settings['bible'],$item['book']);
+        // get book title based on display settings. book or fname
+        $book_title = $book_info[$display_settings['book_display']];
+
+        // create array for book. useful for when we only want the book
+        if (!isset($ref_list[$book_title])) $ref_list[$book_title] = array();
+
+        if (!empty($item['chapter_range_start']))
+           $verses_by_book[$book_title][$item['chapter_range_start'].$delta] = $item;
+        else
+           $verses_by_book[$book_title][$delta] = $item;
+      }
+
+      // if we are only going to display a book skip this
+      if($display_settings['granularity'] !== 'book') {
+        // quickly sort the verses so they are in order
+        foreach ($verses_by_book as $book => $verses) ksort($verses_by_book[$book]);
+
+        foreach ($verses_by_book as $book => $verses) {
+          $last_book = $last_chapter_start = '';
+
+          foreach ($verses as $delta => $item) {
+            // if we dont have a starting chapter
+            // then skip everything else... we must be showing only the book
+            if (!empty($item['chapter_range_start'])) {
+              // reset each time
+              $verse = '';
+
+              // check if book/chapter is the same as previous verse
+              if ($last_chapter_start !== $item['chapter_range_start']
+                  || $last_book !== $book) {
+                $verse = $item['chapter_range_start'];
+              }
+              else $verse = $last_chapter_start;
+
+              // keep track of these for next time
+              $last_book = $book;
+              $last_chapter_start = $item['chapter_range_start'];
+
+              if($display_settings['granularity'] === 'verse') {
+                $verse .= ':' . $item['verse_range_start'];
+              }
+
+              if (!empty($field_settings['showending'])) {
+                $showending =  ''; // reset var
+                if ($field_settings['showending'] === 'chapter'
+                     && $item['chapter_range_start'] !== $item['chapter_range_end']) {
+                   $showending = $item['chapter_range_end'] . ':';
+                }
+
+                if ($item['verse_range_end'] != 0
+                    && ($item['verse_range_start'] !== $item['verse_range_end']
+                         || !empty($item['verse_range_end']))) {
+                   $showending .= $item['verse_range_end'];
+                }
+
+                if (!empty($showending)) $verse .= '-' . $showending;
+              }
+
+              $ref_list[$book][] = $verse;
+            }
+          }
+        }
+      }
+
+      // go through the ref_list and build display
+      $items = array();
+      foreach ($ref_list as $book => $verses) {
+        $items[] = $book . ' ' . implode(', ', $verses);
+      }
+
+      $output = array(
+            '#theme' => 'item_list',
+            '#type' => 'ul',
+            '#items' => $items,
+      );
+
+      break;
+  }
+
+  return $output;
+}
+
+/***********************************************************************
+ *  Feeds
+ *
+ *  These are the api hooks that correspond to the Feeds module
+ **********************************************************************/
+
+/**
+ * Implementation of hook_feeds_processor_targets_alter().
+ */
+function bible__field_feeds_processor_targets_alter(&$targets, $entity_type, $bundle) {
+  foreach (field_info_instances($entity_type, $bundle) as $name => $instance) {
+    $info = field_info_field($name);
+    if(in_array($info['type'], array('bible__field_bible'))) {
+      $targets[$name] = array(
+        'name' => $instance['label'],
+        'description' => t('Map bible verses into a bible field'),
+        'callback' => 'bible__field_feeds_map',
+      );
+    }
+  } 
+}
+
+function bible__field_feeds_map($source, $entity, $target, $feed_element) {
+  $field_info = field_info_field($target);
+
+  // trim and remove excess spaces in verses
+  $feed_element = preg_replace('/\s+/', ' ', trim($feed_element));
+
+  // break apart each verse in a comma seporated list
+  $verses = explode(',', $feed_element);
+  
+  // process each verse
+  foreach ($verses as $i => $verse) {
+    $verse_data = bible__field_verse_parser($field_info['settings']['bible'], $verse);
+    // set valid data
+    if ($verse_data) $entity->{$target}['und'][$i] = $verse_data; 
+  }
+}
+
+/***********************************************************************
+ *  Utilities
+ **********************************************************************/
+
+function bible__field_verse_parser($bible, $verse) {
+  // setup persistant variables
+  static $last_book = '';
+  static $last_start_chapter = '';
+
+  // reset return value
+  $return = array();
+
+  // See if verse starts with a book
+  // matches 1st Chronicles (someverse) or 1CH (someverse)
+  if (preg_match('/^(\d\w{2}\s)?\w+\s[0-9:-]+$/', $verse)) {
+
+    $verse_breakup = explode(' ', $verse);
+
+    if(count($verse_breakup) == 3) // good for say 1st John
+      $book_title = array_shift($verse_breakup) . ' ' . array_shift($verse_breakup);
+    else // good for John
+      $book_title = array_shift($verse_breakup);
+
+    // find book id
+    $book_info = bible__field_get_book_by_name($bible, $book_title);
+    $return['book'] = $book_info['bkid'];
+
+    // set verse to be the remainder
+    $verse = array_shift($verse_breakup);
+  }
+  else // no book specified use prev
+    $return['book'] = $last_book;
+
+  // save the bkid for next time
+  $last_book = $return['book'];
+
+  // make sure verse is trimed
+  $verse = trim($verse);
+
+  // check if chapter/verse is in a valid format
+  // matches 23 or 23:2 or 23:2-4 or 23:2-28:1
+  if (preg_match('/^\d{1,3}((:\d{1,3}(-\d{1,3}(:\d{1,3})?)?)?|-\d{1,3})$/', $verse)) {
+    $verse_halves = explode('-', $verse);
+
+    // matches chapter:verse
+    if (preg_match('/^\d{1,3}:\d{1,3}$/', $verse_halves[0])) {
+      list($return['chapter_range_start'], $return['verse_range_start'])
+           = explode(':', $verse_halves[0]);
+    } // matches verse
+    else if (preg_match('/^\d{1,3}$/', $verse_halves[0])) {
+      $return['chapter_range_start'] = $last_start_chapter;
+      $return['verse_range_start'] = $verse_halves[0];
+    }
+
+    // save the starting chapter
+    $last_start_chapter = $return['chapter_range_start'];
+
+    if(!empty($verse_halves[1])) {
+      // matches chapter:verse
+      if (preg_match('/^\d{1,3}:\d{1,3}$/', $verse_halves[1])) {
+        list($return['chapter_range_end'], $return['verse_range_end'])
+             = explode(':', $verse_halves[1]);
+      } // matches verse
+      else if (preg_match('/^\d{1,3}$/', $verse_halves[1])) {
+        $return['chapter_range_end'] = $return['chapter_range_start'];
+        $return['verse_range_end'] = $verse_halves[1];
+      }
+    }
+  }
+
+  // return verses of we found any else return false
+  return empty($return) ? FALSE : $return;
+}
+
+function bible__field_granularity($value) {
+  $options = array();
+  // skiping the breaks in this next switch is on purpose
+  switch($value) {
+    case 'verse':
+      $options['verse'] = t('Verse');
+    case 'chapter':
+      $options['chapter'] = t('Chapter');
+    default:
+      $options['book'] = t('Book');
+  }
+
+  return array_reverse($options);
+}
+
+function bible__field_get_book_by_id($bid, $bkid) {
+  $book_query = db_select('bible_book_name', 'b')
+                  ->fields('b')
+                  ->condition('bid',$bid, '=')
+                  ->condition('bkid',$bkid, '=')
+                  ->execute();
+
+  return $book_query->fetchAssoc();
+}
+
+function bible__field_get_book_by_name($bid, $name) {
+  $name_or = db_or()
+               ->condition('sname', $name)
+               ->condition('fname', $name);
+
+  $book_query = db_select('bible_book_name','b')
+                  ->fields('b')
+                  ->condition('bid',$bid)
+                  ->condition($name_or)
+                  ->execute();
+
+  // return one row.. should only ever be one
+  return $book_query->fetchAssoc();
+}
+/*
+function bible__field_token_info() {
+  $info['tokens']['node']['bible__field'] = array(
+    'name' => t('Bible Verse'),
+  );
+
+  return $info
+}
+*/
+
+/**
+ * Impliments hook_views_api
+ */
+function bible__field_views_api() {
+  return array(
+    'api' => 3,
+    'path' => drupal_get_path('module', 'bible__field') . '/views',
+  );
+}
+

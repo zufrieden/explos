@@ -1,0 +1,38 @@
+<?php
+/**
+ * Implements hook_field_schema().
+ *
+ * This defines the actual database schema of the field, using the format
+ * used by the Schema API.
+ *
+ * The actual data we store here is just one 7-character element, even
+ * though the widget presents the three portions separately.
+ *
+ * @see hook_field_schema()
+ * @link schemaapi Schema API @endlink
+
+ */
+function bible__field_field_schema($field) {
+  $settings = $field['settings'];
+
+  $columns['book'] = array('type' => 'varchar', 'length' => 255, 'not null' => FALSE);
+  if ($settings['granularity'] !== 'book') {
+    $columns['chapter_range_start'] = array('type' => 'int', 'not null' => FALSE);
+
+    if ($settings['granularity'] === 'verse')
+      $columns['verse_range_start'] = array('type' => 'int', 'not null' => FALSE);
+
+    if(!empty($settings['showending'])) {
+      $columns['chapter_range_end'] = array('type' => 'int', 'not null' => FALSE);
+      $columns['verse_range_end'] = array('type' => 'int', 'not null' => FALSE);
+    }
+  }
+
+  $indexes = array(
+    'book' => array('book'),
+  );
+  return array(
+    'columns' => $columns,
+    'indexes' => $indexes,
+  );
+}

@@ -1,0 +1,12 @@
+name = Bible: field
+description = Defines a bible verse field.
+core = 7.x
+package = Church
+
+dependencies[] = bible
+
+files[] = bible__field.install
+files[] = bible__field.module
+files[] = views/bible__field.views.inc
+files[] = views/handlers/bible__field_bible_views_handler_field.inc
+

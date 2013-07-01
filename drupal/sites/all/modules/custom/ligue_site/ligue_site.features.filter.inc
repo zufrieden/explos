@@ -19,14 +19,14 @@ function ligue_site_filter_default_formats() {
     'weight' => 0,
     'filters' => array(
       'filter_url' => array(
-        'weight' => 0,
+        'weight' => -48,
         'status' => 1,
         'settings' => array(
           'filter_url_length' => 72,
         ),
       ),
       'filter_html' => array(
-        'weight' => 1,
+        'weight' => -47,
         'status' => 1,
         'settings' => array(
           'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd>',
@@ -35,12 +35,17 @@ function ligue_site_filter_default_formats() {
         ),
       ),
       'filter_autop' => array(
-        'weight' => 2,
+        'weight' => -45,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'filter_bible' => array(
+        'weight' => -44,
         'status' => 1,
         'settings' => array(),
       ),
       'filter_htmlcorrector' => array(
-        'weight' => 10,
+        'weight' => -43,
         'status' => 1,
         'settings' => array(),
       ),
@@ -56,19 +61,24 @@ function ligue_site_filter_default_formats() {
     'weight' => 1,
     'filters' => array(
       'filter_url' => array(
-        'weight' => 0,
+        'weight' => -47,
         'status' => 1,
         'settings' => array(
           'filter_url_length' => 72,
         ),
       ),
       'filter_autop' => array(
-        'weight' => 1,
+        'weight' => -46,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'filter_bible' => array(
+        'weight' => -45,
         'status' => 1,
         'settings' => array(),
       ),
       'filter_htmlcorrector' => array(
-        'weight' => 10,
+        'weight' => -43,
         'status' => 1,
         'settings' => array(),
       ),

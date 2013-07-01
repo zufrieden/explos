@@ -690,6 +690,81 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_verses_key'
+  $field_bases['field_verses_key'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_verses_key',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'book' => array(
+        0 => 'book',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'bible__field',
+    'settings' => array(
+      'bible' => 1,
+      'book_display' => 'fname',
+      'granularity' => 'verse',
+      'showending' => 'chapter',
+    ),
+    'translatable' => 0,
+    'type' => 'bible__field_bible',
+  );
+
+  // Exported field_base: 'field_verses_lesson'
+  $field_bases['field_verses_lesson'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_verses_lesson',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'book' => array(
+        0 => 'book',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'bible__field',
+    'settings' => array(
+      'bible' => 1,
+      'book_display' => 'fname',
+      'granularity' => 'verse',
+      'showending' => 'chapter',
+    ),
+    'translatable' => 0,
+    'type' => 'bible__field_bible',
+  );
+
+  // Exported field_base: 'field_verses_week'
+  $field_bases['field_verses_week'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_verses_week',
+    'foreign keys' => array(),
+    'indexes' => array(
+      'book' => array(
+        0 => 'book',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'bible__field',
+    'settings' => array(
+      'bible' => 1,
+      'book_display' => 'fname',
+      'granularity' => 'verse',
+      'showending' => 'chapter',
+    ),
+    'translatable' => 0,
+    'type' => 'bible__field_bible',
+  );
+
   // Exported field_base: 'field_week_number'
   $field_bases['field_week_number'] = array(
     'active' => 1,

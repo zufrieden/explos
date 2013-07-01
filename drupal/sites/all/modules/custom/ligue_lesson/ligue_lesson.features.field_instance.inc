@@ -522,6 +522,126 @@ function ligue_lesson_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-lesson-field_verses_key'
+  $field_instances['node-lesson-field_verses_key'] = array(
+    'bundle' => 'lesson',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'bible__field',
+        'settings' => array(
+          'book_display' => 'fname',
+          'granularity' => 'verse',
+        ),
+        'type' => 'bible__field_ref_list',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_verses_key',
+    'label' => 'Versets “clé”',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'bible__field',
+      'settings' => array(),
+      'type' => 'bible__field_dropdown',
+      'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance: 'node-lesson-field_verses_lesson'
+  $field_instances['node-lesson-field_verses_lesson'] = array(
+    'bundle' => 'lesson',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'bible__field',
+        'settings' => array(
+          'book_display' => 'fname',
+          'granularity' => 'verse',
+        ),
+        'type' => 'bible__field_ref_list',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_verses_lesson',
+    'label' => 'Versets de la leçon',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'bible__field',
+      'settings' => array(),
+      'type' => 'bible__field_dropdown',
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'node-lesson-field_verses_week'
+  $field_instances['node-lesson-field_verses_week'] = array(
+    'bundle' => 'lesson',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'bible__field',
+        'settings' => array(
+          'book_display' => 'fname',
+          'granularity' => 'verse',
+        ),
+        'type' => 'bible__field_ref_list',
+        'weight' => 13,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_verses_week',
+    'label' => 'Versets de la semaine',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'bible__field',
+      'settings' => array(),
+      'type' => 'bible__field_dropdown',
+      'weight' => 11,
+    ),
+  );
+
   // Exported field_instance: 'node-lesson-field_week_number'
   $field_instances['node-lesson-field_week_number'] = array(
     'bundle' => 'lesson',
@@ -851,6 +971,9 @@ function ligue_lesson_field_default_field_instances() {
   t('Stage');
   t('Title');
   t('Type');
+  t('Versets de la leçon');
+  t('Versets de la semaine');
+  t('Versets “clé”');
   t('Week number');
   t('Welcome');
   t('Year number');

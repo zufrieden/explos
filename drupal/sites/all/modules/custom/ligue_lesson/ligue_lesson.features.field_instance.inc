@@ -281,10 +281,10 @@ function ligue_lesson_field_default_field_instances() {
         'label' => 'above',
         'module' => 'field_collection',
         'settings' => array(
-          'add' => 'Add',
-          'delete' => 'Delete',
-          'description' => TRUE,
-          'edit' => 'Edit',
+          'add' => '',
+          'delete' => '',
+          'description' => 1,
+          'edit' => '',
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',
@@ -309,7 +309,7 @@ function ligue_lesson_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 10,
+      'weight' => 13,
     ),
   );
 
@@ -558,7 +558,7 @@ function ligue_lesson_field_default_field_instances() {
       'module' => 'bible__field',
       'settings' => array(),
       'type' => 'bible__field_dropdown',
-      'weight' => 13,
+      'weight' => 12,
     ),
   );
 
@@ -598,7 +598,7 @@ function ligue_lesson_field_default_field_instances() {
       'module' => 'bible__field',
       'settings' => array(),
       'type' => 'bible__field_dropdown',
-      'weight' => 12,
+      'weight' => 11,
     ),
   );
 
@@ -638,7 +638,7 @@ function ligue_lesson_field_default_field_instances() {
       'module' => 'bible__field',
       'settings' => array(),
       'type' => 'bible__field_dropdown',
-      'weight' => 11,
+      'weight' => 10,
     ),
   );
 

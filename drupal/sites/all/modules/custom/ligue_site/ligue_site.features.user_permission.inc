@@ -14,6 +14,8 @@ function ligue_site_user_default_permissions() {
   $permissions['access administration menu'] = array(
     'name' => 'access administration menu',
     'roles' => array(
+      'Manager' => 'Manager',
+      'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
     'module' => 'admin_menu',
@@ -23,6 +25,8 @@ function ligue_site_user_default_permissions() {
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
     'roles' => array(
+      'Manager' => 'Manager',
+      'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
     'module' => 'system',
@@ -57,7 +61,10 @@ function ligue_site_user_default_permissions() {
   $permissions['access bible content'] = array(
     'name' => 'access bible content',
     'roles' => array(
+      'Manager' => 'Manager',
+      'Writer' => 'Writer',
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'bible',
   );
@@ -88,6 +95,7 @@ function ligue_site_user_default_permissions() {
   $permissions['access content overview'] = array(
     'name' => 'access content overview',
     'roles' => array(
+      'Manager' => 'Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -124,6 +132,8 @@ function ligue_site_user_default_permissions() {
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
     'roles' => array(
+      'Manager' => 'Manager',
+      'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
     'module' => 'user',
@@ -133,6 +143,8 @@ function ligue_site_user_default_permissions() {
   $permissions['access workbench'] = array(
     'name' => 'access workbench',
     'roles' => array(
+      'Manager' => 'Manager',
+      'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
     'module' => 'workbench',
@@ -213,14 +225,19 @@ function ligue_site_user_default_permissions() {
   // Exported permission: administer file types.
   $permissions['administer file types'] = array(
     'name' => 'administer file types',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'file_entity',
   );
 
   // Exported permission: administer files.
   $permissions['administer files'] = array(
     'name' => 'administer files',
-    'roles' => array(),
+    'roles' => array(
+      'Manager' => 'Manager',
+      'administrator' => 'administrator',
+    ),
     'module' => 'file_entity',
   );
 
@@ -264,6 +281,7 @@ function ligue_site_user_default_permissions() {
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
     'roles' => array(
+      'Manager' => 'Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'menu',
@@ -291,6 +309,7 @@ function ligue_site_user_default_permissions() {
   $permissions['administer nodes'] = array(
     'name' => 'administer nodes',
     'roles' => array(
+      'Manager' => 'Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -363,6 +382,7 @@ function ligue_site_user_default_permissions() {
   $permissions['administer users'] = array(
     'name' => 'administer users',
     'roles' => array(
+      'Manager' => 'Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'user',
@@ -405,7 +425,9 @@ function ligue_site_user_default_permissions() {
   // Exported permission: bypass file access.
   $permissions['bypass file access'] = array(
     'name' => 'bypass file access',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'file_entity',
   );
 
@@ -431,6 +453,7 @@ function ligue_site_user_default_permissions() {
   $permissions['cancel account'] = array(
     'name' => 'cancel account',
     'roles' => array(
+      'Manager' => 'Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'user',
@@ -440,6 +463,8 @@ function ligue_site_user_default_permissions() {
   $permissions['change own username'] = array(
     'name' => 'change own username',
     'roles' => array(
+      'Manager' => 'Manager',
+      'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
     'module' => 'user',
@@ -464,7 +489,11 @@ function ligue_site_user_default_permissions() {
   // Exported permission: create files.
   $permissions['create files'] = array(
     'name' => 'create files',
-    'roles' => array(),
+    'roles' => array(
+      'Manager' => 'Manager',
+      'Writer' => 'Writer',
+      'administrator' => 'administrator',
+    ),
     'module' => 'file_entity',
   );
 
@@ -481,6 +510,7 @@ function ligue_site_user_default_permissions() {
   $permissions['create url aliases'] = array(
     'name' => 'create url aliases',
     'roles' => array(
+      'Manager' => 'Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'path',
@@ -523,7 +553,10 @@ function ligue_site_user_default_permissions() {
   // Exported permission: delete any files.
   $permissions['delete any files'] = array(
     'name' => 'delete any files',
-    'roles' => array(),
+    'roles' => array(
+      'Manager' => 'Manager',
+      'administrator' => 'administrator',
+    ),
     'module' => 'file_entity',
   );
 
@@ -564,7 +597,11 @@ function ligue_site_user_default_permissions() {
   // Exported permission: delete own files.
   $permissions['delete own files'] = array(
     'name' => 'delete own files',
-    'roles' => array(),
+    'roles' => array(
+      'Manager' => 'Manager',
+      'Writer' => 'Writer',
+      'administrator' => 'administrator',
+    ),
     'module' => 'file_entity',
   );
 
@@ -581,6 +618,7 @@ function ligue_site_user_default_permissions() {
   $permissions['delete revisions'] = array(
     'name' => 'delete revisions',
     'roles' => array(
+      'Manager' => 'Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -598,9 +636,7 @@ function ligue_site_user_default_permissions() {
   // Exported permission: display drupal links.
   $permissions['display drupal links'] = array(
     'name' => 'display drupal links',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'admin_menu',
   );
 
@@ -623,7 +659,10 @@ function ligue_site_user_default_permissions() {
   // Exported permission: edit any files.
   $permissions['edit any files'] = array(
     'name' => 'edit any files',
-    'roles' => array(),
+    'roles' => array(
+      'Manager' => 'Manager',
+      'administrator' => 'administrator',
+    ),
     'module' => 'file_entity',
   );
 
@@ -631,6 +670,7 @@ function ligue_site_user_default_permissions() {
   $permissions['edit any page content'] = array(
     'name' => 'edit any page content',
     'roles' => array(
+      'Manager' => 'Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -657,6 +697,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'edit own comments',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'comment',
   );
@@ -664,7 +705,11 @@ function ligue_site_user_default_permissions() {
   // Exported permission: edit own files.
   $permissions['edit own files'] = array(
     'name' => 'edit own files',
-    'roles' => array(),
+    'roles' => array(
+      'Manager' => 'Manager',
+      'Writer' => 'Writer',
+      'administrator' => 'administrator',
+    ),
     'module' => 'file_entity',
   );
 
@@ -672,6 +717,7 @@ function ligue_site_user_default_permissions() {
   $permissions['edit own page content'] = array(
     'name' => 'edit own page content',
     'roles' => array(
+      'Manager' => 'Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -690,6 +736,7 @@ function ligue_site_user_default_permissions() {
   $permissions['flush caches'] = array(
     'name' => 'flush caches',
     'roles' => array(
+      'Manager' => 'Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'admin_menu',
@@ -717,6 +764,8 @@ function ligue_site_user_default_permissions() {
   $permissions['moderate content from draft to needs_review'] = array(
     'name' => 'moderate content from draft to needs_review',
     'roles' => array(
+      'Manager' => 'Manager',
+      'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
     'module' => 'workbench_moderation',
@@ -726,6 +775,7 @@ function ligue_site_user_default_permissions() {
   $permissions['moderate content from needs_review to draft'] = array(
     'name' => 'moderate content from needs_review to draft',
     'roles' => array(
+      'Manager' => 'Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'workbench_moderation',
@@ -735,6 +785,7 @@ function ligue_site_user_default_permissions() {
   $permissions['moderate content from needs_review to published'] = array(
     'name' => 'moderate content from needs_review to published',
     'roles' => array(
+      'Manager' => 'Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'workbench_moderation',
@@ -772,6 +823,7 @@ function ligue_site_user_default_permissions() {
   $permissions['revert revisions'] = array(
     'name' => 'revert revisions',
     'roles' => array(
+      'Manager' => 'Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -782,6 +834,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'search content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'search',
   );
@@ -809,6 +862,7 @@ function ligue_site_user_default_permissions() {
   $permissions['translate admin strings'] = array(
     'name' => 'translate admin strings',
     'roles' => array(
+      'Manager' => 'Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'i18n_string',
@@ -818,6 +872,7 @@ function ligue_site_user_default_permissions() {
   $permissions['translate interface'] = array(
     'name' => 'translate interface',
     'roles' => array(
+      'Manager' => 'Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'locale',
@@ -827,6 +882,7 @@ function ligue_site_user_default_permissions() {
   $permissions['translate user-defined strings'] = array(
     'name' => 'translate user-defined strings',
     'roles' => array(
+      'Manager' => 'Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'i18n_string',
@@ -844,9 +900,7 @@ function ligue_site_user_default_permissions() {
   // Exported permission: unique_field_perm_bypass.
   $permissions['unique_field_perm_bypass'] = array(
     'name' => 'unique_field_perm_bypass',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'unique_field',
   );
 
@@ -854,6 +908,7 @@ function ligue_site_user_default_permissions() {
   $permissions['use advanced search'] = array(
     'name' => 'use advanced search',
     'roles' => array(
+      'Manager' => 'Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'search',
@@ -864,7 +919,6 @@ function ligue_site_user_default_permissions() {
     'name' => 'use text format filtered_html',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'filter',
@@ -873,9 +927,7 @@ function ligue_site_user_default_permissions() {
   // Exported permission: use text format full_html.
   $permissions['use text format full_html'] = array(
     'name' => 'use text format full_html',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
+    'roles' => array(),
     'module' => 'filter',
   );
 
@@ -883,6 +935,8 @@ function ligue_site_user_default_permissions() {
   $permissions['use workbench_moderation my drafts tab'] = array(
     'name' => 'use workbench_moderation my drafts tab',
     'roles' => array(
+      'Manager' => 'Manager',
+      'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
     'module' => 'workbench_moderation',
@@ -892,6 +946,8 @@ function ligue_site_user_default_permissions() {
   $permissions['use workbench_moderation needs review tab'] = array(
     'name' => 'use workbench_moderation needs review tab',
     'roles' => array(
+      'Manager' => 'Manager',
+      'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
     'module' => 'workbench_moderation',
@@ -901,6 +957,8 @@ function ligue_site_user_default_permissions() {
   $permissions['view all unpublished content'] = array(
     'name' => 'view all unpublished content',
     'roles' => array(
+      'Manager' => 'Manager',
+      'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
     'module' => 'workbench_moderation',
@@ -909,7 +967,11 @@ function ligue_site_user_default_permissions() {
   // Exported permission: view files.
   $permissions['view files'] = array(
     'name' => 'view files',
-    'roles' => array(),
+    'roles' => array(
+      'Manager' => 'Manager',
+      'Writer' => 'Writer',
+      'administrator' => 'administrator',
+    ),
     'module' => 'file_entity',
   );
 
@@ -917,6 +979,8 @@ function ligue_site_user_default_permissions() {
   $permissions['view moderation history'] = array(
     'name' => 'view moderation history',
     'roles' => array(
+      'Manager' => 'Manager',
+      'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
     'module' => 'workbench_moderation',
@@ -926,6 +990,8 @@ function ligue_site_user_default_permissions() {
   $permissions['view moderation messages'] = array(
     'name' => 'view moderation messages',
     'roles' => array(
+      'Manager' => 'Manager',
+      'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
     'module' => 'workbench_moderation',
@@ -934,14 +1000,22 @@ function ligue_site_user_default_permissions() {
   // Exported permission: view own files.
   $permissions['view own files'] = array(
     'name' => 'view own files',
-    'roles' => array(),
+    'roles' => array(
+      'Manager' => 'Manager',
+      'Writer' => 'Writer',
+      'administrator' => 'administrator',
+    ),
     'module' => 'file_entity',
   );
 
   // Exported permission: view own private files.
   $permissions['view own private files'] = array(
     'name' => 'view own private files',
-    'roles' => array(),
+    'roles' => array(
+      'Manager' => 'Manager',
+      'Writer' => 'Writer',
+      'administrator' => 'administrator',
+    ),
     'module' => 'file_entity',
   );
 
@@ -950,6 +1024,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'view own unpublished content',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -959,6 +1034,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'view revisions',
     'roles' => array(
       'administrator' => 'administrator',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
   );
@@ -967,6 +1043,8 @@ function ligue_site_user_default_permissions() {
   $permissions['view the administration theme'] = array(
     'name' => 'view the administration theme',
     'roles' => array(
+      'Manager' => 'Manager',
+      'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
     'module' => 'system',

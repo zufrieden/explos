@@ -53,6 +53,15 @@ function ligue_site_user_default_permissions() {
     'module' => 'backup_migrate',
   );
 
+  // Exported permission: access bible content.
+  $permissions['access bible content'] = array(
+    'name' => 'access bible content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'bible',
+  );
+
   // Exported permission: access comments.
   $permissions['access comments'] = array(
     'name' => 'access comments',
@@ -145,6 +154,24 @@ function ligue_site_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'backup_migrate',
+  );
+
+  // Exported permission: administer bible.
+  $permissions['administer bible'] = array(
+    'name' => 'administer bible',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'bible',
+  );
+
+  // Exported permission: administer blocks.
+  $permissions['administer blocks'] = array(
+    'name' => 'administer blocks',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'block',
   );
 
   // Exported permission: administer comments.
@@ -418,11 +445,36 @@ function ligue_site_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: create article content.
+  $permissions['create article content'] = array(
+    'name' => 'create article content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: create bible_text content.
+  $permissions['create bible_text content'] = array(
+    'name' => 'create bible_text content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: create files.
   $permissions['create files'] = array(
     'name' => 'create files',
     'roles' => array(),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: create page content.
+  $permissions['create page content'] = array(
+    'name' => 'create page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: create url aliases.
@@ -452,11 +504,36 @@ function ligue_site_user_default_permissions() {
     'module' => 'imagecrop',
   );
 
+  // Exported permission: delete any article content.
+  $permissions['delete any article content'] = array(
+    'name' => 'delete any article content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete any bible_text content.
+  $permissions['delete any bible_text content'] = array(
+    'name' => 'delete any bible_text content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: delete any files.
   $permissions['delete any files'] = array(
     'name' => 'delete any files',
     'roles' => array(),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: delete any page content.
+  $permissions['delete any page content'] = array(
+    'name' => 'delete any page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: delete backup files.
@@ -468,11 +545,36 @@ function ligue_site_user_default_permissions() {
     'module' => 'backup_migrate',
   );
 
+  // Exported permission: delete own article content.
+  $permissions['delete own article content'] = array(
+    'name' => 'delete own article content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: delete own bible_text content.
+  $permissions['delete own bible_text content'] = array(
+    'name' => 'delete own bible_text content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: delete own files.
   $permissions['delete own files'] = array(
     'name' => 'delete own files',
     'roles' => array(),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: delete own page content.
+  $permissions['delete own page content'] = array(
+    'name' => 'delete own page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: delete revisions.
@@ -502,11 +604,52 @@ function ligue_site_user_default_permissions() {
     'module' => 'admin_menu',
   );
 
+  // Exported permission: edit any article content.
+  $permissions['edit any article content'] = array(
+    'name' => 'edit any article content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit any bible_text content.
+  $permissions['edit any bible_text content'] = array(
+    'name' => 'edit any bible_text content',
+    'roles' => array(),
+    'module' => 'node',
+  );
+
   // Exported permission: edit any files.
   $permissions['edit any files'] = array(
     'name' => 'edit any files',
     'roles' => array(),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: edit any page content.
+  $permissions['edit any page content'] = array(
+    'name' => 'edit any page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit own article content.
+  $permissions['edit own article content'] = array(
+    'name' => 'edit own article content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: edit own bible_text content.
+  $permissions['edit own bible_text content'] = array(
+    'name' => 'edit own bible_text content',
+    'roles' => array(),
+    'module' => 'node',
   );
 
   // Exported permission: edit own comments.
@@ -523,6 +666,15 @@ function ligue_site_user_default_permissions() {
     'name' => 'edit own files',
     'roles' => array(),
     'module' => 'file_entity',
+  );
+
+  // Exported permission: edit own page content.
+  $permissions['edit own page content'] = array(
+    'name' => 'edit own page content',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'node',
   );
 
   // Exported permission: edit terms in 1.
@@ -678,6 +830,24 @@ function ligue_site_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'i18n_string',
+  );
+
+  // Exported permission: unique_field_perm_admin.
+  $permissions['unique_field_perm_admin'] = array(
+    'name' => 'unique_field_perm_admin',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'unique_field',
+  );
+
+  // Exported permission: unique_field_perm_bypass.
+  $permissions['unique_field_perm_bypass'] = array(
+    'name' => 'unique_field_perm_bypass',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'unique_field',
   );
 
   // Exported permission: use advanced search.

@@ -13,6 +13,13 @@ function ligue_lesson_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'additional_settings__active_tab_lesson';
+  $strongarm->value = 'edit-workflow';
+  $export['additional_settings__active_tab_lesson'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_lesson';
   $strongarm->value = 0;
   $export['comment_anonymous_lesson'] = $strongarm;
@@ -205,6 +212,90 @@ function ligue_lesson_strongarm() {
   $strongarm->name = 'comment_subject_field_period';
   $strongarm->value = 1;
   $export['comment_subject_field_period'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_lesson';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_lesson'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_location';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_location'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_people';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_people'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_period';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_period'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_lesson';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_lesson'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_location';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_location'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_people';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_people'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_period';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_period'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_lesson';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_lesson'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_location';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_location'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_people';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_people'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_period';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_period'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -458,6 +549,13 @@ function ligue_lesson_strongarm() {
   $strongarm->name = 'node_submitted_period';
   $strongarm->value = 0;
   $export['node_submitted_period'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'workbench_moderation_default_state_lesson';
+  $strongarm->value = 'draft';
+  $export['workbench_moderation_default_state_lesson'] = $strongarm;
 
   return $export;
 }

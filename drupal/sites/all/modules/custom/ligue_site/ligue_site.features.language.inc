@@ -20,8 +20,8 @@ function ligue_site_locale_default_languages() {
     'plurals' => 0,
     'formula' => '',
     'domain' => '',
-    'prefix' => '',
-    'weight' => 0,
+    'prefix' => 'en',
+    'weight' => -9,
   );
   // Exported language: fr.
   $languages['fr'] = array(
@@ -34,7 +34,7 @@ function ligue_site_locale_default_languages() {
     'formula' => '($n!=1)',
     'domain' => '',
     'prefix' => 'fr',
-    'weight' => 0,
+    'weight' => -10,
   );
   return $languages;
 }

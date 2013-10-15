@@ -201,11 +201,11 @@ function ligue_site_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'locale_language_providers_weight_language';
   $strongarm->value = array(
-    'locale-url' => '-8',
-    'locale-session' => '-6',
-    'locale-user' => '-4',
-    'locale-browser' => '-2',
-    'language-default' => '10',
+    'locale-session' => '-10',
+    'locale-user' => '-9',
+    'locale-browser' => '-8',
+    'language-default' => '-6',
+    'locale-url' => '-7',
   );
   $export['locale_language_providers_weight_language'] = $strongarm;
 

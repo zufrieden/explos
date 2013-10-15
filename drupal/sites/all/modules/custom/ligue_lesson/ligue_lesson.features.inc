@@ -40,11 +40,11 @@ function ligue_lesson_node_info() {
       'help' => '',
     ),
     'people' => array(
-      'name' => t('People'),
+      'name' => t('Personnes'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Name'),
+      'title_label' => t('Nom'),
       'help' => '',
     ),
     'period' => array(

@@ -578,49 +578,6 @@ function ligue_lesson_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-lesson-field_poeples'
-  $field_instances['node-lesson-field_poeples'] = array(
-    'bundle' => 'lesson',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 9,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_poeples',
-    'label' => 'Poeples',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 8,
-    ),
-  );
-
   // Exported field_instance: 'node-lesson-field_prayer'
   $field_instances['node-lesson-field_prayer'] = array(
     'bundle' => 'lesson',
@@ -1430,7 +1387,6 @@ function ligue_lesson_field_default_field_instances() {
   t('Peoples');
   t('Peridods');
   t('Periods');
-  t('Poeples');
   t('Prayer');
   t('Stage');
   t('Title');

@@ -746,6 +746,7 @@ function ligue_site_user_default_permissions() {
   $permissions['import media'] = array(
     'name' => 'import media',
     'roles' => array(
+      'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
     'module' => 'media',

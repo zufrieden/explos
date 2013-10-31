@@ -642,7 +642,7 @@ function ligue_lesson_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_verses_lesson',
-    'label' => 'Versets de la leçon',
+    'label' => 'Textes bibliques',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1350,9 +1350,9 @@ function ligue_lesson_field_default_field_instances() {
   t('Prière');
   t('Périodes');
   t('Stage');
+  t('Textes bibliques');
   t('Title');
   t('Type');
-  t('Versets de la leçon');
   t('Versets de la semaine');
   t('Versets “clé”');
 

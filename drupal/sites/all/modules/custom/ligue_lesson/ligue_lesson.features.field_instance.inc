@@ -252,14 +252,15 @@ function ligue_lesson_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
+    'label' => 'Corps de la leçon',
+    'required' => 0,
     'settings' => array(
-      'display_summary' => TRUE,
+      'display_summary' => 1,
       'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
         'rows' => 20,
@@ -336,7 +337,7 @@ function ligue_lesson_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_goal',
-    'label' => 'Goal',
+    'label' => 'Objectif',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -378,7 +379,7 @@ function ligue_lesson_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_locations',
-    'label' => 'Locations',
+    'label' => 'Lieux',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -474,7 +475,7 @@ function ligue_lesson_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_peoples',
-    'label' => 'Peoples',
+    'label' => 'Personnages',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -489,49 +490,6 @@ function ligue_lesson_field_default_field_instances() {
       ),
       'type' => 'entityreference_autocomplete',
       'weight' => 8,
-    ),
-  );
-
-  // Exported field_instance: 'node-lesson-field_peridods'
-  $field_instances['node-lesson-field_peridods'] = array(
-    'bundle' => 'lesson',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 10,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_peridods',
-    'label' => 'Peridods',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 9,
     ),
   );
 
@@ -560,7 +518,7 @@ function ligue_lesson_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_periods',
-    'label' => 'Periods',
+    'label' => 'Périodes',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -601,7 +559,7 @@ function ligue_lesson_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_prayer',
-    'label' => 'Prayer',
+    'label' => 'Prière',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -766,7 +724,7 @@ function ligue_lesson_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_week_number',
-    'label' => 'Week number',
+    'label' => 'Numéro de semaine',
     'required' => 0,
     'settings' => array(
       'max' => 52,
@@ -807,7 +765,7 @@ function ligue_lesson_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_welcome',
-    'label' => 'Welcome',
+    'label' => 'Bienvenue',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -847,7 +805,7 @@ function ligue_lesson_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_year_number',
-    'label' => 'Year number',
+    'label' => 'Numéro d\'année',
     'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1373,30 +1331,30 @@ function ligue_lesson_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Activities');
+  t('Bienvenue');
   t('Bio');
   t('Birthdate');
   t('Body');
+  t('Corps de la leçon');
   t('Date');
   t('Date perdiod');
   t('Deathdate');
   t('Description');
   t('Duration');
-  t('Goal');
-  t('Locations');
+  t('Lieux');
   t('Media');
-  t('Peoples');
-  t('Peridods');
-  t('Periods');
-  t('Prayer');
+  t('Numéro d\'année');
+  t('Numéro de semaine');
+  t('Objectif');
+  t('Personnages');
+  t('Prière');
+  t('Périodes');
   t('Stage');
   t('Title');
   t('Type');
   t('Versets de la leçon');
   t('Versets de la semaine');
   t('Versets “clé”');
-  t('Week number');
-  t('Welcome');
-  t('Year number');
 
   return $field_instances;
 }

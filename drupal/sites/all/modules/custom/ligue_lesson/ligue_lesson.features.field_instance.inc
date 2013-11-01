@@ -37,7 +37,7 @@ function ligue_lesson_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -141,7 +141,7 @@ function ligue_lesson_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -188,7 +188,7 @@ function ligue_lesson_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 6,
+      'weight' => 5,
     ),
   );
 
@@ -267,7 +267,7 @@ function ligue_lesson_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -310,7 +310,7 @@ function ligue_lesson_field_default_field_instances() {
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -350,7 +350,7 @@ function ligue_lesson_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -393,7 +393,7 @@ function ligue_lesson_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -446,7 +446,7 @@ function ligue_lesson_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 11,
+      'weight' => 13,
     ),
   );
 
@@ -489,7 +489,7 @@ function ligue_lesson_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -532,47 +532,7 @@ function ligue_lesson_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 9,
-    ),
-  );
-
-  // Exported field_instance: 'node-lesson-field_prayer'
-  $field_instances['node-lesson-field_prayer'] = array(
-    'bundle' => 'lesson',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_prayer',
-    'label' => 'Prière',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 10,
     ),
   );
 
@@ -692,7 +652,7 @@ function ligue_lesson_field_default_field_instances() {
       'module' => 'bible__field',
       'settings' => array(),
       'type' => 'bible__field_dropdown',
-      'weight' => 10,
+      'weight' => 3,
     ),
   );
 
@@ -739,46 +699,6 @@ function ligue_lesson_field_default_field_instances() {
       'settings' => array(),
       'type' => 'number',
       'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance: 'node-lesson-field_welcome'
-  $field_instances['node-lesson-field_welcome'] = array(
-    'bundle' => 'lesson',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 6,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_welcome',
-    'label' => 'Bienvenue',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 4,
     ),
   );
 
@@ -1331,7 +1251,6 @@ function ligue_lesson_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Activities');
-  t('Bienvenue');
   t('Bio');
   t('Birthdate');
   t('Body');
@@ -1347,7 +1266,6 @@ function ligue_lesson_field_default_field_instances() {
   t('Numéro de semaine');
   t('Objectif');
   t('Personnages');
-  t('Prière');
   t('Périodes');
   t('Stage');
   t('Textes bibliques');

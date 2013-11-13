@@ -22,8 +22,8 @@ set :download_drush, true
 role :app,           domain
 role :db,            domain
 
-set  :keep_releases,   3
-after "deploy:update", "deploy:cleanup" 
+# set  :keep_releases,   3
+# after "deploy:update", "deploy:cleanup" 
 
 # Be more verbose by uncommenting the following line
 #logger.level = Logger::MAX_LEVEL

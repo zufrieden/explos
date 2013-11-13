@@ -906,6 +906,44 @@ function ligue_lesson_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-location-field_location'
+  $field_instances['node-location-field_location'] = array(
+    'bundle' => 'location',
+    'default_value' => array(),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'geofield',
+        'settings' => array(
+          'data' => 'full',
+        ),
+        'type' => 'geofield_wkt',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_location',
+    'label' => 'Localisation',
+    'required' => FALSE,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'geofield',
+      'settings' => array(),
+      'type' => 'geofield_latlon',
+      'weight' => -3,
+    ),
+  );
+
   // Exported field_instance: 'node-people-field_bio'
   $field_instances['node-people-field_bio'] = array(
     'bundle' => 'people',
@@ -1473,6 +1511,7 @@ function ligue_lesson_field_default_field_instances() {
   t('Description');
   t('Duration');
   t('Lieux');
+  t('Localisation');
   t('Media');
   t('Numéro d\'année');
   t('Numéro de semaine');

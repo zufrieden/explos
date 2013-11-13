@@ -493,6 +493,49 @@ function ligue_lesson_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-lesson-field_peridods'
+  $field_instances['node-lesson-field_peridods'] = array(
+    'bundle' => 'lesson',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_peridods',
+    'label' => 'Peridods',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 9,
+    ),
+  );
+
   // Exported field_instance: 'node-lesson-field_periods'
   $field_instances['node-lesson-field_periods'] = array(
     'bundle' => 'lesson',
@@ -533,6 +576,46 @@ function ligue_lesson_field_default_field_instances() {
       ),
       'type' => 'entityreference_autocomplete',
       'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'node-lesson-field_prayer'
+  $field_instances['node-lesson-field_prayer'] = array(
+    'bundle' => 'lesson',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_prayer',
+    'label' => 'Prière',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 5,
     ),
   );
 
@@ -702,6 +785,46 @@ function ligue_lesson_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-lesson-field_welcome'
+  $field_instances['node-lesson-field_welcome'] = array(
+    'bundle' => 'lesson',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_welcome',
+    'label' => 'Bienvenue',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 4,
+    ),
+  );
+
   // Exported field_instance: 'node-lesson-field_year_number'
   $field_instances['node-lesson-field_year_number'] = array(
     'bundle' => 'lesson',
@@ -819,7 +942,7 @@ function ligue_lesson_field_default_field_instances() {
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 5,
     ),
   );
 
@@ -850,7 +973,7 @@ function ligue_lesson_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_birthdate',
-    'label' => 'Birthdate',
+    'label' => 'Date de naissance',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -935,7 +1058,7 @@ function ligue_lesson_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_deathdate',
-    'label' => 'Deathdate',
+    'label' => 'Date de décès',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -989,7 +1112,93 @@ function ligue_lesson_field_default_field_instances() {
         'tz_handling' => 'none',
       ),
       'type' => 'partial_date',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-people-field_is_approximative_birthdate'
+  $field_instances['node-people-field_is_approximative_birthdate'] = array(
+    'bundle' => 'people',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_is_approximative_birthdate',
+    'label' => 'Date de naissance approximative ?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-people-field_is_approximative_deathdate'
+  $field_instances['node-people-field_is_approximative_deathdate'] = array(
+    'bundle' => 'people',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_is_approximative_deathdate',
+    'label' => 'Date de mort approximative ?',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 4,
     ),
   );
 
@@ -1045,7 +1254,7 @@ function ligue_lesson_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -1251,13 +1460,16 @@ function ligue_lesson_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Activities');
+  t('Bienvenue');
   t('Bio');
-  t('Birthdate');
   t('Body');
   t('Corps de la leçon');
   t('Date');
+  t('Date de décès');
+  t('Date de mort approximative ?');
+  t('Date de naissance');
+  t('Date de naissance approximative ?');
   t('Date perdiod');
-  t('Deathdate');
   t('Description');
   t('Duration');
   t('Lieux');
@@ -1265,7 +1477,9 @@ function ligue_lesson_field_default_field_instances() {
   t('Numéro d\'année');
   t('Numéro de semaine');
   t('Objectif');
+  t('Peridods');
   t('Personnages');
+  t('Prière');
   t('Périodes');
   t('Stage');
   t('Textes bibliques');

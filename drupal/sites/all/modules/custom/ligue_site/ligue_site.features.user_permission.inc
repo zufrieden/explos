@@ -355,6 +355,7 @@ function ligue_site_user_default_permissions() {
   $permissions['administer taxonomy'] = array(
     'name' => 'administer taxonomy',
     'roles' => array(
+      'Manager' => 'Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'taxonomy',

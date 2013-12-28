@@ -260,7 +260,7 @@ Comment, avec quoi, pourquoi,…
     'bundle' => 'lesson',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indique ici le canevas de la leçon.',
+    'description' => 'Explique ici en une dizaine de phrases ce qui va être vécu durant la leçon, afin que l\'enseignant puisse avoir une idée globale de ce qu\'il devra préparer.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -1525,10 +1525,10 @@ Comment, avec quoi, pourquoi,…
 </ul>');
   t('Estime le temps que va durer cette activité.');
   t('Explique au moniteur comment les enfants qui viennent à cette leçon peuvent être accueillis.');
+  t('Explique ici en une dizaine de phrases ce qui va être vécu durant la leçon, afin que l\'enseignant puisse avoir une idée globale de ce qu\'il devra préparer.');
   t('Expliquer quel est l’objectif de la leçon.
 Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre aux enfants.
 ');
-  t('Indique ici le canevas de la leçon.');
   t('Indique ici à quelle partie de la leçon cette activité sera rattachée
 <ul><li><strong>Accueil</strong>	Temps ou l’enfant est accueilli et se sent le bienvenu. C’est un temps important qui permet à chacun d’être a l’aise, quelque soit les évènements qui on pu se passer précédemment. Ex : décoration particulière, gobelet de sirop, attention particulière,… selon le thème abordé !</li>
 <li><strong>Bienvenue</strong>	Rassembler les enfants dans ce qui va être vécu dans l’heure qui suit, « annoncer la couleur ! » Tous n’ont pas le même vécu (l’arrivée au culte n’est pas toujours évidente..). C’est donc important de les rassembler et d’avoir qqch de motivant avant de commencer…</li>

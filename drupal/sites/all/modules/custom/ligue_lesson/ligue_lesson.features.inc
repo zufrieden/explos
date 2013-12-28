@@ -24,7 +24,7 @@ function ligue_lesson_ctools_plugin_api() {
 function ligue_lesson_node_info() {
   $items = array(
     'lesson' => array(
-      'name' => t('Lesson'),
+      'name' => t('Leçon'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
@@ -32,7 +32,7 @@ function ligue_lesson_node_info() {
       'help' => '',
     ),
     'location' => array(
-      'name' => t('Location'),
+      'name' => t('Lieu'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
@@ -48,7 +48,7 @@ function ligue_lesson_node_info() {
       'help' => '',
     ),
     'period' => array(
-      'name' => t('Period'),
+      'name' => t('Période'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

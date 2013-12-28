@@ -154,7 +154,7 @@ function ligue_site_strongarm() {
     'domain' => '',
     'prefix' => 'fr',
     'weight' => '-10',
-    'javascript' => '3j-gf5e1dRZ59fFtIS6AP998F2h_nkE4_3bU1QttOdA',
+    'javascript' => 'UkmGtPUiKvw5z6pUWe71z3tgvNtsQ_fxTo17WcB5LW8',
   );
   $export['language_default'] = $strongarm;
 

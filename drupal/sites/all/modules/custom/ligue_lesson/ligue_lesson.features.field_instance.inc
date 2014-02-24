@@ -192,7 +192,7 @@ Comment, avec quoi, pourquoi,…
     'settings' => array(
       'description_field' => 0,
       'file_directory' => 'activities-media',
-      'file_extensions' => 'txt pdf doc docx ppt pptx jpeg jpg png',
+      'file_extensions' => 'txt pdf doc docx ppt pptx jpeg jpg png mov',
       'max_filesize' => '',
       'user_register_form' => FALSE,
     ),
@@ -204,6 +204,7 @@ Comment, avec quoi, pourquoi,…
           'public' => 'public',
         ),
         'allowed_types' => array(
+          0 => 0,
           'audio' => 0,
           'document' => 0,
           'image' => 'image',
@@ -263,11 +264,11 @@ Comment, avec quoi, pourquoi,…
     'description' => 'Explique ici en une dizaine de phrases ce qui va être vécu durant la leçon, afin que l\'enseignant puisse avoir une idée globale de ce qu\'il devra préparer.',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -296,7 +297,7 @@ Comment, avec quoi, pourquoi,…
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 7,
+      'weight' => 10,
     ),
   );
 
@@ -318,7 +319,7 @@ Comment, avec quoi, pourquoi,…
           'view_mode' => 'full',
         ),
         'type' => 'field_collection_view',
-        'weight' => 7,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -339,7 +340,7 @@ Comment, avec quoi, pourquoi,…
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 14,
+      'weight' => 12,
     ),
   );
 
@@ -399,7 +400,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -439,7 +440,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 11,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -480,7 +481,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 13,
+      'weight' => 11,
     ),
   );
 
@@ -498,7 +499,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 11,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -523,7 +524,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 9,
+      'weight' => 7,
     ),
   );
 
@@ -535,13 +536,13 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
     'description' => 'Indique la période dans laquelle se passe l’histoire. ',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 12,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -566,7 +567,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 10,
+      'weight' => 9,
     ),
   );
 
@@ -582,7 +583,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 13,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -606,7 +607,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 14,
     ),
   );
 
@@ -627,7 +628,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
           'granularity' => 'verse',
         ),
         'type' => 'bible__field_ref_list',
-        'weight' => 15,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -648,7 +649,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
       'module' => 'bible__field',
       'settings' => array(),
       'type' => 'bible__field_dropdown',
-      'weight' => 12,
+      'weight' => 6,
     ),
   );
 
@@ -667,7 +668,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
           'granularity' => 'verse',
         ),
         'type' => 'bible__field_ref_list',
-        'weight' => 14,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -688,7 +689,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
       'module' => 'bible__field',
       'settings' => array(),
       'type' => 'bible__field_dropdown',
-      'weight' => 11,
+      'weight' => 5,
     ),
   );
 
@@ -707,7 +708,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
           'granularity' => 'verse',
         ),
         'type' => 'bible__field_ref_list',
-        'weight' => 13,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -740,7 +741,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     'description' => 'Indique le numéro de la semaine de la leçon, selon le lectionnaire. ',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -790,7 +791,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 6,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -814,7 +815,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 13,
     ),
   );
 
@@ -826,11 +827,11 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     'description' => 'Indique le numéro de l’année de la leçon, selon le lectionnaire.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 4,
+        'weight' => 0,
       ),
       'teaser' => array(
         'label' => 'above',

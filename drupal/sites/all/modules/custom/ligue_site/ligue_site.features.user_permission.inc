@@ -319,6 +319,7 @@ function ligue_site_user_default_permissions() {
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
     'roles' => array(
+      'Manager' => 'Manager',
       'administrator' => 'administrator',
     ),
     'module' => 'user',
@@ -484,7 +485,9 @@ function ligue_site_user_default_permissions() {
   // Exported permission: create bible_text content.
   $permissions['create bible_text content'] = array(
     'name' => 'create bible_text content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -548,7 +551,9 @@ function ligue_site_user_default_permissions() {
   // Exported permission: delete any bible_text content.
   $permissions['delete any bible_text content'] = array(
     'name' => 'delete any bible_text content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -592,7 +597,9 @@ function ligue_site_user_default_permissions() {
   // Exported permission: delete own bible_text content.
   $permissions['delete own bible_text content'] = array(
     'name' => 'delete own bible_text content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -638,7 +645,9 @@ function ligue_site_user_default_permissions() {
   // Exported permission: display drupal links.
   $permissions['display drupal links'] = array(
     'name' => 'display drupal links',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'admin_menu',
   );
 
@@ -654,7 +663,9 @@ function ligue_site_user_default_permissions() {
   // Exported permission: edit any bible_text content.
   $permissions['edit any bible_text content'] = array(
     'name' => 'edit any bible_text content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -690,7 +701,9 @@ function ligue_site_user_default_permissions() {
   // Exported permission: edit own bible_text content.
   $permissions['edit own bible_text content'] = array(
     'name' => 'edit own bible_text content',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -903,7 +916,9 @@ function ligue_site_user_default_permissions() {
   // Exported permission: unique_field_perm_bypass.
   $permissions['unique_field_perm_bypass'] = array(
     'name' => 'unique_field_perm_bypass',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'unique_field',
   );
 
@@ -930,7 +945,9 @@ function ligue_site_user_default_permissions() {
   // Exported permission: use text format full_html.
   $permissions['use text format full_html'] = array(
     'name' => 'use text format full_html',
-    'roles' => array(),
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
     'module' => 'filter',
   );
 

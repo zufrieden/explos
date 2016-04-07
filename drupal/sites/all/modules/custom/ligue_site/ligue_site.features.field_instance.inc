@@ -176,8 +176,8 @@ function ligue_site_field_default_field_instances() {
     ),
     'entity_type' => 'file',
     'field_name' => 'field_file_image_alt_text',
-    'label' => 'Alt Text',
-    'required' => 0,
+    'label' => 'Description courte',
+    'required' => 1,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -186,10 +186,10 @@ function ligue_site_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'size' => 200,
       ),
       'type' => 'text_textfield',
-      'weight' => -4,
+      'weight' => 3,
     ),
   );
 
@@ -227,8 +227,8 @@ function ligue_site_field_default_field_instances() {
     ),
     'entity_type' => 'file',
     'field_name' => 'field_file_image_title_text',
-    'label' => 'Title Text',
-    'required' => 0,
+    'label' => 'Titre',
+    'required' => 1,
     'settings' => array(
       'text_processing' => 0,
       'user_register_form' => FALSE,
@@ -240,7 +240,7 @@ function ligue_site_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -3,
+      'weight' => 2,
     ),
   );
 
@@ -558,14 +558,14 @@ function ligue_site_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Alt Text');
   t('Body');
   t('Comment');
+  t('Description courte');
   t('Enter a comma-separated list of words to describe your content.');
   t('Image');
   t('Tags');
-  t('Title Text');
   t('Title text attribute');
+  t('Titre');
   t('Upload an image to go with this article.');
   t('order');
   t('reference');

@@ -31,7 +31,14 @@ function ligue_site_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'filename' => array(
+          'weight' => '-10',
+        ),
+        'preview' => array(
+          'weight' => '-5',
+        ),
+      ),
       'display' => array(
         'file' => array(
           'media_small' => array(
@@ -71,7 +78,14 @@ function ligue_site_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'filename' => array(
+          'weight' => '0',
+        ),
+        'preview' => array(
+          'weight' => '1',
+        ),
+      ),
       'display' => array(
         'file' => array(
           'media_small' => array(
@@ -91,7 +105,14 @@ function ligue_site_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(),
     'extra_fields' => array(
-      'form' => array(),
+      'form' => array(
+        'filename' => array(
+          'weight' => '-10',
+        ),
+        'preview' => array(
+          'weight' => '-5',
+        ),
+      ),
       'display' => array(
         'file' => array(
           'media_small' => array(
@@ -154,7 +175,7 @@ function ligue_site_strongarm() {
     'domain' => '',
     'prefix' => 'fr',
     'weight' => '-10',
-    'javascript' => 'CWNyYlzS2RwGXHteox6zchdcLhCQwD6CK-DznvDZ_G0',
+    'javascript' => 'y32QtzHRBBIHW2PyfnSdFqQ-6-kVw__vU4DjUEt2HQg',
   );
   $export['language_default'] = $strongarm;
 

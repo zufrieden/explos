@@ -15,20 +15,7 @@ function ligue_lesson_field_default_field_instances() {
     'bundle' => 'field_activities',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Définis le type d’activité que c’est ;
-
-<ul><li><strong>Bricolage</strong>	Coloriage, découpage, création de quelque chose,…</li>
-<li><strong>Chant</strong>	Chant</li>
-<li><strong>Défi</strong>	Lancer un défi aux enfants, les défier sur un sujet de la leçon</li>
-<li><strong>Enseignement</strong>	Temps ou la Parole de Dieu est transmise</li>
-<li><strong>Histoire</strong>	Lecture d’un texte biblique, raconter une histoire (biblique ou non)</li>
-<li><strong>Illustration</strong>	Explication du thème par des images, vidéo, sketch, …</li>
-<li><strong>Jeu</strong>	Temps de jeu</li>
-<li><strong>Leçon d’objet</strong>	Une histoire, un fait, un défi, un tour de magie, une vidéo,… avec lequel on tire un parallèle sur le thème de la leçon </li>
-<li><strong>Prière</strong>	Temps de prière</li>
-<li><strong>Réflexion</strong>	Temps ou l’enfant peut réfléchir sur ce qui à été apporter et se l’approprier (ne pas oublier le temps avec parents…).</li>
-<li><strong>Autre</strong>	Tout ce qui ne va pas dans les autres rubriques</li>
-</ul>',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -135,17 +122,7 @@ Comment, avec quoi, pourquoi,…
     'bundle' => 'field_activities',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indique ici à quelle partie de la leçon cette activité sera rattachée
-<ul><li><strong>Accueil</strong>	Temps ou l’enfant est accueilli et se sent le bienvenu. C’est un temps important qui permet à chacun d’être a l’aise, quelque soit les évènements qui on pu se passer précédemment. Ex : décoration particulière, gobelet de sirop, attention particulière,… selon le thème abordé !</li>
-<li><strong>Bienvenue</strong>	Rassembler les enfants dans ce qui va être vécu dans l’heure qui suit, « annoncer la couleur ! » Tous n’ont pas le même vécu (l’arrivée au culte n’est pas toujours évidente..). C’est donc important de les rassembler et d’avoir qqch de motivant avant de commencer…</li>
-<li><strong>Intro au thème</strong>	Introduire le thème qui sera proposé</li>
-<li><strong>Sujet de la leçon</strong>	C’est la partie principale. On développe ici le thème, on l’explique, le lit, le raconte,…</li>
-<li><strong>Engagement personnel</strong>	Temps ou l’enfants peut prendre une décision…</li>
-<li><strong>Prière</strong>	Temps de prière, expliquer comment il peut-être vécu… Soyez créatif !</li>
-<li><strong>Conclusion</strong>	Finalisation du thème (rappel, résumé, envois,…)</li>
-<li><strong>Implication des parents</strong>	Proposer qqch que l’enfant peut prendre avec à la maison pour en parler avec ses parents (questions, histoire, qqch de ludique, un défi,…) Qqch qui implique les parents dans la marche de la foi de leurs enfants…</li>
-<li><strong>Détente</strong>	Temps où l’on s’amuse, où l’on crée des liens…</li>
-</ul>',
+    'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -429,62 +406,6 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
     ),
   );
 
-  // Exported field_instance: 'node-lesson-field_media'
-  $field_instances['node-lesson-field_media'] = array(
-    'bundle' => 'lesson',
-    'deleted' => 0,
-    'description' => 'Si besoin, indique un(des) média(s) que tu proposes pour l’ensemble de la leçon (image, pdf, audio, vidéo,…).',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
-        'weight' => 10,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_media',
-    'label' => 'Media',
-    'required' => 0,
-    'settings' => array(
-      'description_field' => 0,
-      'file_directory' => 'lesson-media',
-      'file_extensions' => 'txt pdf doc docx ppt pptx jpeg jpg png',
-      'max_filesize' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'media',
-      'settings' => array(
-        'allowed_schemes' => array(
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'document' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
-        'browser_plugins' => array(
-          'media_default--media_browser_1' => 'media_default--media_browser_1',
-          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-          'upload' => 'upload',
-        ),
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'media_generic',
-      'weight' => 11,
-    ),
-  );
-
   // Exported field_instance: 'node-lesson-field_peoples'
   $field_instances['node-lesson-field_peoples'] = array(
     'bundle' => 'lesson',
@@ -560,54 +481,10 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
       'weight' => 9,
-    ),
-  );
-
-  // Exported field_instance: 'node-lesson-field_prayer'
-  $field_instances['node-lesson-field_prayer'] = array(
-    'bundle' => 'lesson',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Pour cette séance, sous quelle forme proposes-tu de vivre un temps de prière ?',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 13,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_prayer',
-    'label' => 'Prière',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 14,
     ),
   );
 
@@ -738,7 +615,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     'bundle' => 'lesson',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indique le numéro de la semaine de la leçon, selon le lectionnaire. ',
+    'description' => 'Indique le numéro de la leçon, selon le lectionnaire. ',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -761,10 +638,10 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     ),
     'entity_type' => 'node',
     'field_name' => 'field_week_number',
-    'label' => 'Numéro de semaine',
+    'label' => 'Numéro de la leçon',
     'required' => 0,
     'settings' => array(
-      'max' => 52,
+      'max' => 30,
       'min' => 0,
       'prefix' => '',
       'suffix' => '',
@@ -779,52 +656,12 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     ),
   );
 
-  // Exported field_instance: 'node-lesson-field_welcome'
-  $field_instances['node-lesson-field_welcome'] = array(
-    'bundle' => 'lesson',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Explique au moniteur comment les enfants qui viennent à cette leçon peuvent être accueillis.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 12,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_welcome',
-    'label' => 'Bienvenue',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 13,
-    ),
-  );
-
   // Exported field_instance: 'node-lesson-field_year_number'
   $field_instances['node-lesson-field_year_number'] = array(
     'bundle' => 'lesson',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indique le numéro de l’année de la leçon, selon le lectionnaire.',
+    'description' => 'Indique le numéro de du tome',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -842,7 +679,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     ),
     'entity_type' => 'node',
     'field_name' => 'field_year_number',
-    'label' => 'Numéro d\'année',
+    'label' => 'Numéro du tome',
     'required' => 1,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -1492,7 +1329,6 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
   // Translatables
   // Included for use with string extractors like potx.
   t('Activities');
-  t('Bienvenue');
   t('Bio');
   t('Body');
   t('Corps de la leçon');
@@ -1510,40 +1346,14 @@ Comment, avec quoi, pourquoi,…
   t('Description');
   t('Donne le titre que va porter cette activité.');
   t('Durée');
-  t('Définis le type d’activité que c’est ;
-
-<ul><li><strong>Bricolage</strong>	Coloriage, découpage, création de quelque chose,…</li>
-<li><strong>Chant</strong>	Chant</li>
-<li><strong>Défi</strong>	Lancer un défi aux enfants, les défier sur un sujet de la leçon</li>
-<li><strong>Enseignement</strong>	Temps ou la Parole de Dieu est transmise</li>
-<li><strong>Histoire</strong>	Lecture d’un texte biblique, raconter une histoire (biblique ou non)</li>
-<li><strong>Illustration</strong>	Explication du thème par des images, vidéo, sketch, …</li>
-<li><strong>Jeu</strong>	Temps de jeu</li>
-<li><strong>Leçon d’objet</strong>	Une histoire, un fait, un défi, un tour de magie, une vidéo,… avec lequel on tire un parallèle sur le thème de la leçon </li>
-<li><strong>Prière</strong>	Temps de prière</li>
-<li><strong>Réflexion</strong>	Temps ou l’enfant peut réfléchir sur ce qui à été apporter et se l’approprier (ne pas oublier le temps avec parents…).</li>
-<li><strong>Autre</strong>	Tout ce qui ne va pas dans les autres rubriques</li>
-</ul>');
   t('Estime le temps que va durer cette activité.');
-  t('Explique au moniteur comment les enfants qui viennent à cette leçon peuvent être accueillis.');
   t('Explique ici en une dizaine de phrases ce qui va être vécu durant la leçon, afin que l\'enseignant puisse avoir une idée globale de ce qu\'il devra préparer.');
   t('Expliquer quel est l’objectif de la leçon.
 Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre aux enfants.
 ');
-  t('Indique ici à quelle partie de la leçon cette activité sera rattachée
-<ul><li><strong>Accueil</strong>	Temps ou l’enfant est accueilli et se sent le bienvenu. C’est un temps important qui permet à chacun d’être a l’aise, quelque soit les évènements qui on pu se passer précédemment. Ex : décoration particulière, gobelet de sirop, attention particulière,… selon le thème abordé !</li>
-<li><strong>Bienvenue</strong>	Rassembler les enfants dans ce qui va être vécu dans l’heure qui suit, « annoncer la couleur ! » Tous n’ont pas le même vécu (l’arrivée au culte n’est pas toujours évidente..). C’est donc important de les rassembler et d’avoir qqch de motivant avant de commencer…</li>
-<li><strong>Intro au thème</strong>	Introduire le thème qui sera proposé</li>
-<li><strong>Sujet de la leçon</strong>	C’est la partie principale. On développe ici le thème, on l’explique, le lit, le raconte,…</li>
-<li><strong>Engagement personnel</strong>	Temps ou l’enfants peut prendre une décision…</li>
-<li><strong>Prière</strong>	Temps de prière, expliquer comment il peut-être vécu… Soyez créatif !</li>
-<li><strong>Conclusion</strong>	Finalisation du thème (rappel, résumé, envois,…)</li>
-<li><strong>Implication des parents</strong>	Proposer qqch que l’enfant peut prendre avec à la maison pour en parler avec ses parents (questions, histoire, qqch de ludique, un défi,…) Qqch qui implique les parents dans la marche de la foi de leurs enfants…</li>
-<li><strong>Détente</strong>	Temps où l’on s’amuse, où l’on crée des liens…</li>
-</ul>');
   t('Indique la période dans laquelle se passe l’histoire. ');
-  t('Indique le numéro de la semaine de la leçon, selon le lectionnaire. ');
-  t('Indique le numéro de l’année de la leçon, selon le lectionnaire.');
+  t('Indique le numéro de du tome');
+  t('Indique le numéro de la leçon, selon le lectionnaire. ');
   t('Indique le verset clé de la leçon, le verset à retenir !
 Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubrique « texte biblique ».
 ');
@@ -1553,16 +1363,13 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
   t('Lieux');
   t('Localisation');
   t('Media');
-  t('Numéro d\'année');
-  t('Numéro de semaine');
+  t('Numéro de la leçon');
+  t('Numéro du tome');
   t('Objectif');
   t('Personnages');
-  t('Pour cette séance, sous quelle forme proposes-tu de vivre un temps de prière ?');
-  t('Prière');
   t('Périodes');
   t('Selon le lectionnaire « les explorateurs ».');
   t('Si besoin, indique un(des) média(s) que tu proposes pour cette activité (image, pdf, audio, vidéo,…).');
-  t('Si besoin, indique un(des) média(s) que tu proposes pour l’ensemble de la leçon (image, pdf, audio, vidéo,…).');
   t('Textes bibliques');
   t('Titre');
   t('Type');

@@ -14,7 +14,7 @@ function ligue_site_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'admin_theme';
-  $strongarm->value = 'seven';
+  $strongarm->value = 'adminimal';
   $export['admin_theme'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -175,7 +175,7 @@ function ligue_site_strongarm() {
     'domain' => '',
     'prefix' => 'fr',
     'weight' => '-10',
-    'javascript' => 'y32QtzHRBBIHW2PyfnSdFqQ-6-kVw__vU4DjUEt2HQg',
+    'javascript' => '0bBWTXo7IBgl0j6lb3kZtVQXgE3TUbpIXZUb2yO7lyw',
   );
   $export['language_default'] = $strongarm;
 

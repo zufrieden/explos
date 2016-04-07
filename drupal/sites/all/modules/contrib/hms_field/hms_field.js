@@ -97,12 +97,16 @@ var hms_update_field = function(element) {
 var hms_tick_difference = 0;
 var hms_timer = null;
 var hms_request_time = unixtimestamp();
+var hms_tick_difference_done = false;
+
 
 Drupal.behaviors.hmsfield = {
   attach: function (context, settings) {
-
-    // Calculate the difference between server time and client time.
-    hms_tick_difference = settings.hms_field.servertime - hms_request_time;
+    if (!hms_tick_difference_done) {
+      // Calculate the difference between server time and client time.
+      hms_tick_difference = settings.hms_field.servertime - hms_request_time;
+      hms_tick_difference_done = true;
+    }
 
     // We search in the whole DOM object, not only in our context
     if ($('.hms-running').length && !hms_timer) {
@@ -113,6 +117,7 @@ Drupal.behaviors.hmsfield = {
       }, 1000);
     } else if (!$('.hms-running').length && hms_timer) {
       window.clearInterval(hms_timer);
+      hms_timer = null;
     }
 
   },
@@ -120,6 +125,7 @@ Drupal.behaviors.hmsfield = {
   detach: function (context, settings) {
     if (hms_timer) {
       window.clearInterval(hms_timer);
+      hms_timer = null;
     }
   }
 };

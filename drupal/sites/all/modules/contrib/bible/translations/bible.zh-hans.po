@@ -1,4 +1,3 @@
-# $Id$
 #
 # Chinese, Traditional translation of Drupal (general)
 # Copyright YEAR NAME <EMAIL@ADDRESS>

@@ -4,9 +4,13 @@ package = Fields
 core = 7.x
 
 dependencies[] = field
-; Information added by drupal.org packaging script on 2012-05-06
-version = "7.x-1.1"
+
+files[] = hms_field.migrate.inc
+files[] = views/hms_field_views_handler_filter_hms.inc
+
+; Information added by drupal.org packaging script on 2013-07-21
+version = "7.x-1.2"
 core = "7.x"
 project = "hms_field"
-datestamp = "1336310155"
+datestamp = "1374440768"
 

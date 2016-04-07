@@ -9,6 +9,15 @@
 class ViewsBulkOperationsRulesComponent extends ViewsBulkOperationsBaseOperation {
 
   /**
+   * Returns the access bitmask for the operation, used for entity access checks.
+   *
+   * Rules has its own permission system, so the lowest bitmask is enough.
+   */
+  public function getAccessMask() {
+    return VBO_ACCESS_OP_VIEW;
+  }
+
+  /**
    * Returns whether the provided account has access to execute the operation.
    *
    * @param $account
@@ -115,6 +124,8 @@ class ViewsBulkOperationsRulesComponent extends ViewsBulkOperationsBaseOperation
     else {
      $element = rules_action('component_' . $this->operationInfo['parameters']['component_key']);
     }
-    $element->execute($data);
+    $wrapper_type = is_array($data) ? "list<{$this->entityType}>" : $this->entityType;
+    $wrapper = entity_metadata_wrapper($wrapper_type, $data);
+    $element->execute($wrapper);
   }
 }

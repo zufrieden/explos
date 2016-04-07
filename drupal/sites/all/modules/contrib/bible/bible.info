@@ -3,9 +3,6 @@ description = Christian Holy Bible.
 core = 7.x
 package = Church
 
-files[] = bible.install
-files[] = bible.module
-
 scripts[] = bible.js
 scripts[] = bible_bls.js
 scripts[] = bible_webimport.js
@@ -13,13 +10,11 @@ scripts[] = bible_webimport.js
 stylesheets[all][] = bible.css
 stylesheets[all][] = bible_bls.css
 
-version = "7.x-1.4"
-
 configure = admin/config/bible
 
-; Information added by drupal.org packaging script on 2011-12-28
-version = "7.x-1.4"
+; Information added by Drupal.org packaging script on 2015-04-27
+version = "7.x-1.6"
 core = "7.x"
 project = "bible"
-datestamp = "1325083236"
+datestamp = "1430098988"
 

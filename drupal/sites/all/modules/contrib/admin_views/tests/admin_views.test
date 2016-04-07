@@ -86,6 +86,10 @@ class AdminViewsSystemDisplayTestCase extends AdminViewsWebTestCase {
     );
   }
 
+  function setUp() {
+    parent::setUp(array('node', 'comment', 'admin_views_test'));
+  }
+
   /**
    * Tests proper inheritance of router item properties.
    */
@@ -102,6 +106,12 @@ class AdminViewsSystemDisplayTestCase extends AdminViewsWebTestCase {
       $this->clickLink($link);
       $this->assertResponse(200);
     }
+
+    // Test that child page callbacks of a system display work.
+    $this->drupalGet('admin/content/admin_views_test');
+    $this->assertResponse(200);
+    $this->assertTitle('Administration views test | Drupal');
+    $this->assertText('Administration views test page callback');
   }
 }
 
@@ -237,5 +247,41 @@ class AdminViewsPageDisplayTestCase extends AdminViewsWebTestCase {
     $handler->display->display_options['path'] = 'admin/content/test';
 
     return $view;
+  }
+}
+
+/**
+ * Tests default views.
+ */
+class AdminViewsAccessHandlerTestCase extends AdminViewsWebTestCase {
+
+  public static function getInfo() {
+    return array(
+      'name' => 'Access handler',
+      'description' => 'Tests views_plugin_access_menu handler.',
+      'group' => 'Administration views',
+    );
+  }
+
+  function setUp() {
+    parent::setUp(array('node'));
+  }
+
+  /**
+   * Tests access handler via views/ajax.
+   */
+  function testAjaxAccess() {
+    $params = array(
+      'view_name' => 'admin_views_user',
+      'view_display_id' => 'system_1',
+    );
+    $response_data = $this->drupalGetAJAX('views/ajax', array('query' => $params));
+
+    $this->assertResponse(200);
+    // Check no views settings are returned.
+    $this->assertTrue(empty($response_data[0]['settings']['views']));
+    // The next item in the AJAX data will be the insert command containing the
+    // rendered view.
+    $this->assertTrue(empty($response_data[1]));
   }
 }

@@ -11,19 +11,19 @@ Drupal.behaviors.bible = {
 	  span.css('textAlign', 'left');
 	  span.css('position', 'absolute');
 	  span.hide();
-	
+
 		for (i=0; i<6; i++) {
 	 		var img = $('<img class=vset />');
 			img.attr("id", "vsetimg"+i);
 			img.css('cursor', 'pointer');
 			span.append(img);
 		}
+		var baseurl = Drupal.settings.baseurl;
 		var bibleimgurl = Drupal.settings.bibleimgurl;
 		var chapverse;
-	
+
 	  span.append($('<div id=sntext />'));
 	  $('body').append(span);
-	  var baseurl = window.location.href.substr(0, window.location.href.lastIndexOf('bible'));
 	  var ajaxobj;
 
 	  $("span.biblesn a").each(function () {
@@ -32,7 +32,7 @@ Drupal.behaviors.bible = {
 	      var SN = dat[dat.length-1];
 	      if (this.SN==SN) return;
 	      this.SN = SN;
-	
+
 	      for (i=0; i<6; i++) {
 		  		$("#vsetimg"+i).hide();
 	      }
@@ -41,7 +41,7 @@ Drupal.behaviors.bible = {
 			  span.css('color', '#FFFFFF');
 			  span.css('background', 'green');
 			  span.css('border-color', 'black');
-			  span.css('border-width', '5px');  
+			  span.css('border-width', '5px');
 	      $('#sntext').html("Wait...["+SN+"]");
 	      span.css('left', $(this).offset().left + $(this).width());
 	      span.css('top', $(this).offset().top);
@@ -52,7 +52,7 @@ Drupal.behaviors.bible = {
 	        success: function (data) {
 	          // Parse back result
 	          var HTMLStr = '';
-	          if (data=='""') { 
+	          if (data=='""') {
 		      		HTMLStr = 'No Data of ['+SN+']';
 						}
 						else {
@@ -81,14 +81,14 @@ Drupal.behaviors.bible = {
       $(this).mouseover(function () {
 	    	chapverse = $(this);
 	    	var alink = $(this).children("verse");
-	
+
 	      $("#sntext").hide();
 			  span.width(16*6);
 			  span.height(16);
 			  span.css('color', '#000000');
 			  span.css('background', 'silver');
 			  span.css('border-color', 'black');
-			  span.css('border-width', '1px');  
+			  span.css('border-width', '1px');
 	      var vsetpara = $(this).attr("vset");
 	      for (i=0; i<6; i++) {
 		  		var imgsrc = bibleimgurl+ 'vset_'+i;
@@ -106,7 +106,7 @@ Drupal.behaviors.bible = {
 	      span.hide();
 	    })
 	  });
-	  
+
 	  $("#SNData").each(function () {
 	    $(this).mouseover(function() {
 	    	span.show();
@@ -115,7 +115,7 @@ Drupal.behaviors.bible = {
 	    	span.hide();
 	    });
 		});
-		
+
 		$("img.vset").each(function () {
     	$(this).click(function(E) {
 	    	span.show();
@@ -157,7 +157,7 @@ Drupal.behaviors.bible = {
 	    	span.hide();
 	    })
 	  });
-    
+
 		$("span.vref").each(function () {
     	$(this).hover(function(E) {
 	      for (i=0; i<6; i++) {
@@ -168,7 +168,7 @@ Drupal.behaviors.bible = {
 			  span.css('color', '#000000');
 			  span.css('background', 'lightblue');
 			  span.css('border-color', 'blue');
-			  span.css('border-width', '5px');  
+			  span.css('border-width', '5px');
 	      span.css('left', $(this).offset().left + $(this).width() + 5);
 	      span.css('top', $(this).offset().top);
 	    	span.show();
@@ -191,7 +191,7 @@ Drupal.behaviors.bible = {
 	    	$('#sntext').html('');
 			})
 		});
-		
+
 		$("img.note").each(function () {
 	   	$(this).hover(function(E) {
 	      for (i=0; i<6; i++) {
@@ -202,7 +202,7 @@ Drupal.behaviors.bible = {
 			  span.css('color', '#000000');
 			  span.css('background', 'yellow');
 			  span.css('border-color', 'orange');
-			  span.css('border-width', '5px');  
+			  span.css('border-width', '5px');
 	      span.css('left', $(this).offset().left + $(this).width() + 5);
 	      span.css('top', $(this).offset().top);
 	    	span.show();
@@ -226,7 +226,7 @@ Drupal.behaviors.bible = {
 	    	$('#sntext').html('');
 	    })
 		});
-		
+
 		$("input.selectall").each(function () {
 	    	$(this).click(function() {
 				var chk = $(this).attr("checked");
@@ -235,9 +235,8 @@ Drupal.behaviors.bible = {
 				})
 			})
 		});
-			
+
 	}
 };
 
 })(jQuery);
-

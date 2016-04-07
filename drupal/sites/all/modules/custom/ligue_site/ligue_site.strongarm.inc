@@ -128,6 +128,23 @@ function ligue_site_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__page';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'title' => array(
+          'weight' => '1',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__page'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'genpass_algorithm';
   $strongarm->value = 'user';
   $export['genpass_algorithm'] = $strongarm;
@@ -175,7 +192,7 @@ function ligue_site_strongarm() {
     'domain' => '',
     'prefix' => 'fr',
     'weight' => '-10',
-    'javascript' => '0bBWTXo7IBgl0j6lb3kZtVQXgE3TUbpIXZUb2yO7lyw',
+    'javascript' => 'DWez5lS2bW4AFMlBFuGcQW28Q7ryf56vNdju9COvKKo',
   );
   $export['language_default'] = $strongarm;
 

@@ -1,0 +1,6 @@
+{
+  "generator-toolbox": {
+    "bootstrapSass": true,
+    "bootstrap4": false
+  }
+}

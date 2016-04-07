@@ -10,7 +10,7 @@
 function ligue_site_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_article-comment_body'
+  // Exported field_instance: 'comment-comment_node_article-comment_body'.
   $field_instances['comment-comment_node_article-comment_body'] = array(
     'bundle' => 'comment_node_article',
     'default_value' => NULL,
@@ -43,7 +43,7 @@ function ligue_site_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'comment-comment_node_bible_text-comment_body'
+  // Exported field_instance: 'comment-comment_node_bible_text-comment_body'.
   $field_instances['comment-comment_node_bible_text-comment_body'] = array(
     'bundle' => 'comment_node_bible_text',
     'default_value' => NULL,
@@ -76,7 +76,7 @@ function ligue_site_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'comment-comment_node_lesson-comment_body'
+  // Exported field_instance: 'comment-comment_node_lesson-comment_body'.
   $field_instances['comment-comment_node_lesson-comment_body'] = array(
     'bundle' => 'comment_node_lesson',
     'default_value' => NULL,
@@ -109,7 +109,7 @@ function ligue_site_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'comment-comment_node_people-comment_body'
+  // Exported field_instance: 'comment-comment_node_people-comment_body'.
   $field_instances['comment-comment_node_people-comment_body'] = array(
     'bundle' => 'comment_node_people',
     'default_value' => NULL,
@@ -142,12 +142,12 @@ function ligue_site_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'file-image-field_file_image_alt_text'
+  // Exported field_instance: 'file-image-field_file_image_alt_text'.
   $field_instances['file-image-field_file_image_alt_text'] = array(
     'bundle' => 'image',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -193,12 +193,12 @@ function ligue_site_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'file-image-field_file_image_title_text'
+  // Exported field_instance: 'file-image-field_file_image_title_text'.
   $field_instances['file-image-field_file_image_title_text'] = array(
     'bundle' => 'image',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Title text attribute',
+    'description' => 'Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -244,7 +244,7 @@ function ligue_site_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-body'
+  // Exported field_instance: 'node-article-body'.
   $field_instances['node-article-body'] = array(
     'bundle' => 'article',
     'default_value' => NULL,
@@ -288,7 +288,7 @@ function ligue_site_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_image'
+  // Exported field_instance: 'node-article-field_image'.
   $field_instances['node-article-field_image'] = array(
     'bundle' => 'article',
     'deleted' => 0,
@@ -341,7 +341,7 @@ function ligue_site_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_tags'
+  // Exported field_instance: 'node-article-field_tags'.
   $field_instances['node-article-field_tags'] = array(
     'bundle' => 'article',
     'default_value' => NULL,
@@ -381,7 +381,7 @@ function ligue_site_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-bible_text-body'
+  // Exported field_instance: 'node-bible_text-body'.
   $field_instances['node-bible_text-body'] = array(
     'bundle' => 'bible_text',
     'default_value' => NULL,
@@ -426,7 +426,7 @@ function ligue_site_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-bible_text-field_order'
+  // Exported field_instance: 'node-bible_text-field_order'.
   $field_instances['node-bible_text-field_order'] = array(
     'bundle' => 'bible_text',
     'default_value' => NULL,
@@ -472,7 +472,7 @@ function ligue_site_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-bible_text-field_reference'
+  // Exported field_instance: 'node-bible_text-field_reference'.
   $field_instances['node-bible_text-field_reference'] = array(
     'bundle' => 'bible_text',
     'default_value' => NULL,
@@ -512,7 +512,7 @@ function ligue_site_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-body'
+  // Exported field_instance: 'node-page-body'.
   $field_instances['node-page-body'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -558,13 +558,14 @@ function ligue_site_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Alternative text is used by screen readers, search engines, and when the image cannot be loaded. By adding alt text you improve accessibility and search engine optimization.');
   t('Body');
   t('Comment');
   t('Description courte');
   t('Enter a comma-separated list of words to describe your content.');
   t('Image');
   t('Tags');
-  t('Title text attribute');
+  t('Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.');
   t('Titre');
   t('Upload an image to go with this article.');
   t('order');

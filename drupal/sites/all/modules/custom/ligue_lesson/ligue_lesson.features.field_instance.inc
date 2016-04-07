@@ -10,7 +10,8 @@
 function ligue_lesson_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'field_collection_item-field_activities-field_activity_type'
+  // Exported field_instance:
+  // 'field_collection_item-field_activities-field_activity_type'.
   $field_instances['field_collection_item-field_activities-field_activity_type'] = array(
     'bundle' => 'field_activities',
     'default_value' => NULL,
@@ -41,7 +42,8 @@ function ligue_lesson_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_activities-field_description'
+  // Exported field_instance:
+  // 'field_collection_item-field_activities-field_description'.
   $field_instances['field_collection_item-field_activities-field_description'] = array(
     'bundle' => 'field_activities',
     'default_value' => NULL,
@@ -78,7 +80,8 @@ Comment, avec quoi, pourquoi,…
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_activities-field_duration'
+  // Exported field_instance:
+  // 'field_collection_item-field_activities-field_duration'.
   $field_instances['field_collection_item-field_activities-field_duration'] = array(
     'bundle' => 'field_activities',
     'default_value' => array(
@@ -105,6 +108,7 @@ Comment, avec quoi, pourquoi,…
     'label' => 'Durée',
     'required' => 0,
     'settings' => array(
+      'default_description' => 1,
       'format' => 'h:mm',
       'user_register_form' => FALSE,
     ),
@@ -117,7 +121,8 @@ Comment, avec quoi, pourquoi,…
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_activities-field_lesson_stage'
+  // Exported field_instance:
+  // 'field_collection_item-field_activities-field_lesson_stage'.
   $field_instances['field_collection_item-field_activities-field_lesson_stage'] = array(
     'bundle' => 'field_activities',
     'default_value' => NULL,
@@ -148,7 +153,8 @@ Comment, avec quoi, pourquoi,…
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_activities-field_media'
+  // Exported field_instance:
+  // 'field_collection_item-field_activities-field_media'.
   $field_instances['field_collection_item-field_activities-field_media'] = array(
     'bundle' => 'field_activities',
     'deleted' => 0,
@@ -199,7 +205,8 @@ Comment, avec quoi, pourquoi,…
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_activities-field_title'
+  // Exported field_instance:
+  // 'field_collection_item-field_activities-field_title'.
   $field_instances['field_collection_item-field_activities-field_title'] = array(
     'bundle' => 'field_activities',
     'default_value' => NULL,
@@ -233,7 +240,7 @@ Comment, avec quoi, pourquoi,…
     ),
   );
 
-  // Exported field_instance: 'node-lesson-body'
+  // Exported field_instance: 'node-lesson-body'.
   $field_instances['node-lesson-body'] = array(
     'bundle' => 'lesson',
     'default_value' => NULL,
@@ -278,7 +285,7 @@ Comment, avec quoi, pourquoi,…
     ),
   );
 
-  // Exported field_instance: 'node-lesson-field_activities'
+  // Exported field_instance: 'node-lesson-field_activities'.
   $field_instances['node-lesson-field_activities'] = array(
     'bundle' => 'lesson',
     'default_value' => NULL,
@@ -321,7 +328,7 @@ Comment, avec quoi, pourquoi,…
     ),
   );
 
-  // Exported field_instance: 'node-lesson-field_goal'
+  // Exported field_instance: 'node-lesson-field_goal'.
   $field_instances['node-lesson-field_goal'] = array(
     'bundle' => 'lesson',
     'default_value' => NULL,
@@ -363,7 +370,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
     ),
   );
 
-  // Exported field_instance: 'node-lesson-field_locations'
+  // Exported field_instance: 'node-lesson-field_locations'.
   $field_instances['node-lesson-field_locations'] = array(
     'bundle' => 'lesson',
     'default_value' => NULL,
@@ -406,7 +413,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
     ),
   );
 
-  // Exported field_instance: 'node-lesson-field_peoples'
+  // Exported field_instance: 'node-lesson-field_peoples'.
   $field_instances['node-lesson-field_peoples'] = array(
     'bundle' => 'lesson',
     'default_value' => NULL,
@@ -449,7 +456,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
     ),
   );
 
-  // Exported field_instance: 'node-lesson-field_periods'
+  // Exported field_instance: 'node-lesson-field_periods'.
   $field_instances['node-lesson-field_periods'] = array(
     'bundle' => 'lesson',
     'default_value' => NULL,
@@ -488,7 +495,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
     ),
   );
 
-  // Exported field_instance: 'node-lesson-field_verses_key'
+  // Exported field_instance: 'node-lesson-field_verses_key'.
   $field_instances['node-lesson-field_verses_key'] = array(
     'bundle' => 'lesson',
     'default_value' => NULL,
@@ -530,7 +537,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     ),
   );
 
-  // Exported field_instance: 'node-lesson-field_verses_lesson'
+  // Exported field_instance: 'node-lesson-field_verses_lesson'.
   $field_instances['node-lesson-field_verses_lesson'] = array(
     'bundle' => 'lesson',
     'default_value' => NULL,
@@ -570,7 +577,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     ),
   );
 
-  // Exported field_instance: 'node-lesson-field_verses_week'
+  // Exported field_instance: 'node-lesson-field_verses_week'.
   $field_instances['node-lesson-field_verses_week'] = array(
     'bundle' => 'lesson',
     'default_value' => NULL,
@@ -610,7 +617,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     ),
   );
 
-  // Exported field_instance: 'node-lesson-field_week_number'
+  // Exported field_instance: 'node-lesson-field_week_number'.
   $field_instances['node-lesson-field_week_number'] = array(
     'bundle' => 'lesson',
     'default_value' => NULL,
@@ -656,7 +663,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     ),
   );
 
-  // Exported field_instance: 'node-lesson-field_year_number'
+  // Exported field_instance: 'node-lesson-field_year_number'.
   $field_instances['node-lesson-field_year_number'] = array(
     'bundle' => 'lesson',
     'default_value' => NULL,
@@ -693,7 +700,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     ),
   );
 
-  // Exported field_instance: 'node-location-body'
+  // Exported field_instance: 'node-location-body'.
   $field_instances['node-location-body'] = array(
     'bundle' => 'location',
     'default_value' => NULL,
@@ -737,7 +744,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     ),
   );
 
-  // Exported field_instance: 'node-location-field_location'
+  // Exported field_instance: 'node-location-field_location'.
   $field_instances['node-location-field_location'] = array(
     'bundle' => 'location',
     'default_value' => array(),
@@ -775,7 +782,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     ),
   );
 
-  // Exported field_instance: 'node-people-field_bio'
+  // Exported field_instance: 'node-people-field_bio'.
   $field_instances['node-people-field_bio'] = array(
     'bundle' => 'people',
     'default_value' => NULL,
@@ -815,7 +822,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     ),
   );
 
-  // Exported field_instance: 'node-people-field_birthdate'
+  // Exported field_instance: 'node-people-field_birthdate'.
   $field_instances['node-people-field_birthdate'] = array(
     'bundle' => 'people',
     'default_value' => NULL,
@@ -900,7 +907,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     ),
   );
 
-  // Exported field_instance: 'node-people-field_deathdate'
+  // Exported field_instance: 'node-people-field_deathdate'.
   $field_instances['node-people-field_deathdate'] = array(
     'bundle' => 'people',
     'default_value' => NULL,
@@ -985,7 +992,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     ),
   );
 
-  // Exported field_instance: 'node-people-field_is_approximative_birthdate'
+  // Exported field_instance: 'node-people-field_is_approximative_birthdate'.
   $field_instances['node-people-field_is_approximative_birthdate'] = array(
     'bundle' => 'people',
     'default_value' => array(
@@ -1028,7 +1035,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     ),
   );
 
-  // Exported field_instance: 'node-people-field_is_approximative_deathdate'
+  // Exported field_instance: 'node-people-field_is_approximative_deathdate'.
   $field_instances['node-people-field_is_approximative_deathdate'] = array(
     'bundle' => 'people',
     'default_value' => array(
@@ -1071,7 +1078,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     ),
   );
 
-  // Exported field_instance: 'node-people-field_media'
+  // Exported field_instance: 'node-people-field_media'.
   $field_instances['node-people-field_media'] = array(
     'bundle' => 'people',
     'deleted' => 0,
@@ -1127,7 +1134,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     ),
   );
 
-  // Exported field_instance: 'node-period-body'
+  // Exported field_instance: 'node-period-body'.
   $field_instances['node-period-body'] = array(
     'bundle' => 'period',
     'default_value' => NULL,
@@ -1171,7 +1178,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     ),
   );
 
-  // Exported field_instance: 'node-period-field_date_perdiod'
+  // Exported field_instance: 'node-period-field_date_perdiod'.
   $field_instances['node-period-field_date_perdiod'] = array(
     'bundle' => 'period',
     'default_value' => NULL,
@@ -1273,7 +1280,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     ),
   );
 
-  // Exported field_instance: 'node-period-field_date_start_end'
+  // Exported field_instance: 'node-period-field_date_start_end'.
   $field_instances['node-period-field_date_start_end'] = array(
     'bundle' => 'period',
     'deleted' => 0,
@@ -1288,6 +1295,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 1,

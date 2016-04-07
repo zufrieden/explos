@@ -10,7 +10,7 @@
 function ligue_site_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: access administration menu.
+  // Exported permission: 'access administration menu'.
   $permissions['access administration menu'] = array(
     'name' => 'access administration menu',
     'roles' => array(
@@ -21,7 +21,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'admin_menu',
   );
 
-  // Exported permission: access administration pages.
+  // Exported permission: 'access administration pages'.
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
     'roles' => array(
@@ -32,14 +32,14 @@ function ligue_site_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: access all views.
+  // Exported permission: 'access all views'.
   $permissions['access all views'] = array(
     'name' => 'access all views',
     'roles' => array(),
     'module' => 'views',
   );
 
-  // Exported permission: access backup and migrate.
+  // Exported permission: 'access backup and migrate'.
   $permissions['access backup and migrate'] = array(
     'name' => 'access backup and migrate',
     'roles' => array(
@@ -48,7 +48,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'backup_migrate',
   );
 
-  // Exported permission: access backup files.
+  // Exported permission: 'access backup files'.
   $permissions['access backup files'] = array(
     'name' => 'access backup files',
     'roles' => array(
@@ -57,7 +57,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'backup_migrate',
   );
 
-  // Exported permission: access bible content.
+  // Exported permission: 'access bible content'.
   $permissions['access bible content'] = array(
     'name' => 'access bible content',
     'roles' => array(
@@ -69,7 +69,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'bible',
   );
 
-  // Exported permission: access comments.
+  // Exported permission: 'access comments'.
   $permissions['access comments'] = array(
     'name' => 'access comments',
     'roles' => array(
@@ -80,7 +80,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'comment',
   );
 
-  // Exported permission: access content.
+  // Exported permission: 'access content'.
   $permissions['access content'] = array(
     'name' => 'access content',
     'roles' => array(
@@ -91,7 +91,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: access content overview.
+  // Exported permission: 'access content overview'.
   $permissions['access content overview'] = array(
     'name' => 'access content overview',
     'roles' => array(
@@ -101,7 +101,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: access contextual links.
+  // Exported permission: 'access contextual links'.
   $permissions['access contextual links'] = array(
     'name' => 'access contextual links',
     'roles' => array(
@@ -110,7 +110,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'contextual',
   );
 
-  // Exported permission: access site in maintenance mode.
+  // Exported permission: 'access site in maintenance mode'.
   $permissions['access site in maintenance mode'] = array(
     'name' => 'access site in maintenance mode',
     'roles' => array(
@@ -119,7 +119,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: access site reports.
+  // Exported permission: 'access site reports'.
   $permissions['access site reports'] = array(
     'name' => 'access site reports',
     'roles' => array(
@@ -128,7 +128,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: access user profiles.
+  // Exported permission: 'access user profiles'.
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
     'roles' => array(
@@ -139,7 +139,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: access workbench.
+  // Exported permission: 'access workbench'.
   $permissions['access workbench'] = array(
     'name' => 'access workbench',
     'roles' => array(
@@ -150,7 +150,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'workbench',
   );
 
-  // Exported permission: administer actions.
+  // Exported permission: 'administer actions'.
   $permissions['administer actions'] = array(
     'name' => 'administer actions',
     'roles' => array(
@@ -159,7 +159,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer backup and migrate.
+  // Exported permission: 'administer backup and migrate'.
   $permissions['administer backup and migrate'] = array(
     'name' => 'administer backup and migrate',
     'roles' => array(
@@ -168,7 +168,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'backup_migrate',
   );
 
-  // Exported permission: administer bible.
+  // Exported permission: 'administer bible'.
   $permissions['administer bible'] = array(
     'name' => 'administer bible',
     'roles' => array(
@@ -177,7 +177,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'bible',
   );
 
-  // Exported permission: administer blocks.
+  // Exported permission: 'administer blocks'.
   $permissions['administer blocks'] = array(
     'name' => 'administer blocks',
     'roles' => array(
@@ -186,7 +186,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'block',
   );
 
-  // Exported permission: administer comments.
+  // Exported permission: 'administer comments'.
   $permissions['administer comments'] = array(
     'name' => 'administer comments',
     'roles' => array(
@@ -195,7 +195,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'comment',
   );
 
-  // Exported permission: administer content types.
+  // Exported permission: 'administer content types'.
   $permissions['administer content types'] = array(
     'name' => 'administer content types',
     'roles' => array(
@@ -204,7 +204,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: administer features.
+  // Exported permission: 'administer features'.
   $permissions['administer features'] = array(
     'name' => 'administer features',
     'roles' => array(
@@ -213,7 +213,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'features',
   );
 
-  // Exported permission: administer field collections.
+  // Exported permission: 'administer field collections'.
   $permissions['administer field collections'] = array(
     'name' => 'administer field collections',
     'roles' => array(
@@ -222,7 +222,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'field_collection',
   );
 
-  // Exported permission: administer file types.
+  // Exported permission: 'administer file types'.
   $permissions['administer file types'] = array(
     'name' => 'administer file types',
     'roles' => array(
@@ -231,7 +231,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: administer files.
+  // Exported permission: 'administer files'.
   $permissions['administer files'] = array(
     'name' => 'administer files',
     'roles' => array(
@@ -241,7 +241,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: administer filters.
+  // Exported permission: 'administer filters'.
   $permissions['administer filters'] = array(
     'name' => 'administer filters',
     'roles' => array(
@@ -250,7 +250,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'filter',
   );
 
-  // Exported permission: administer image styles.
+  // Exported permission: 'administer image styles'.
   $permissions['administer image styles'] = array(
     'name' => 'administer image styles',
     'roles' => array(
@@ -259,7 +259,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'image',
   );
 
-  // Exported permission: administer imagecrop.
+  // Exported permission: 'administer imagecrop'.
   $permissions['administer imagecrop'] = array(
     'name' => 'administer imagecrop',
     'roles' => array(
@@ -268,7 +268,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'imagecrop',
   );
 
-  // Exported permission: administer languages.
+  // Exported permission: 'administer languages'.
   $permissions['administer languages'] = array(
     'name' => 'administer languages',
     'roles' => array(
@@ -277,7 +277,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'locale',
   );
 
-  // Exported permission: administer menu.
+  // Exported permission: 'administer menu'.
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
     'roles' => array(
@@ -287,7 +287,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'menu',
   );
 
-  // Exported permission: administer module filter.
+  // Exported permission: 'administer module filter'.
   $permissions['administer module filter'] = array(
     'name' => 'administer module filter',
     'roles' => array(
@@ -296,7 +296,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'module_filter',
   );
 
-  // Exported permission: administer modules.
+  // Exported permission: 'administer modules'.
   $permissions['administer modules'] = array(
     'name' => 'administer modules',
     'roles' => array(
@@ -305,7 +305,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer nodes.
+  // Exported permission: 'administer nodes'.
   $permissions['administer nodes'] = array(
     'name' => 'administer nodes',
     'roles' => array(
@@ -315,7 +315,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: administer permissions.
+  // Exported permission: 'administer permissions'.
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
     'roles' => array(
@@ -325,7 +325,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: administer search.
+  // Exported permission: 'administer search'.
   $permissions['administer search'] = array(
     'name' => 'administer search',
     'roles' => array(
@@ -334,7 +334,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'search',
   );
 
-  // Exported permission: administer site configuration.
+  // Exported permission: 'administer site configuration'.
   $permissions['administer site configuration'] = array(
     'name' => 'administer site configuration',
     'roles' => array(
@@ -343,7 +343,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer software updates.
+  // Exported permission: 'administer software updates'.
   $permissions['administer software updates'] = array(
     'name' => 'administer software updates',
     'roles' => array(
@@ -352,7 +352,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer taxonomy.
+  // Exported permission: 'administer taxonomy'.
   $permissions['administer taxonomy'] = array(
     'name' => 'administer taxonomy',
     'roles' => array(
@@ -362,7 +362,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
-  // Exported permission: administer themes.
+  // Exported permission: 'administer themes'.
   $permissions['administer themes'] = array(
     'name' => 'administer themes',
     'roles' => array(
@@ -371,7 +371,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: administer url aliases.
+  // Exported permission: 'administer url aliases'.
   $permissions['administer url aliases'] = array(
     'name' => 'administer url aliases',
     'roles' => array(
@@ -380,7 +380,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'path',
   );
 
-  // Exported permission: administer users.
+  // Exported permission: 'administer users'.
   $permissions['administer users'] = array(
     'name' => 'administer users',
     'roles' => array(
@@ -390,14 +390,14 @@ function ligue_site_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: administer views.
+  // Exported permission: 'administer views'.
   $permissions['administer views'] = array(
     'name' => 'administer views',
     'roles' => array(),
     'module' => 'views',
   );
 
-  // Exported permission: administer workbench.
+  // Exported permission: 'administer workbench'.
   $permissions['administer workbench'] = array(
     'name' => 'administer workbench',
     'roles' => array(
@@ -406,7 +406,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'workbench',
   );
 
-  // Exported permission: administer workbench moderation.
+  // Exported permission: 'administer workbench moderation'.
   $permissions['administer workbench moderation'] = array(
     'name' => 'administer workbench moderation',
     'roles' => array(
@@ -415,7 +415,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
-  // Exported permission: block IP addresses.
+  // Exported permission: 'block IP addresses'.
   $permissions['block IP addresses'] = array(
     'name' => 'block IP addresses',
     'roles' => array(
@@ -424,7 +424,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'system',
   );
 
-  // Exported permission: bypass file access.
+  // Exported permission: 'bypass file access'.
   $permissions['bypass file access'] = array(
     'name' => 'bypass file access',
     'roles' => array(
@@ -433,7 +433,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: bypass node access.
+  // Exported permission: 'bypass node access'.
   $permissions['bypass node access'] = array(
     'name' => 'bypass node access',
     'roles' => array(
@@ -443,7 +443,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: bypass workbench moderation.
+  // Exported permission: 'bypass workbench moderation'.
   $permissions['bypass workbench moderation'] = array(
     'name' => 'bypass workbench moderation',
     'roles' => array(
@@ -452,7 +452,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
-  // Exported permission: cancel account.
+  // Exported permission: 'cancel account'.
   $permissions['cancel account'] = array(
     'name' => 'cancel account',
     'roles' => array(
@@ -462,7 +462,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: change own username.
+  // Exported permission: 'change own username'.
   $permissions['change own username'] = array(
     'name' => 'change own username',
     'roles' => array(
@@ -473,7 +473,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: create article content.
+  // Exported permission: 'create article content'.
   $permissions['create article content'] = array(
     'name' => 'create article content',
     'roles' => array(
@@ -482,7 +482,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: create bible_text content.
+  // Exported permission: 'create bible_text content'.
   $permissions['create bible_text content'] = array(
     'name' => 'create bible_text content',
     'roles' => array(
@@ -491,7 +491,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: create files.
+  // Exported permission: 'create files'.
   $permissions['create files'] = array(
     'name' => 'create files',
     'roles' => array(
@@ -502,7 +502,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: create page content.
+  // Exported permission: 'create page content'.
   $permissions['create page content'] = array(
     'name' => 'create page content',
     'roles' => array(
@@ -511,7 +511,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: create url aliases.
+  // Exported permission: 'create url aliases'.
   $permissions['create url aliases'] = array(
     'name' => 'create url aliases',
     'roles' => array(
@@ -521,7 +521,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'path',
   );
 
-  // Exported permission: crop any image.
+  // Exported permission: 'crop any image'.
   $permissions['crop any image'] = array(
     'name' => 'crop any image',
     'roles' => array(
@@ -530,7 +530,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'imagecrop',
   );
 
-  // Exported permission: crop own images.
+  // Exported permission: 'crop own images'.
   $permissions['crop own images'] = array(
     'name' => 'crop own images',
     'roles' => array(
@@ -539,7 +539,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'imagecrop',
   );
 
-  // Exported permission: delete any article content.
+  // Exported permission: 'delete any article content'.
   $permissions['delete any article content'] = array(
     'name' => 'delete any article content',
     'roles' => array(
@@ -548,7 +548,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete any bible_text content.
+  // Exported permission: 'delete any bible_text content'.
   $permissions['delete any bible_text content'] = array(
     'name' => 'delete any bible_text content',
     'roles' => array(
@@ -557,17 +557,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete any files.
-  $permissions['delete any files'] = array(
-    'name' => 'delete any files',
-    'roles' => array(
-      'Manager' => 'Manager',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'file_entity',
-  );
-
-  // Exported permission: delete any page content.
+  // Exported permission: 'delete any page content'.
   $permissions['delete any page content'] = array(
     'name' => 'delete any page content',
     'roles' => array(
@@ -576,7 +566,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete backup files.
+  // Exported permission: 'delete backup files'.
   $permissions['delete backup files'] = array(
     'name' => 'delete backup files',
     'roles' => array(
@@ -585,7 +575,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'backup_migrate',
   );
 
-  // Exported permission: delete own article content.
+  // Exported permission: 'delete own article content'.
   $permissions['delete own article content'] = array(
     'name' => 'delete own article content',
     'roles' => array(
@@ -594,7 +584,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete own bible_text content.
+  // Exported permission: 'delete own bible_text content'.
   $permissions['delete own bible_text content'] = array(
     'name' => 'delete own bible_text content',
     'roles' => array(
@@ -603,18 +593,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete own files.
-  $permissions['delete own files'] = array(
-    'name' => 'delete own files',
-    'roles' => array(
-      'Manager' => 'Manager',
-      'Writer' => 'Writer',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'file_entity',
-  );
-
-  // Exported permission: delete own page content.
+  // Exported permission: 'delete own page content'.
   $permissions['delete own page content'] = array(
     'name' => 'delete own page content',
     'roles' => array(
@@ -623,7 +602,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete revisions.
+  // Exported permission: 'delete revisions'.
   $permissions['delete revisions'] = array(
     'name' => 'delete revisions',
     'roles' => array(
@@ -633,16 +612,16 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: delete terms in 1.
-  $permissions['delete terms in 1'] = array(
-    'name' => 'delete terms in 1',
+  // Exported permission: 'delete terms in tags'.
+  $permissions['delete terms in tags'] = array(
+    'name' => 'delete terms in tags',
     'roles' => array(
       'administrator' => 'administrator',
     ),
     'module' => 'taxonomy',
   );
 
-  // Exported permission: display drupal links.
+  // Exported permission: 'display drupal links'.
   $permissions['display drupal links'] = array(
     'name' => 'display drupal links',
     'roles' => array(
@@ -651,7 +630,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'admin_menu',
   );
 
-  // Exported permission: edit any article content.
+  // Exported permission: 'edit any article content'.
   $permissions['edit any article content'] = array(
     'name' => 'edit any article content',
     'roles' => array(
@@ -660,7 +639,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit any bible_text content.
+  // Exported permission: 'edit any bible_text content'.
   $permissions['edit any bible_text content'] = array(
     'name' => 'edit any bible_text content',
     'roles' => array(
@@ -669,17 +648,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit any files.
-  $permissions['edit any files'] = array(
-    'name' => 'edit any files',
-    'roles' => array(
-      'Manager' => 'Manager',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'file_entity',
-  );
-
-  // Exported permission: edit any page content.
+  // Exported permission: 'edit any page content'.
   $permissions['edit any page content'] = array(
     'name' => 'edit any page content',
     'roles' => array(
@@ -689,7 +658,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit own article content.
+  // Exported permission: 'edit own article content'.
   $permissions['edit own article content'] = array(
     'name' => 'edit own article content',
     'roles' => array(
@@ -698,7 +667,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit own bible_text content.
+  // Exported permission: 'edit own bible_text content'.
   $permissions['edit own bible_text content'] = array(
     'name' => 'edit own bible_text content',
     'roles' => array(
@@ -707,7 +676,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit own comments.
+  // Exported permission: 'edit own comments'.
   $permissions['edit own comments'] = array(
     'name' => 'edit own comments',
     'roles' => array(
@@ -717,18 +686,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'comment',
   );
 
-  // Exported permission: edit own files.
-  $permissions['edit own files'] = array(
-    'name' => 'edit own files',
-    'roles' => array(
-      'Manager' => 'Manager',
-      'Writer' => 'Writer',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'file_entity',
-  );
-
-  // Exported permission: edit own page content.
+  // Exported permission: 'edit own page content'.
   $permissions['edit own page content'] = array(
     'name' => 'edit own page content',
     'roles' => array(
@@ -738,16 +696,16 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit terms in 1.
-  $permissions['edit terms in 1'] = array(
-    'name' => 'edit terms in 1',
+  // Exported permission: 'edit terms in tags'.
+  $permissions['edit terms in tags'] = array(
+    'name' => 'edit terms in tags',
     'roles' => array(
       'administrator' => 'administrator',
     ),
     'module' => 'taxonomy',
   );
 
-  // Exported permission: flush caches.
+  // Exported permission: 'flush caches'.
   $permissions['flush caches'] = array(
     'name' => 'flush caches',
     'roles' => array(
@@ -757,17 +715,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'admin_menu',
   );
 
-  // Exported permission: import media.
-  $permissions['import media'] = array(
-    'name' => 'import media',
-    'roles' => array(
-      'Writer' => 'Writer',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'media',
-  );
-
-  // Exported permission: manage features.
+  // Exported permission: 'manage features'.
   $permissions['manage features'] = array(
     'name' => 'manage features',
     'roles' => array(
@@ -776,7 +724,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'features',
   );
 
-  // Exported permission: moderate content from draft to needs_review.
+  // Exported permission: 'moderate content from draft to needs_review'.
   $permissions['moderate content from draft to needs_review'] = array(
     'name' => 'moderate content from draft to needs_review',
     'roles' => array(
@@ -787,7 +735,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
-  // Exported permission: moderate content from needs_review to draft.
+  // Exported permission: 'moderate content from needs_review to draft'.
   $permissions['moderate content from needs_review to draft'] = array(
     'name' => 'moderate content from needs_review to draft',
     'roles' => array(
@@ -797,7 +745,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
-  // Exported permission: moderate content from needs_review to published.
+  // Exported permission: 'moderate content from needs_review to published'.
   $permissions['moderate content from needs_review to published'] = array(
     'name' => 'moderate content from needs_review to published',
     'roles' => array(
@@ -807,7 +755,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
-  // Exported permission: perform backup.
+  // Exported permission: 'perform backup'.
   $permissions['perform backup'] = array(
     'name' => 'perform backup',
     'roles' => array(
@@ -816,7 +764,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'backup_migrate',
   );
 
-  // Exported permission: post comments.
+  // Exported permission: 'post comments'.
   $permissions['post comments'] = array(
     'name' => 'post comments',
     'roles' => array(
@@ -826,7 +774,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'comment',
   );
 
-  // Exported permission: restore from backup.
+  // Exported permission: 'restore from backup'.
   $permissions['restore from backup'] = array(
     'name' => 'restore from backup',
     'roles' => array(
@@ -835,7 +783,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'backup_migrate',
   );
 
-  // Exported permission: revert revisions.
+  // Exported permission: 'revert revisions'.
   $permissions['revert revisions'] = array(
     'name' => 'revert revisions',
     'roles' => array(
@@ -845,7 +793,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: search content.
+  // Exported permission: 'search content'.
   $permissions['search content'] = array(
     'name' => 'search content',
     'roles' => array(
@@ -855,7 +803,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'search',
   );
 
-  // Exported permission: select account cancellation method.
+  // Exported permission: 'select account cancellation method'.
   $permissions['select account cancellation method'] = array(
     'name' => 'select account cancellation method',
     'roles' => array(
@@ -864,7 +812,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: skip comment approval.
+  // Exported permission: 'skip comment approval'.
   $permissions['skip comment approval'] = array(
     'name' => 'skip comment approval',
     'roles' => array(
@@ -874,7 +822,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'comment',
   );
 
-  // Exported permission: translate admin strings.
+  // Exported permission: 'translate admin strings'.
   $permissions['translate admin strings'] = array(
     'name' => 'translate admin strings',
     'roles' => array(
@@ -884,7 +832,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'i18n_string',
   );
 
-  // Exported permission: translate interface.
+  // Exported permission: 'translate interface'.
   $permissions['translate interface'] = array(
     'name' => 'translate interface',
     'roles' => array(
@@ -894,7 +842,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'locale',
   );
 
-  // Exported permission: translate user-defined strings.
+  // Exported permission: 'translate user-defined strings'.
   $permissions['translate user-defined strings'] = array(
     'name' => 'translate user-defined strings',
     'roles' => array(
@@ -904,7 +852,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'i18n_string',
   );
 
-  // Exported permission: unique_field_perm_admin.
+  // Exported permission: 'unique_field_perm_admin'.
   $permissions['unique_field_perm_admin'] = array(
     'name' => 'unique_field_perm_admin',
     'roles' => array(
@@ -913,7 +861,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'unique_field',
   );
 
-  // Exported permission: unique_field_perm_bypass.
+  // Exported permission: 'unique_field_perm_bypass'.
   $permissions['unique_field_perm_bypass'] = array(
     'name' => 'unique_field_perm_bypass',
     'roles' => array(
@@ -922,7 +870,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'unique_field',
   );
 
-  // Exported permission: use advanced search.
+  // Exported permission: 'use advanced search'.
   $permissions['use advanced search'] = array(
     'name' => 'use advanced search',
     'roles' => array(
@@ -932,7 +880,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'search',
   );
 
-  // Exported permission: use text format filtered_html.
+  // Exported permission: 'use text format filtered_html'.
   $permissions['use text format filtered_html'] = array(
     'name' => 'use text format filtered_html',
     'roles' => array(
@@ -942,7 +890,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'filter',
   );
 
-  // Exported permission: use text format full_html.
+  // Exported permission: 'use text format full_html'.
   $permissions['use text format full_html'] = array(
     'name' => 'use text format full_html',
     'roles' => array(
@@ -951,7 +899,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'filter',
   );
 
-  // Exported permission: use workbench_moderation my drafts tab.
+  // Exported permission: 'use workbench_moderation my drafts tab'.
   $permissions['use workbench_moderation my drafts tab'] = array(
     'name' => 'use workbench_moderation my drafts tab',
     'roles' => array(
@@ -962,7 +910,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
-  // Exported permission: use workbench_moderation needs review tab.
+  // Exported permission: 'use workbench_moderation needs review tab'.
   $permissions['use workbench_moderation needs review tab'] = array(
     'name' => 'use workbench_moderation needs review tab',
     'roles' => array(
@@ -973,7 +921,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
-  // Exported permission: view all unpublished content.
+  // Exported permission: 'view all unpublished content'.
   $permissions['view all unpublished content'] = array(
     'name' => 'view all unpublished content',
     'roles' => array(
@@ -984,7 +932,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
-  // Exported permission: view files.
+  // Exported permission: 'view files'.
   $permissions['view files'] = array(
     'name' => 'view files',
     'roles' => array(
@@ -995,7 +943,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: view moderation history.
+  // Exported permission: 'view moderation history'.
   $permissions['view moderation history'] = array(
     'name' => 'view moderation history',
     'roles' => array(
@@ -1006,7 +954,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
-  // Exported permission: view moderation messages.
+  // Exported permission: 'view moderation messages'.
   $permissions['view moderation messages'] = array(
     'name' => 'view moderation messages',
     'roles' => array(
@@ -1017,7 +965,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'workbench_moderation',
   );
 
-  // Exported permission: view own files.
+  // Exported permission: 'view own files'.
   $permissions['view own files'] = array(
     'name' => 'view own files',
     'roles' => array(
@@ -1028,7 +976,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: view own private files.
+  // Exported permission: 'view own private files'.
   $permissions['view own private files'] = array(
     'name' => 'view own private files',
     'roles' => array(
@@ -1039,7 +987,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'file_entity',
   );
 
-  // Exported permission: view own unpublished content.
+  // Exported permission: 'view own unpublished content'.
   $permissions['view own unpublished content'] = array(
     'name' => 'view own unpublished content',
     'roles' => array(
@@ -1049,7 +997,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: view revisions.
+  // Exported permission: 'view revisions'.
   $permissions['view revisions'] = array(
     'name' => 'view revisions',
     'roles' => array(
@@ -1059,7 +1007,7 @@ function ligue_site_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: view the administration theme.
+  // Exported permission: 'view the administration theme'.
   $permissions['view the administration theme'] = array(
     'name' => 'view the administration theme',
     'roles' => array(

@@ -10,7 +10,7 @@
 function ligue_lesson_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'body'
+  // Exported field_base: 'body'.
   $field_bases['body'] = array(
     'active' => 1,
     'cardinality' => 1,
@@ -19,14 +19,6 @@ function ligue_lesson_field_default_field_bases() {
       0 => 'node',
     ),
     'field_name' => 'body',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -39,15 +31,18 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'text_with_summary',
   );
 
-  // Exported field_base: 'field_activities'
+  // Exported field_base: 'field_activities'.
   $field_bases['field_activities'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_activities',
-    'foreign keys' => array(),
-    'indexes' => array(),
+    'indexes' => array(
+      'revision_id' => array(
+        0 => 'revision_id',
+      ),
+    ),
     'locked' => 0,
     'module' => 'field_collection',
     'settings' => array(
@@ -58,21 +53,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'field_collection',
   );
 
-  // Exported field_base: 'field_activity_type'
+  // Exported field_base: 'field_activity_type'.
   $field_bases['field_activity_type'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_activity_type',
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
-    ),
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
@@ -92,21 +79,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_bio'
+  // Exported field_base: 'field_bio'.
   $field_bases['field_bio'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_bio',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -119,14 +98,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_birthdate'
+  // Exported field_base: 'field_birthdate'.
   $field_bases['field_birthdate'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_birthdate',
-    'foreign keys' => array(),
     'indexes' => array(
       'timestamp' => array(
         0 => 'timestamp',
@@ -190,14 +168,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'partial_date',
   );
 
-  // Exported field_base: 'field_date_perdiod'
+  // Exported field_base: 'field_date_perdiod'.
   $field_bases['field_date_perdiod'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_date_perdiod',
-    'foreign keys' => array(),
     'indexes' => array(
       'timestamp' => array(
         0 => 'timestamp',
@@ -277,14 +254,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'partial_date_range',
   );
 
-  // Exported field_base: 'field_date_start_end'
+  // Exported field_base: 'field_date_start_end'.
   $field_bases['field_date_start_end'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_date_start_end',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'date',
@@ -307,14 +283,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'datetime',
   );
 
-  // Exported field_base: 'field_deathdate'
+  // Exported field_base: 'field_deathdate'.
   $field_bases['field_deathdate'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_deathdate',
-    'foreign keys' => array(),
     'indexes' => array(
       'timestamp' => array(
         0 => 'timestamp',
@@ -378,21 +353,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'partial_date',
   );
 
-  // Exported field_base: 'field_description'
+  // Exported field_base: 'field_description'.
   $field_bases['field_description'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_description',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -405,14 +372,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_duration'
+  // Exported field_base: 'field_duration'.
   $field_bases['field_duration'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_duration',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'hms_field',
@@ -421,21 +387,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'hms_field',
   );
 
-  // Exported field_base: 'field_goal'
+  // Exported field_base: 'field_goal'.
   $field_bases['field_goal'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_goal',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -448,14 +406,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'text_long',
   );
 
-  // Exported field_base: 'field_is_approximative_birthdate'
+  // Exported field_base: 'field_is_approximative_birthdate'.
   $field_bases['field_is_approximative_birthdate'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_is_approximative_birthdate',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -474,14 +431,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_is_approximative_deathdate'
+  // Exported field_base: 'field_is_approximative_deathdate'.
   $field_bases['field_is_approximative_deathdate'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_is_approximative_deathdate',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',
@@ -500,21 +456,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'list_boolean',
   );
 
-  // Exported field_base: 'field_lesson_stage'
+  // Exported field_base: 'field_lesson_stage'.
   $field_bases['field_lesson_stage'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_lesson_stage',
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
-    ),
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
@@ -534,14 +482,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_location'
+  // Exported field_base: 'field_location'.
   $field_bases['field_location'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_location',
-    'foreign keys' => array(),
     'indexes' => array(
       'bbox' => array(
         0 => 'top',
@@ -585,21 +532,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'geofield',
   );
 
-  // Exported field_base: 'field_locations'
+  // Exported field_base: 'field_locations'.
   $field_bases['field_locations'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_locations',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -630,21 +569,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_media'
+  // Exported field_base: 'field_media'.
   $field_bases['field_media'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_media',
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
-    ),
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -661,14 +592,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_order'
+  // Exported field_base: 'field_order'.
   $field_bases['field_order'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_order',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'number',
@@ -677,21 +607,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_peoples'
+  // Exported field_base: 'field_peoples'.
   $field_bases['field_peoples'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_peoples',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -722,21 +644,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_periods'
+  // Exported field_base: 'field_periods'.
   $field_bases['field_periods'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_periods',
-    'foreign keys' => array(
-      'node' => array(
-        'columns' => array(
-          'target_id' => 'nid',
-        ),
-        'table' => 'node',
-      ),
-    ),
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -767,21 +681,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_reference'
+  // Exported field_base: 'field_reference'.
   $field_bases['field_reference'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_reference',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -796,21 +702,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_title'
+  // Exported field_base: 'field_title'.
   $field_bases['field_title'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_title',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -825,14 +723,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_verses_key'
+  // Exported field_base: 'field_verses_key'.
   $field_bases['field_verses_key'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_verses_key',
-    'foreign keys' => array(),
     'indexes' => array(
       'book' => array(
         0 => 'book',
@@ -850,14 +747,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'bible__field_bible',
   );
 
-  // Exported field_base: 'field_verses_lesson'
+  // Exported field_base: 'field_verses_lesson'.
   $field_bases['field_verses_lesson'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_verses_lesson',
-    'foreign keys' => array(),
     'indexes' => array(
       'book' => array(
         0 => 'book',
@@ -875,14 +771,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'bible__field_bible',
   );
 
-  // Exported field_base: 'field_verses_week'
+  // Exported field_base: 'field_verses_week'.
   $field_bases['field_verses_week'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_verses_week',
-    'foreign keys' => array(),
     'indexes' => array(
       'book' => array(
         0 => 'book',
@@ -900,14 +795,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'bible__field_bible',
   );
 
-  // Exported field_base: 'field_week_number'
+  // Exported field_base: 'field_week_number'.
   $field_bases['field_week_number'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_week_number',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'number',
@@ -916,14 +810,13 @@ function ligue_lesson_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_year_number'
+  // Exported field_base: 'field_year_number'.
   $field_bases['field_year_number'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_year_number',
-    'foreign keys' => array(),
     'indexes' => array(
       'value' => array(
         0 => 'value',

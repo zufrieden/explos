@@ -78,7 +78,6 @@ features[filter][] = full_html
 features[filter][] = plain_text
 features[language][] = en
 features[language][] = fr
-features[menu_custom][] = main-menu
 features[node][] = article
 features[node][] = page
 features[taxonomy][] = tags

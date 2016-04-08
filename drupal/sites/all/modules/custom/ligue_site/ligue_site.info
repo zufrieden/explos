@@ -59,6 +59,7 @@ features[field_base][] = field_file_image_alt_text
 features[field_base][] = field_file_image_title_text
 features[field_base][] = field_image
 features[field_base][] = field_tags
+features[field_group][] = group_tab1|node|bible_text|form
 features[field_group][] = group_tab1|node|page|form
 features[field_instance][] = comment-comment_node_article-comment_body
 features[field_instance][] = comment-comment_node_bible_text-comment_body

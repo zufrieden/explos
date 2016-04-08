@@ -407,7 +407,7 @@ function ligue_site_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'body',
-    'label' => 'verse',
+    'label' => 'Verset',
     'required' => 0,
     'settings' => array(
       'display_summary' => 1,
@@ -422,7 +422,7 @@ function ligue_site_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => -4,
+      'weight' => 2,
     ),
   );
 
@@ -454,7 +454,7 @@ function ligue_site_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_order',
-    'label' => 'order',
+    'label' => 'Ordre',
     'required' => 0,
     'settings' => array(
       'max' => '',
@@ -468,7 +468,7 @@ function ligue_site_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => -2,
+      'weight' => 4,
     ),
   );
 
@@ -495,7 +495,7 @@ function ligue_site_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_reference',
-    'label' => 'reference',
+    'label' => 'Référence',
     'required' => 0,
     'settings' => array(
       'text_processing' => 0,
@@ -508,7 +508,7 @@ function ligue_site_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -3,
+      'weight' => 3,
     ),
   );
 
@@ -627,13 +627,13 @@ function ligue_site_field_default_field_instances() {
   t('Enter a comma-separated list of words to describe your content.');
   t('Image');
   t('Image de couverture');
+  t('Ordre');
+  t('Référence');
   t('Tags');
   t('Title text is used in the tool tip when a user hovers their mouse over the image. Adding title text makes it easier to understand the context of an image and improves usability.');
   t('Titre');
   t('Upload an image to go with this article.');
-  t('order');
-  t('reference');
-  t('verse');
+  t('Verset');
 
   return $field_instances;
 }

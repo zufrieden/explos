@@ -78,7 +78,7 @@ Comment, avec quoi, pourquoi,…
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 2,
     ),
   );
 
@@ -205,7 +205,7 @@ Comment, avec quoi, pourquoi,…
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 5,
+      'weight' => 4,
     ),
   );
 

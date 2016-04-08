@@ -40,9 +40,9 @@ function ligue_site_node_info() {
       'help' => '',
     ),
     'page' => array(
-      'name' => t('Basic page'),
+      'name' => t('Page basique'),
       'base' => 'node_content',
-      'description' => t('Use <em>basic pages</em> for your static content, such as an \'About us\' page.'),
+      'description' => '',
       'has_title' => '1',
       'title_label' => t('Titre'),
       'help' => '',

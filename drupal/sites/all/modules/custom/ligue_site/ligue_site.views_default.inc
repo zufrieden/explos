@@ -53,11 +53,11 @@ function ligue_site_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Nœud: Numéro du tome */
+  /* Field: Content: Numéro du tome */
   $handler->display->display_options['fields']['field_year_number']['id'] = 'field_year_number';
   $handler->display->display_options['fields']['field_year_number']['table'] = 'field_data_field_year_number';
   $handler->display->display_options['fields']['field_year_number']['field'] = 'field_year_number';
-  /* Field: Nœud: Numéro de la leçon */
+  /* Field: Content: Numéro de la leçon */
   $handler->display->display_options['fields']['field_week_number']['id'] = 'field_week_number';
   $handler->display->display_options['fields']['field_week_number']['table'] = 'field_data_field_week_number';
   $handler->display->display_options['fields']['field_week_number']['field'] = 'field_week_number';

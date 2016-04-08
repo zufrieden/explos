@@ -748,7 +748,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => -4,
+      'weight' => 2,
     ),
   );
 
@@ -786,7 +786,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
       'module' => 'geofield',
       'settings' => array(),
       'type' => 'geofield_latlon',
-      'weight' => -3,
+      'weight' => 3,
     ),
   );
 
@@ -826,7 +826,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
         'rows' => 3,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -911,7 +911,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
         'tz_handling' => 'none',
       ),
       'type' => 'partial_date',
-      'weight' => 1,
+      'weight' => 3,
     ),
   );
 
@@ -996,7 +996,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
         'tz_handling' => 'none',
       ),
       'type' => 'partial_date',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -1039,7 +1039,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 2,
+      'weight' => 4,
     ),
   );
 
@@ -1082,7 +1082,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -1138,7 +1138,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
         'progress_indicator' => 'throbber',
       ),
       'type' => 'media_generic',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -1182,7 +1182,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 2,
+      'weight' => 4,
     ),
   );
 
@@ -1284,13 +1284,14 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
         'tz_handling' => 'none',
       ),
       'type' => 'partial_date',
-      'weight' => 1,
+      'weight' => 3,
     ),
   );
 
   // Exported field_instance: 'node-period-field_date_start_end'.
   $field_instances['node-period-field_date_start_end'] = array(
     'bundle' => 'period',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1334,11 +1335,12 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
         'input_format' => 'd/m/Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
+        'no_fieldset' => 0,
         'text_parts' => array(),
         'year_range' => '-2000:+0',
       ),
       'type' => 'date_text',
-      'weight' => -3,
+      'weight' => 2,
     ),
   );
 

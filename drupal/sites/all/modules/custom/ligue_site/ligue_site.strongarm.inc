@@ -257,13 +257,13 @@ function ligue_site_strongarm() {
     'name' => 'French',
     'native' => 'Français',
     'direction' => '0',
-    'enabled' => 1,
+    'enabled' => '1',
     'plurals' => '2',
     'formula' => '($n!=1)',
     'domain' => '',
     'prefix' => 'fr',
     'weight' => '-10',
-    'javascript' => 'IhBy0x9fFIVLZ1S8O-zXeNF8voAsykQLJFbJV5Yf1Zc',
+    'javascript' => '4_gvryUaU1bdkMQ43KyTSzVVMWYSpfEi46OJaWw6yJs',
   );
   $export['language_default'] = $strongarm;
 

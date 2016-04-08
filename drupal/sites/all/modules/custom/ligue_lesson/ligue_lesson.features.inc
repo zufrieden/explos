@@ -45,7 +45,7 @@ function ligue_lesson_node_info() {
       'help' => '',
     ),
     'people' => array(
-      'name' => t('Personnes'),
+      'name' => t('Personne'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

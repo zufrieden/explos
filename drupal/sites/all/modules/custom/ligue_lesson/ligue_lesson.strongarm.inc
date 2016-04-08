@@ -348,7 +348,10 @@ function ligue_lesson_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '-5',
+          'weight' => '1',
+        ),
+        'path' => array(
+          'weight' => '4',
         ),
       ),
       'display' => array(),
@@ -365,7 +368,10 @@ function ligue_lesson_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '0',
+          'weight' => '1',
+        ),
+        'path' => array(
+          'weight' => '8',
         ),
       ),
       'display' => array(),
@@ -382,7 +388,10 @@ function ligue_lesson_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '0',
+          'weight' => '1',
+        ),
+        'path' => array(
+          'weight' => '5',
         ),
       ),
       'display' => array(),

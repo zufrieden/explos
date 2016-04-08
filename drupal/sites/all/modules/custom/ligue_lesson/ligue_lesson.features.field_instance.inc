@@ -36,7 +36,9 @@ function ligue_lesson_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
       'type' => 'options_select',
       'weight' => 2,
     ),
@@ -147,7 +149,9 @@ Comment, avec quoi, pourquoi,…
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
       'type' => 'options_select',
       'weight' => 1,
     ),
@@ -489,7 +493,9 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
       'type' => 'options_select',
       'weight' => 10,
     ),

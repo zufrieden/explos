@@ -46,27 +46,27 @@ function ligue_site_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
   $handler->display->display_options['style_plugin'] = 'grid';
   $handler->display->display_options['row_plugin'] = 'node';
-  /* Field: Contenu: Titre */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Contenu: Numéro du tome */
+  /* Field: Content: Numéro du tome */
   $handler->display->display_options['fields']['field_year_number']['id'] = 'field_year_number';
   $handler->display->display_options['fields']['field_year_number']['table'] = 'field_data_field_year_number';
   $handler->display->display_options['fields']['field_year_number']['field'] = 'field_year_number';
-  /* Field: Contenu: Numéro de la leçon */
+  /* Field: Content: Numéro de la leçon */
   $handler->display->display_options['fields']['field_week_number']['id'] = 'field_week_number';
   $handler->display->display_options['fields']['field_week_number']['table'] = 'field_data_field_week_number';
   $handler->display->display_options['fields']['field_week_number']['field'] = 'field_week_number';
-  /* Sort criterion: Contenu: Date de publication */
+  /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
   $handler->display->display_options['sorts']['created']['field'] = 'created';
   $handler->display->display_options['sorts']['created']['order'] = 'DESC';
-  /* Filter criterion: Contenu: Type */
+  /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';

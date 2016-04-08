@@ -1,4 +1,8 @@
 set :application,     "explos"
+
+# load custom recipes
+load 'config/recipes.rb'
+
 # Relative path to thedrupal path
 set :app_path,        "drupal"
 set :shared_children, ['drupal/sites/default/files']
@@ -22,8 +26,14 @@ set :download_drush, true
 role :app,           domain
 role :db,            domain
 
-# set  :keep_releases,   3
-# after "deploy:update", "deploy:cleanup" 
+set  :keep_releases,   3
+
+
+set :styleguide_path, 'drupal/sites/all/themes/ligue/build/'
+after "deploy:update_code", "styleguide:update"
+after "deploy:update_code", "styleguide:deploy_build"
+
+after "deploy:update", "deploy:cleanup"
 
 # Be more verbose by uncommenting the following line
 #logger.level = Logger::MAX_LEVEL

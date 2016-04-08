@@ -9,3 +9,5 @@ node_modules
 
 tests/regression/compare
 tests/regression/temp
+
+drupal/sites/all/themes/ligue/build

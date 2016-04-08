@@ -473,15 +473,6 @@ function ligue_site_user_default_permissions() {
     'module' => 'user',
   );
 
-  // Exported permission: 'create article content'.
-  $permissions['create article content'] = array(
-    'name' => 'create article content',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'create bible_text content'.
   $permissions['create bible_text content'] = array(
     'name' => 'create bible_text content',
@@ -539,15 +530,6 @@ function ligue_site_user_default_permissions() {
     'module' => 'imagecrop',
   );
 
-  // Exported permission: 'delete any article content'.
-  $permissions['delete any article content'] = array(
-    'name' => 'delete any article content',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'delete any bible_text content'.
   $permissions['delete any bible_text content'] = array(
     'name' => 'delete any bible_text content',
@@ -573,15 +555,6 @@ function ligue_site_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'backup_migrate',
-  );
-
-  // Exported permission: 'delete own article content'.
-  $permissions['delete own article content'] = array(
-    'name' => 'delete own article content',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
   );
 
   // Exported permission: 'delete own bible_text content'.
@@ -630,15 +603,6 @@ function ligue_site_user_default_permissions() {
     'module' => 'admin_menu',
   );
 
-  // Exported permission: 'edit any article content'.
-  $permissions['edit any article content'] = array(
-    'name' => 'edit any article content',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
   // Exported permission: 'edit any bible_text content'.
   $permissions['edit any bible_text content'] = array(
     'name' => 'edit any bible_text content',
@@ -653,15 +617,6 @@ function ligue_site_user_default_permissions() {
     'name' => 'edit any page content',
     'roles' => array(
       'Manager' => 'Manager',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'edit own article content'.
-  $permissions['edit own article content'] = array(
-    'name' => 'edit own article content',
-    'roles' => array(
       'administrator' => 'administrator',
     ),
     'module' => 'node',

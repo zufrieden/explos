@@ -23,6 +23,7 @@ dependencies[] = i18n_string
 dependencies[] = image
 dependencies[] = imagecrop
 dependencies[] = l10n_update
+dependencies[] = ligue_admin
 dependencies[] = ligue_lesson
 dependencies[] = locale
 dependencies[] = media

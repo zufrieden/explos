@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Admin for Ligue feature.
+ */
+
+include_once 'ligue_admin.features.inc';

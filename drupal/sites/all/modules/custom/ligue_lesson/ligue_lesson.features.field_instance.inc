@@ -281,7 +281,7 @@ Comment, avec quoi, pourquoi,…
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -366,7 +366,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -409,7 +409,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -452,7 +452,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -491,7 +491,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -533,7 +533,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
       'module' => 'bible__field',
       'settings' => array(),
       'type' => 'bible__field_dropdown',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -573,7 +573,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
       'module' => 'bible__field',
       'settings' => array(),
       'type' => 'bible__field_dropdown',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -613,7 +613,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
       'module' => 'bible__field',
       'settings' => array(),
       'type' => 'bible__field_dropdown',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 

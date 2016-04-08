@@ -281,11 +281,11 @@ Comment, avec quoi, pourquoi,…
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 20,
+        'rows' => 10,
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 11,
+      'weight' => 6,
     ),
   );
 
@@ -318,7 +318,7 @@ Comment, avec quoi, pourquoi,…
     ),
     'entity_type' => 'node',
     'field_name' => 'field_activities',
-    'label' => 'Activities',
+    'label' => 'Activités',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -328,7 +328,7 @@ Comment, avec quoi, pourquoi,…
       'module' => 'field_collection',
       'settings' => array(),
       'type' => 'field_collection_embed',
-      'weight' => 12,
+      'weight' => 6,
     ),
   );
 
@@ -360,7 +360,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
     'label' => 'Objectif',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -370,14 +370,14 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 15,
     ),
   );
 
   // Exported field_instance: 'node-lesson-field_locations'.
   $field_instances['node-lesson-field_locations'] = array(
     'bundle' => 'lesson',
-    'default_value' => NULL,
+    'default_value' => array(),
     'deleted' => 0,
     'description' => 'Indique le(s) différent(s) lieu(x) où se passe l’histoire.',
     'display' => array(
@@ -413,7 +413,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -456,7 +456,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -465,7 +465,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
     'bundle' => 'lesson',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indique la période dans laquelle se passe l’histoire. ',
+    'description' => 'Indique la (ou les) période dans laquelle se passe l’histoire. ',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -491,13 +491,13 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
-      'module' => 'options',
+      'active' => 0,
+      'module' => 'multiple_selects',
       'settings' => array(
-        'apply_chosen' => '',
+        'apply_chosen' => 1,
       ),
-      'type' => 'options_select',
-      'weight' => 10,
+      'type' => 'multiple_selects',
+      'weight' => 9,
     ),
   );
 
@@ -507,7 +507,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Indique le verset clé de la leçon, le verset à retenir !
-Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubrique « texte biblique ».
+Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubrique « textes bibliques ».
 ',
     'display' => array(
       'default' => array(
@@ -539,7 +539,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
       'module' => 'bible__field',
       'settings' => array(),
       'type' => 'bible__field_dropdown',
-      'weight' => 7,
+      'weight' => 18,
     ),
   );
 
@@ -579,7 +579,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
       'module' => 'bible__field',
       'settings' => array(),
       'type' => 'bible__field_dropdown',
-      'weight' => 6,
+      'weight' => 17,
     ),
   );
 
@@ -619,7 +619,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
       'module' => 'bible__field',
       'settings' => array(),
       'type' => 'bible__field_dropdown',
-      'weight' => 4,
+      'weight' => 16,
     ),
   );
 
@@ -665,7 +665,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 2,
+      'weight' => 15,
     ),
   );
 
@@ -674,7 +674,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     'bundle' => 'lesson',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indique le numéro de du tome',
+    'description' => 'Indique le numéro du tome',
     'display' => array(
       'default' => array(
         'label' => 'inline',
@@ -700,9 +700,11 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 1,
+      'settings' => array(
+        'apply_chosen' => '',
+      ),
+      'type' => 'options_select',
+      'weight' => 14,
     ),
   );
 
@@ -1342,7 +1344,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Activities');
+  t('Activités');
   t('Bio');
   t('Body');
   t('Corps de la leçon');
@@ -1365,11 +1367,11 @@ Comment, avec quoi, pourquoi,…
   t('Expliquer quel est l’objectif de la leçon.
 Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre aux enfants.
 ');
-  t('Indique la période dans laquelle se passe l’histoire. ');
-  t('Indique le numéro de du tome');
+  t('Indique la (ou les) période dans laquelle se passe l’histoire. ');
   t('Indique le numéro de la leçon, selon le lectionnaire. ');
+  t('Indique le numéro du tome');
   t('Indique le verset clé de la leçon, le verset à retenir !
-Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubrique « texte biblique ».
+Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubrique « textes bibliques ».
 ');
   t('Indique le(s) différent(s) lieu(x) où se passe l’histoire.');
   t('Indique le(s) passage(s) biblique(s) qui va(vont)  être thématiser dans la leçon.');

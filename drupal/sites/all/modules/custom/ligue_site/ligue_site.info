@@ -45,7 +45,6 @@ dependencies[] = workbench
 dependencies[] = workbench_moderation
 features[ckeditor_profile][] = Advanced
 features[ckeditor_profile][] = CKEditor Global Profile
-features[ckeditor_profile][] = Full
 features[context][] = ligue_lesson
 features[ctools][] = context:context:3
 features[ctools][] = field_group:field_group:1

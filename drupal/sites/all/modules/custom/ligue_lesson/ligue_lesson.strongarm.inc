@@ -328,7 +328,10 @@ function ligue_lesson_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '0',
+          'weight' => '13',
+        ),
+        'path' => array(
+          'weight' => '7',
         ),
       ),
       'display' => array(),

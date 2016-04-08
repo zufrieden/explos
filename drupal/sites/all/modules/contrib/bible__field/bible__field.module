@@ -84,10 +84,10 @@ function bible__field_field_settings_form($field, $instance, $has_data) {
   }
 
   $form['bible'] = array(
-    '#type' => 'select', 
-    '#title' => t('Bible'), 
-    '#default_value' => count($options) > 1 ? $settings['bible']: key($options), 
-    '#required' => TRUE, 
+    '#type' => 'select',
+    '#title' => t('Bible'),
+    '#default_value' => count($options) > 1 ? $settings['bible']: key($options),
+    '#required' => TRUE,
     '#options' => $options,
   );
 
@@ -103,7 +103,7 @@ function bible__field_field_settings_form($field, $instance, $has_data) {
   $form['granularity'] = array(
     '#type' => 'select',
     '#title' => t('Granularity'),
-    '#required' => TRUE, 
+    '#required' => TRUE,
     '#default_value' => $settings['granularity'],
     '#options' => array('book' => 'Book', 'chapter' => 'Chapter', 'verse' => 'Verse'),
     '#disabled' => $has_data,
@@ -159,9 +159,9 @@ function bible__field_field_widget_form(&$form, &$form_state, $field, $instance,
     '#prefix' => '<div class="bible--field-book">',
     '#suffix' => '</div>',
   );
- 
+
   if ($settings['granularity'] !== 'book') {
- 
+
     $element['chapter_range_start'] = array(
       '#type' => 'select',
       '#default_value' => isset($values['chapter_range_start']) ? $values['chapter_range_start'] : '',
@@ -169,7 +169,7 @@ function bible__field_field_widget_form(&$form, &$form_state, $field, $instance,
       '#prefix' => '<div class="bible--field-other">',
       '#suffix' => '</div>',
     );
- 
+
     if ($settings['granularity'] === 'verse') {
       $element['verse_range_start'] = array(
         '#type' => 'select',
@@ -179,14 +179,14 @@ function bible__field_field_widget_form(&$form, &$form_state, $field, $instance,
         '#suffix' => '</div>',
       );
     }
- 
+
     if (!empty($settings['showending'])) {
       $element['to'] = array(
         '#markup' => 'to',
         '#prefix' => '<div class="bible--field-other">',
         '#suffix' => '</div>',
       );
- 
+
       if ($settings['granularity'] !== 'book' && $settings['showending'] === 'chapter') {
         $element['chapter_range_end'] = array(
           '#type' => 'select',
@@ -196,7 +196,7 @@ function bible__field_field_widget_form(&$form, &$form_state, $field, $instance,
           '#suffix' => '</div>',
         );
       }
- 
+
       if ($settings['granularity'] === 'verse') {
         $element['verse_range_end'] = array(
           '#type' => 'select',
@@ -286,7 +286,8 @@ function bible__field_field_validate($entity_type, $entity, $field, $instance, $
         $item['chapter_range_end'] = $item['chapter_range_start'];
       }
 
-      if($item['verse_range_start'] > $item['verse_range_end']) {
+      // only do this validation if both chapters are the same, otherwise, it's pointless
+      if($item['chapter_range_start'] == $item['chapter_range_end'] && $item['verse_range_start'] > $item['verse_range_end']) {
         $errors[$field['field_name']][$langcode][$delta][] = array(
           'error' => 'bible__field_invalid',
           'message' => t('The ending verse must not be before the start verse.'),
@@ -348,9 +349,9 @@ function bible__field_field_formatter_settings_form($field, $instance, $view_mod
 
   if ($display['type'] == 'bible__field_ref_list') {
     $element['book_display'] = array(
-      '#title' => t('Book name format'), 
-      '#type' => 'select', 
-      '#default_value' => $settings['book_display'], 
+      '#title' => t('Book name format'),
+      '#type' => 'select',
+      '#default_value' => $settings['book_display'],
       '#options' => array('fname' => 'Full name', 'sname' => 'Short name'),
       '#required' => TRUE,
     );
@@ -363,9 +364,9 @@ function bible__field_field_formatter_settings_form($field, $instance, $view_mod
     }
 
     $element['granularity'] = array(
-      '#title' => t('Display granularity'), 
+      '#title' => t('Display granularity'),
       '#type' => 'select',
-      '#default_value' => $default_value, 
+      '#default_value' => $default_value,
       '#options' => bible__field_granularity($field['settings']['granularity']),
       '#disabled' => $field['settings']['granularity'] == 'book' ? TRUE : FALSE,
       '#required' => TRUE,
@@ -532,7 +533,7 @@ function bible__field_feeds_processor_targets_alter(&$targets, $entity_type, $bu
         'callback' => 'bible__field_feeds_map',
       );
     }
-  } 
+  }
 }
 
 function bible__field_feeds_map($source, $entity, $target, $feed_element) {
@@ -543,12 +544,12 @@ function bible__field_feeds_map($source, $entity, $target, $feed_element) {
 
   // break apart each verse in a comma seporated list
   $verses = explode(',', $feed_element);
-  
+
   // process each verse
   foreach ($verses as $i => $verse) {
     $verse_data = bible__field_verse_parser($field_info['settings']['bible'], $verse);
     // set valid data
-    if ($verse_data) $entity->{$target}['und'][$i] = $verse_data; 
+    if ($verse_data) $entity->{$target}['und'][$i] = $verse_data;
   }
 }
 

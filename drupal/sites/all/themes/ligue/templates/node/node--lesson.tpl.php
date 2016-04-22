@@ -80,37 +80,52 @@
  */
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <?php if ((!empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
+
   <header>
+    <?php print render($content['field_cover_image']); ?>
+
     <?php print render($title_prefix); ?>
-    <?php if (!$page && !empty($title)): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-    <?php endif; ?>
     <?php print render($title_suffix); ?>
-    <?php if ($display_submitted): ?>
-    <span class="submitted">
-      <?php print $user_picture; ?>
-      <?php print $submitted; ?>
-    </span>
-    <?php endif; ?>
+    <div class="header-flex">
+      <div>
+        <h1><?php print $title; ?></h1>
+        <h2><?php print t('Tome') . ' ' . render($content['field_year_number']) . ' / ' . t('Animation') . ' ' . render($content['field_week_number']) ?></h2>
+      </div>
+    </div>
+    <hr>
   </header>
-  <?php endif; ?>
 
-  <?php print render($content['field_cover_image']); ?>
+  <div class="row">
+    <div class="col-md-6">
 
-  <?php if ($page): ?>
-    <h1><?php print $title; ?></h1>
-    <?php print render($content['field_subtitle']); ?>
-  <?php endif ?>
+      <div class="well well-sm">
+        <h3 class="media-heading"><?php print t('Dans le livre'); ?></h3>
+        <?php
+          // the bible__field module is ugly, so we have to be ugly too. :(
+          unset($content['field_verses_week']['#title']);
+        ?>
+        <div class="row">
+          <div class="col-sm-6">
+            <h4>Versets de la semaine</h4>
+            <?php print render($content['field_verses_week']); ?>
+          </div>
+          <div class="col-sm-6">
+            (pages?)
+          </div>
+        </div>
+      </div>
 
-  <div<?php print $content_class; ?>>
-    <?php
-      // Hide comments, tags, and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
-      hide($content['field_tags']);
-      print render($content);
-    ?>
+      <?php
+        // Hide comments, tags, and links now so that we can render them later.
+        hide($content['comments']);
+        hide($content['links']);
+        hide($content['field_activities']);
+
+        print render($content); ?>
+    </div>
+    <div class="col-md-6">
+      <?php print render($content['field_activities']); ?>
+    </div>
   </div>
 
   <?php if (!empty($region['sidebar_second'])): ?>

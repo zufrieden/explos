@@ -34,7 +34,3 @@ function ligue_preprocess_node(&$variables) {
     }
   }
 }
-
-function ligue_preprocess_page(&$variables) {
-
-}

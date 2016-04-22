@@ -129,6 +129,7 @@ function ligue_site_views_default_views() {
     t('Numéro du tome'),
     t('Numéro de la leçon'),
     t('Block'),
+    t('more'),
   );
   $export['created_lesson'] = $view;
 

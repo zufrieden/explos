@@ -14,7 +14,7 @@ function ligue_site_ckeditor_profile_defaults() {
       'settings' => array(
         'ss' => 2,
         'toolbar' => '[
-    [\'Format\',\'Bold\',\'Italic\',\'-\',\'NumberedList\',\'BulletedList\',\'Blockquote\',\'-\',\'Link\',\'Unlink\',\'Image\',\'-\',\'HorizontalRule\',\'-\',\'Source\',\'Maximize\']
+    [\'Format\',\'Bold\',\'Italic\',\'-\',\'NumberedList\',\'BulletedList\',\'Blockquote\',\'-\',\'Link\',\'Unlink\',\'Image\',\'Enhanced Image\',\'-\',\'HorizontalRule\',\'-\',\'Source\',\'Maximize\']
 ]',
         'expand' => 't',
         'default' => 't',

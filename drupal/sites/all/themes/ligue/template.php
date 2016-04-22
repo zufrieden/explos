@@ -18,3 +18,23 @@ function ligue_block_view_alter(&$data, $block) {
     );
   }
 }
+
+function ligue_preprocess_node(&$variables) {
+  // make some regions available in the node template
+  if(($variables['node']->type == 'page') && $variables['page']) {
+    if ($reaction = context_get_plugin('reaction', 'block')) {
+      $variables['region']['sidebar_second'] = $reaction->block_get_blocks_by_region('sidebar_second');
+
+      if (!empty($variables['region']['sidebar_second'])) {
+        $variables['content_class'] = ' class="col-md-6"';
+      } else {
+        $variables['content_class'] = ' class="col-sm-12"';
+      }
+      drupal_static_reset('context_reaction_block_list');
+    }
+  }
+}
+
+function ligue_preprocess_page(&$variables) {
+
+}

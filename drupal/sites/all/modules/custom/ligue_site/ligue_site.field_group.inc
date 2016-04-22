@@ -54,8 +54,8 @@ function ligue_site_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'body',
-      1 => 'title',
-      2 => 'field_cover_image',
+      1 => 'field_cover_image',
+      2 => 'title_field',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

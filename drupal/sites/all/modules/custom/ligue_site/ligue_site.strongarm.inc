@@ -200,6 +200,9 @@ function ligue_site_strongarm() {
         'title' => array(
           'weight' => '1',
         ),
+        'path' => array(
+          'weight' => '30',
+        ),
       ),
       'display' => array(),
     ),

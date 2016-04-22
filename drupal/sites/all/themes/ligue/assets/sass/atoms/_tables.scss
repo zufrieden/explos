@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.table-striped {
+  @media screen and (max-width: $screen-xs-max) {
+    > tbody {
+      > tr {
+
+        &:nth-of-type(odd) {
+          background: none;
+        }
+        &:hover {
+          > td {
+            &.active {
+              background: none;
+            }
+          }
+        }
+
+        > td {
+          border: 0;
+
+          &.active {
+            background: none;
+          }
+        }
+      }
+    }
+  }
+}

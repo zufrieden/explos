@@ -6,7 +6,7 @@
   },
   "vendors": {
     "css": [
-      ""
+      "node_modules/tablesaw/dist/bare/tablesaw.bare.css"
     ],
     "js": [
       "node_modules/bootstrap-sass/assets/javascripts/bootstrap/affix.js",
@@ -20,7 +20,9 @@
       "node_modules/bootstrap-sass/assets/javascripts/bootstrap/popover.js",
       "node_modules/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js",
       "node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab.js",
-      "node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js"
+      "node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js",
+      "node_modules/tablesaw/dist/tablesaw.js",
+      "node_modules/tablesaw/dist/tablesaw-init.js"
     ],
     "fonts": [
       "node_modules/bootstrap-sass/assets/fonts/bootstrap/*",

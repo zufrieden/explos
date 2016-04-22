@@ -29,6 +29,7 @@
     "respond.js": "^1.4.2",
     "run-sequence": "~1.1.0",
     "slug": "^0.9.1",
+    "tablesaw": "^2.0.2",
     "toolbox-utils": "0.0.1",
     "yargs": "^3.8.0"
   },

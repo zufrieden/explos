@@ -24,6 +24,7 @@ regions[page_bottom]    = 'Page bottom'
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
+stylesheets[all][] = build/css/vendors.min.css
 stylesheets[all][] = build/css/main.css
 
 
@@ -31,6 +32,7 @@ stylesheets[all][] = build/css/main.css
 ;; Scripts
 ;;;;;;;;;;;;;;;;;;;;;
 
+scripts[] = 'build/js/vendors.min.js'
 scripts[] = 'build/js/main.js'
 
 ; Disable BootstrapCDN so the compiled LESS source files can be used.

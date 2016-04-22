@@ -221,4 +221,3 @@ features[variable][] = theme_seven_settings
 features[variable][] = user_admin_role
 features[variable][] = user_pictures
 features[variable][] = user_register
-features[views_view][] = created_lesson

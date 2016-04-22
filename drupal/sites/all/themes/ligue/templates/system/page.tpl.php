@@ -151,6 +151,7 @@
   </div>
 </div>
 
+<div class="spacer"></div>
 <footer class="footer bg-gray">
   <div class="container">
     <div class="spacer spacer-sm"></div>

@@ -114,11 +114,12 @@
         hide($content['comments']);
         hide($content['links']);
         hide($content['field_tags']);
-        hide($content['field_second_body']);
+        if (!empty($content['field_second_body'])) {
+          hide($content['field_second_body']);
+        }
         print render($content);
       ?>
     </div>
-
     <?php if (!empty($region['sidebar_second']) || !empty($content['field_second_body'])): ?>
       <div class="col-sm-6">
         <?php print render($content['field_second_body']); ?>

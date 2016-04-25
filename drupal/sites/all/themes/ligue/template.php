@@ -31,6 +31,8 @@ function ligue_preprocess_node(&$variables) {
       }
       drupal_static_reset('context_reaction_block_list');
     }
+  } elseif ($variables['page']) {
+    $variables['content_class'] = ' class="col-sm-12"';
   }
   if($variables['node']->type == 'lesson') {
     $variables['content']['links']['comment']['#links']['comment-add']['attributes']['class'][] = 'btn btn-info';

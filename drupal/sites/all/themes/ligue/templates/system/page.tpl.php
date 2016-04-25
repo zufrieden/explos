@@ -74,6 +74,7 @@
  */
 ?>
 <div class="wrapper">
+  <div class="spacer spacer-sm"></div>
   <header id="navbar" role="banner" class="header <?php print $navbar_classes; ?>">
     <div class="<?php print $container_class; ?>">
       <div class="navbar-header">

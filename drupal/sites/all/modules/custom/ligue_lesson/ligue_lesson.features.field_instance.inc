@@ -19,11 +19,11 @@ function ligue_lesson_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 6,
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -60,7 +60,7 @@ Comment, avec quoi, pourquoi,…
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -68,7 +68,7 @@ Comment, avec quoi, pourquoi,…
     'label' => 'Description',
     'required' => 0,
     'settings' => array(
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -95,14 +95,21 @@ Comment, avec quoi, pourquoi,…
     'description' => 'Estime le temps que va durer cette activité.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'hms_field',
         'settings' => array(
-          'format' => 'h:mm',
-          'leading_zero' => TRUE,
+          'display_formats' => array(
+            'd' => 0,
+            'h' => 'h',
+            'm' => 'm',
+            's' => 0,
+            'w' => 0,
+          ),
+          'last_separator' => ' et ',
+          'separator' => ', ',
         ),
-        'type' => 'hms_default_formatter',
-        'weight' => 2,
+        'type' => 'hms_natural_language_formatter',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -132,11 +139,11 @@ Comment, avec quoi, pourquoi,…
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 5,
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -169,7 +176,7 @@ Comment, avec quoi, pourquoi,…
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
-        'weight' => 7,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'field_collection_item',
@@ -218,10 +225,10 @@ Comment, avec quoi, pourquoi,…
     'description' => 'Donne le titre que va porter cette activité.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'text_plain',
         'weight' => 0,
       ),
     ),
@@ -256,7 +263,7 @@ Comment, avec quoi, pourquoi,…
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -270,7 +277,7 @@ Comment, avec quoi, pourquoi,…
     ),
     'entity_type' => 'node',
     'field_name' => 'body',
-    'label' => 'Corps de la leçon',
+    'label' => 'Déroulement de l\'animation',
     'required' => 0,
     'settings' => array(
       'display_summary' => 1,
@@ -332,6 +339,68 @@ Comment, avec quoi, pourquoi,…
     ),
   );
 
+  // Exported field_instance: 'node-lesson-field_cover_image'.
+  $field_instances['node-lesson-field_cover_image'] = array(
+    'bundle' => 'lesson',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'cover_image',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_cover_image',
+    'label' => 'Image de couverture',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'lessons',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '1200x300',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'upload' => 'upload',
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 14,
+    ),
+  );
+
   // Exported field_instance: 'node-lesson-field_goal'.
   $field_instances['node-lesson-field_goal'] = array(
     'bundle' => 'lesson',
@@ -346,7 +415,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -370,7 +439,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 15,
+      'weight' => 16,
     ),
   );
 
@@ -388,7 +457,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -431,7 +500,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 6,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -468,13 +537,13 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
     'description' => 'Indique la (ou les) période dans laquelle se passe l’histoire. ',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -511,14 +580,14 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
 ',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'bible__field',
         'settings' => array(
           'book_display' => 'fname',
           'granularity' => 'verse',
         ),
         'type' => 'bible__field_ref_list',
-        'weight' => 5,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -539,7 +608,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
       'module' => 'bible__field',
       'settings' => array(),
       'type' => 'bible__field_dropdown',
-      'weight' => 18,
+      'weight' => 19,
     ),
   );
 
@@ -551,7 +620,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     'description' => 'Indique le(s) passage(s) biblique(s) qui va(vont)  être thématiser dans la leçon.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'bible__field',
         'settings' => array(
           'book_display' => 'fname',
@@ -579,7 +648,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
       'module' => 'bible__field',
       'settings' => array(),
       'type' => 'bible__field_dropdown',
-      'weight' => 17,
+      'weight' => 18,
     ),
   );
 
@@ -591,14 +660,14 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     'description' => 'Selon le lectionnaire « les explorateurs ».',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'bible__field',
         'settings' => array(
           'book_display' => 'fname',
           'granularity' => 'verse',
         ),
         'type' => 'bible__field_ref_list',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -619,7 +688,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
       'module' => 'bible__field',
       'settings' => array(),
       'type' => 'bible__field_dropdown',
-      'weight' => 16,
+      'weight' => 17,
     ),
   );
 
@@ -631,7 +700,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     'description' => 'Indique le numéro de la leçon, selon le lectionnaire. ',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -640,7 +709,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
           'thousand_separator' => ' ',
         ),
         'type' => 'number_integer',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -677,11 +746,11 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     'description' => 'Indique le numéro du tome',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1349,7 +1418,6 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
   t('Activités');
   t('Bio');
   t('Body');
-  t('Corps de la leçon');
   t('C’est ici que tu vas indiquer ce qui va être fait pendant la leçon… il y aura plusieurs activités. Tu peux en ajouter autant qu’il faut en cliquant sous « ajouter un autre élément », sous la rubrique activités. Tu peux aussi les disposer dans l’ordre que tu veux via la petite étoile sur le côté droit.');
   t('C’est le corps de l’activité, la partie principale :
 Indique ce qui va se dire, se vivre,…
@@ -1364,11 +1432,13 @@ Comment, avec quoi, pourquoi,…
   t('Description');
   t('Donne le titre que va porter cette activité.');
   t('Durée');
+  t('Déroulement de l\'animation');
   t('Estime le temps que va durer cette activité.');
   t('Explique ici en une dizaine de phrases ce qui va être vécu durant la leçon, afin que l\'enseignant puisse avoir une idée globale de ce qu\'il devra préparer.');
   t('Expliquer quel est l’objectif de la leçon.
 Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre aux enfants.
 ');
+  t('Image de couverture');
   t('Indique la (ou les) période dans laquelle se passe l’histoire. ');
   t('Indique le numéro de la leçon, selon le lectionnaire. ');
   t('Indique le numéro du tome');

@@ -71,6 +71,7 @@ features[field_instance][] = file-image-field_file_image_title_text
 features[field_instance][] = node-bible_text-body
 features[field_instance][] = node-bible_text-field_order
 features[field_instance][] = node-bible_text-field_reference
+features[field_instance][] = node-lesson-field_cover_image
 features[field_instance][] = node-page-body
 features[field_instance][] = node-page-field_cover_image
 features[field_instance][] = node-page-field_subtitle

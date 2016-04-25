@@ -49,8 +49,21 @@ function ligue_site_context_default_contexts() {
   $context->name = 'ligue_lesson';
   $context->description = '';
   $context->tag = '';
-  $context->conditions = array();
-  $context->reactions = array();
+  $context->conditions = array(
+    'node' => array(
+      'values' => array(
+        'lesson' => 'lesson',
+      ),
+      'options' => array(
+        'node_form' => '0',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'menu' => array(
+      0 => 'main-menu:les-animations',
+    ),
+  );
   $context->condition_mode = 0;
   $export['ligue_lesson'] = $context;
 

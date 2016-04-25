@@ -90,7 +90,7 @@ function ligue_lesson_field_group_info() {
   $field_group->parent_name = 'group_tab1';
   $field_group->data = array(
     'label' => '',
-    'weight' => '14',
+    'weight' => '15',
     'children' => array(
       0 => 'field_week_number',
       1 => 'field_year_number',
@@ -194,7 +194,8 @@ function ligue_lesson_field_group_info() {
       2 => 'field_verses_lesson',
       3 => 'field_verses_week',
       4 => 'title',
-      5 => 'group_flex',
+      5 => 'field_cover_image',
+      6 => 'group_flex',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

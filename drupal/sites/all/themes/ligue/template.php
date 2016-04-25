@@ -37,8 +37,10 @@ function ligue_preprocess_node(&$variables) {
 
 function ligue_preprocess_field(&$variables) {
   $element = $variables['element'];
-  if ($element['#field_name'] == 'field_peoples') {
-    $variables['label'] = '' . $variables['label'];
+  if ($element['#bundle'] == 'lesson' && $element['#field_type'] == 'entityreference' && $element['#formatter'] == 'entityreference_label') {
+    foreach ($variables['items'] as $key => $item) {
+      $variables['items'][$key]['#markup'] = l($item['#markup'], 'node/' . $element['#items'][$key]['target_id'], array('attributes' => array('class' => 'btn btn-primary btn-xs')));
+    }
   }
 
   if ($element['#field_name'] == 'field_activity_type' || $element['#field_name'] == 'field_duration') {

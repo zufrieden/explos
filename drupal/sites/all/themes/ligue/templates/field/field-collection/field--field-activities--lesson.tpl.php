@@ -47,7 +47,7 @@
 ?>
 <div class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <?php if (!$label_hidden): ?>
-    <div class="field-label"<?php print $title_attributes; ?>><?php print $label ?>:&nbsp;</div>
+    <h3 class="field-label media-heading"<?php print $title_attributes; ?>><?php print $label ?></h3>
   <?php endif; ?>
   <div class="panel-group" id="activities-accordion" role="tablist" aria-multiselectable="true"<?php print $content_attributes; ?>>
     <?php foreach ($items as $delta => $item): ?>

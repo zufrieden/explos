@@ -13,6 +13,38 @@ function ligue_site_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
+  $context->name = 'contact';
+  $context->description = '';
+  $context->tag = 'specific';
+  $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        'contact' => 'contact',
+      ),
+    ),
+  );
+  $context->reactions = array(
+    'block' => array(
+      'blocks' => array(
+        'block-2' => array(
+          'module' => 'block',
+          'delta' => '2',
+          'region' => 'content_bottom',
+          'weight' => '-10',
+        ),
+      ),
+    ),
+  );
+  $context->condition_mode = 0;
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('specific');
+  $export['contact'] = $context;
+
+  $context = new stdClass();
+  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
+  $context->api_version = 3;
   $context->name = 'ligue_front';
   $context->description = 'For the homepage';
   $context->tag = 'specific';

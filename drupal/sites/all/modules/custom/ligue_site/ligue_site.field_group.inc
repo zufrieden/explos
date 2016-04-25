@@ -57,6 +57,7 @@ function ligue_site_field_group_info() {
       1 => 'field_cover_image',
       2 => 'title_field',
       3 => 'field_subtitle',
+      4 => 'field_second_body',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

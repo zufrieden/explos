@@ -1,6 +1,16 @@
 @charset "UTF-8";
 
 .table-striped {
+  .img-responsive {
+    display: inline;
+    max-width: none;
+  }
+  th {
+    a {
+      white-space: nowrap;
+    }
+  }
+
   @media screen and (max-width: $screen-xs-max) {
     > tbody {
       > tr {

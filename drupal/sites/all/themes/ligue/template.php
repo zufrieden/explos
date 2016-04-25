@@ -24,8 +24,7 @@ function ligue_preprocess_node(&$variables) {
   if(($variables['node']->type == 'page') && $variables['page']) {
     if ($reaction = context_get_plugin('reaction', 'block')) {
       $variables['region']['sidebar_second'] = $reaction->block_get_blocks_by_region('sidebar_second');
-
-      if (!empty($variables['region']['sidebar_second'])) {
+      if (!empty($variables['region']['sidebar_second']) || !empty($variables['field_second_body'])) {
         $variables['content_class'] = ' class="col-md-6"';
       } else {
         $variables['content_class'] = ' class="col-sm-12"';
@@ -92,4 +91,12 @@ function ligue_preprocess_comment(&$variables) {
   $variables['content']['links']['comment']['#links']['comment-reply']['attributes']['class'][] = 'btn btn-xs btn-default';
   $variables['content']['links']['comment']['#links']['comment-delete']['attributes']['class'][] = 'btn btn-xs btn-danger';
   $variables['content']['links']['comment']['#links']['comment-edit']['attributes']['class'][] = 'btn btn-xs btn-info';
+}
+
+
+/**
+ * Bootstrap theme wrapper function for the secondary menu links.
+ */
+function ligue_menu_tree__secondary(&$variables) {
+  return '<ul class="menu nav navbar-nav secondary navbar-right">' . $variables['tree'] . '</ul>';
 }

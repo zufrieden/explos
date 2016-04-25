@@ -80,7 +80,7 @@
  */
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <?php if ((!empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
+  <?php if (!empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
   <header>
     <?php print render($title_prefix); ?>
     <?php if (!$page && !empty($title)): ?>
@@ -97,27 +97,37 @@
   <?php endif; ?>
 
   <?php print render($content['field_cover_image']); ?>
-
   <?php if ($page): ?>
-    <h1><?php print $title; ?></h1>
-    <?php print render($content['field_subtitle']); ?>
+    <div class="row">
+      <div class="col-sm-12">
+        <h1><?php print $title; ?></h1>
+        <?php print render($content['field_subtitle']); ?>
+        <hr>
+      </div>
+    </div>
   <?php endif ?>
 
-  <div<?php print $content_class; ?>>
-    <?php
-      // Hide comments, tags, and links now so that we can render them later.
-      hide($content['comments']);
-      hide($content['links']);
-      hide($content['field_tags']);
-      print render($content);
-    ?>
-  </div>
+  <div class="row">
+    <div<?php print $content_class; ?>>
+      <?php
+        // Hide comments, tags, and links now so that we can render them later.
+        hide($content['comments']);
+        hide($content['links']);
+        hide($content['field_tags']);
+        hide($content['field_second_body']);
+        print render($content);
+      ?>
+    </div>
 
-  <?php if (!empty($region['sidebar_second'])): ?>
-    <aside class="col-sm-6" role="complementary">
-      <?php print render($region['sidebar_second']); ?>
-    </aside>  <!-- /#sidebar-second -->
-  <?php endif; ?>
+    <?php if (!empty($region['sidebar_second']) || !empty($content['field_second_body'])): ?>
+      <div class="col-sm-6">
+        <?php print render($content['field_second_body']); ?>
+        <aside role="complementary">
+          <?php print render($region['sidebar_second']); ?>
+        </aside>  <!-- /#sidebar-second -->
+      </div>
+    <?php endif; ?>
+  </div>
 
   <?php if (!empty($content['field_tags']) || !empty($content['links'])): ?>
   <footer>

@@ -6,7 +6,8 @@
   },
   "vendors": {
     "css": [
-      "node_modules/tablesaw/dist/bare/tablesaw.bare.css"
+      "node_modules/tablesaw/dist/bare/tablesaw.bare.css",
+      "node_modules/font-awesome/css/font-awesome.css"
     ],
     "js": [
       "node_modules/bootstrap-sass/assets/javascripts/bootstrap/affix.js",
@@ -26,6 +27,7 @@
     ],
     "fonts": [
       "node_modules/bootstrap-sass/assets/fonts/bootstrap/*",
+      "node_modules/font-awesome/fonts/*",
       "drupal/sites/all/themes/ligue/assets/fonts/*"
     ],
     "polyfills": [

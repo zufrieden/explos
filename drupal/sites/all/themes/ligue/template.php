@@ -34,3 +34,10 @@ function ligue_preprocess_node(&$variables) {
     }
   }
 }
+
+function ligue_preprocess_field($variables) {
+  $element = $variables['element'];
+  if ($element['#field_name'] == 'field_peoples') {
+    $variables['label'] = '' . $variables['label'];
+  }
+}

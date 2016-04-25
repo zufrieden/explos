@@ -27,6 +27,9 @@ regions[page_bottom]    = 'Page bottom'
 stylesheets[all][] = build/css/vendors.min.css
 stylesheets[all][] = build/css/main.css
 
+exclude[css][] = 'sites/all/modules/contrib/field_collection/field_collection.theme.css'
+exclude[css][] = 'modules/field/theme/field.css'
+
 
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Scripts

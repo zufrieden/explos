@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.panel-heading {
+  display: flex;
+  justify-content: space-between;
+
+  h4 {
+    margin-right: auto;
+  }
+
+  .flex-baseline {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+
+    + .flex-baseline {margin-left: 5px;}
+  }
+}
+

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+.field-label {
+  font-weight: bold;
+}
+
+.field-label-inline {
+  display: flex;
+  align-items: baseline;
+
+  .field-label {
+    float: left;
+    margin-right: 5px;
+  }
+}
+
+.field-name-field-duration {
+  white-space: nowrap;
+}

@@ -33,6 +33,10 @@ function ligue_preprocess_node(&$variables) {
       drupal_static_reset('context_reaction_block_list');
     }
   }
+  if($variables['node']->type == 'lesson') {
+    $variables['content']['links']['comment']['#links']['comment-add']['attributes']['class'][] = 'btn btn-info';
+  }
+
 }
 
 function ligue_preprocess_field(&$variables) {
@@ -72,4 +76,20 @@ function ligue_preprocess_field(&$variables) {
 function ligue_field_collection_view($variables) {
   $element = $variables['element'];
   return $element['#children'];
+}
+
+function ligue_preprocess_comment(&$variables) {
+  // Change the Permalink to display #1 instead of 'Permalink'
+  $comment = $variables['comment'];
+  $uri = entity_uri('comment', $comment);
+  $uri['options'] += array('attributes' => array(
+    'class' => 'permalink',
+    'rel' => 'bookmark',
+  ));
+  $variables['permalink'] = l('#' . $variables['id'], $uri['path'], $uri['options']);
+
+  // add classes to all actions buttons
+  $variables['content']['links']['comment']['#links']['comment-reply']['attributes']['class'][] = 'btn btn-xs btn-default';
+  $variables['content']['links']['comment']['#links']['comment-delete']['attributes']['class'][] = 'btn btn-xs btn-danger';
+  $variables['content']['links']['comment']['#links']['comment-edit']['attributes']['class'][] = 'btn btn-xs btn-info';
 }

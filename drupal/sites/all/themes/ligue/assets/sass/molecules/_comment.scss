@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.comment-by-viewer {
+  background: darken($well-bg, 5%);
+}
+
+.comment-wrapper {
+  .indented {
+    margin-left: 30px;
+  }
+}

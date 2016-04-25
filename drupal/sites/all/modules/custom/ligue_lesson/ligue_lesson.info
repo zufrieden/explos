@@ -77,7 +77,6 @@ features[field_instance][] = field_collection_item-field_activities-field_media
 features[field_instance][] = field_collection_item-field_activities-field_title
 features[field_instance][] = node-lesson-body
 features[field_instance][] = node-lesson-field_activities
-features[field_instance][] = node-lesson-field_cover_image
 features[field_instance][] = node-lesson-field_goal
 features[field_instance][] = node-lesson-field_locations
 features[field_instance][] = node-lesson-field_peoples

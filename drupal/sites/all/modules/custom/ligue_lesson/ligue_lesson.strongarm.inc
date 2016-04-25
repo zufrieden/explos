@@ -14,7 +14,7 @@ function ligue_lesson_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'additional_settings__active_tab_lesson';
-  $strongarm->value = 'edit-submission';
+  $strongarm->value = 'edit-comment';
   $export['additional_settings__active_tab_lesson'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -49,7 +49,7 @@ function ligue_lesson_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_default_mode_lesson';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['comment_default_mode_lesson'] = $strongarm;
 
   $strongarm = new stdClass();

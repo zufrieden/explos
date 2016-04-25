@@ -95,7 +95,7 @@ Comment, avec quoi, pourquoi,…
     'description' => 'Estime le temps que va durer cette activité.',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'hms_field',
         'settings' => array(
           'display_formats' => array(
@@ -336,68 +336,6 @@ Comment, avec quoi, pourquoi,…
       'settings' => array(),
       'type' => 'field_collection_embed',
       'weight' => 6,
-    ),
-  );
-
-  // Exported field_instance: 'node-lesson-field_cover_image'.
-  $field_instances['node-lesson-field_cover_image'] = array(
-    'bundle' => 'lesson',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => 'cover_image',
-        ),
-        'type' => 'image',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_cover_image',
-    'label' => 'Image de couverture',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'file_directory' => 'lessons',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '1200x300',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'media',
-      'settings' => array(
-        'allowed_schemes' => array(
-          'public' => 'public',
-        ),
-        'allowed_types' => array(
-          'audio' => 0,
-          'document' => 0,
-          'image' => 'image',
-          'video' => 0,
-        ),
-        'browser_plugins' => array(
-          'media_default--media_browser_1' => 'media_default--media_browser_1',
-          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
-          'upload' => 'upload',
-        ),
-      ),
-      'type' => 'media_generic',
-      'weight' => 14,
     ),
   );
 
@@ -1438,7 +1376,6 @@ Comment, avec quoi, pourquoi,…
   t('Expliquer quel est l’objectif de la leçon.
 Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre aux enfants.
 ');
-  t('Image de couverture');
   t('Indique la (ou les) période dans laquelle se passe l’histoire. ');
   t('Indique le numéro de la leçon, selon le lectionnaire. ');
   t('Indique le numéro du tome');

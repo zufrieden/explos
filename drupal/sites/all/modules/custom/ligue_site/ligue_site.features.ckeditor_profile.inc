@@ -91,7 +91,6 @@ function ligue_site_ckeditor_profile_defaults() {
       ),
       'input_formats' => array(
         'filtered_html' => 'Filtered HTML',
-        'full_html' => 'Full HTML',
       ),
     ),
     'CKEditor Global Profile' => array(

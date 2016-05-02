@@ -72,11 +72,12 @@
  *
  * @ingroup templates
  */
+$navbar_classes = str_replace('container ', '', $navbar_classes);
 ?>
 <div class="wrapper">
   <div class="spacer spacer-sm"></div>
-  <header id="navbar" role="banner" class="header <?php print $navbar_classes; ?>">
-    <div class="<?php print $container_class; ?>">
+  <header id="navbar" role="banner" class="header container">
+    <div class="<?php print $navbar_classes; ?>">
       <div class="navbar-header">
 
         <?php if (!empty($site_name)): ?>

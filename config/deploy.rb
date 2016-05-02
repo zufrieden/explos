@@ -34,6 +34,7 @@ after "deploy:update_code", "styleguide:update"
 after "deploy:update_code", "styleguide:deploy_build"
 
 after "deploy:update", "deploy:cleanup"
+before "deploy:cleanup", "hotfix:fix_permissions"
 
 # Be more verbose by uncommenting the following line
 #logger.level = Logger::MAX_LEVEL

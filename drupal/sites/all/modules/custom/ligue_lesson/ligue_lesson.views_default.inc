@@ -121,6 +121,101 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
+
+  /* Display: Lessons with person */
+  $handler = $view->new_display('block', 'Lessons with person', 'block_1');
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_peoples_target_id']['id'] = 'field_peoples_target_id';
+  $handler->display->display_options['relationships']['field_peoples_target_id']['table'] = 'field_data_field_peoples';
+  $handler->display->display_options['relationships']['field_peoples_target_id']['field'] = 'field_peoples_target_id';
+  $handler->display->display_options['relationships']['field_peoples_target_id']['label'] = 'Entité Contenu réferencée par field_peoples';
+  $handler->display->display_options['relationships']['field_peoples_target_id']['required'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Personnages (field_peoples) */
+  $handler->display->display_options['arguments']['field_peoples_target_id']['id'] = 'field_peoples_target_id';
+  $handler->display->display_options['arguments']['field_peoples_target_id']['table'] = 'field_data_field_peoples';
+  $handler->display->display_options['arguments']['field_peoples_target_id']['field'] = 'field_peoples_target_id';
+  $handler->display->display_options['arguments']['field_peoples_target_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_peoples_target_id']['exception']['title'] = 'Tout';
+  $handler->display->display_options['arguments']['field_peoples_target_id']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['field_peoples_target_id']['title'] = 'Les animations avec %1';
+  $handler->display->display_options['arguments']['field_peoples_target_id']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['field_peoples_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_peoples_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_peoples_target_id']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_peoples_target_id']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_peoples_target_id']['validate']['type'] = 'node';
+  $handler->display->display_options['arguments']['field_peoples_target_id']['validate_options']['types'] = array(
+    'people' => 'people',
+  );
+
+  /* Display: Lessons in location */
+  $handler = $view->new_display('block', 'Lessons in location', 'block_2');
+  $handler->display->display_options['defaults']['query'] = FALSE;
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_locations_target_id']['id'] = 'field_locations_target_id';
+  $handler->display->display_options['relationships']['field_locations_target_id']['table'] = 'field_data_field_locations';
+  $handler->display->display_options['relationships']['field_locations_target_id']['field'] = 'field_locations_target_id';
+  $handler->display->display_options['relationships']['field_locations_target_id']['label'] = 'Entité Contenu réferencée par field_locations';
+  $handler->display->display_options['relationships']['field_locations_target_id']['required'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Localisation (field_location) - proximity */
+  $handler->display->display_options['arguments']['field_geofield_distance']['id'] = 'field_geofield_distance';
+  $handler->display->display_options['arguments']['field_geofield_distance']['table'] = 'field_data_field_location';
+  $handler->display->display_options['arguments']['field_geofield_distance']['field'] = 'field_geofield_distance';
+  $handler->display->display_options['arguments']['field_geofield_distance']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_geofield_distance']['exception']['title'] = 'Tout';
+  $handler->display->display_options['arguments']['field_geofield_distance']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['field_geofield_distance']['title'] = 'Les animations en lien avec ce lieu';
+  $handler->display->display_options['arguments']['field_geofield_distance']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['field_geofield_distance']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_geofield_distance']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_geofield_distance']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_geofield_distance']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_geofield_distance']['validate']['type'] = 'node';
+  $handler->display->display_options['arguments']['field_geofield_distance']['validate_options']['types'] = array(
+    'location' => 'location',
+  );
+  $handler->display->display_options['arguments']['field_geofield_distance']['proximity'] = array(
+    'operation' => 'lt',
+    'default_radius' => '',
+    'radius_unit' => '6371',
+  );
+
+  /* Display: Lessons in period */
+  $handler = $view->new_display('block', 'Lessons in period', 'block_3');
+  $handler->display->display_options['defaults']['query'] = FALSE;
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_periods_target_id']['id'] = 'field_periods_target_id';
+  $handler->display->display_options['relationships']['field_periods_target_id']['table'] = 'field_data_field_periods';
+  $handler->display->display_options['relationships']['field_periods_target_id']['field'] = 'field_periods_target_id';
+  $handler->display->display_options['relationships']['field_periods_target_id']['label'] = 'Entité Contenu réferencée par field_periods';
+  $handler->display->display_options['relationships']['field_periods_target_id']['required'] = TRUE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Content: Périodes (field_periods) */
+  $handler->display->display_options['arguments']['field_periods_target_id']['id'] = 'field_periods_target_id';
+  $handler->display->display_options['arguments']['field_periods_target_id']['table'] = 'field_data_field_periods';
+  $handler->display->display_options['arguments']['field_periods_target_id']['field'] = 'field_periods_target_id';
+  $handler->display->display_options['arguments']['field_periods_target_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['field_periods_target_id']['exception']['title'] = 'Tout';
+  $handler->display->display_options['arguments']['field_periods_target_id']['title_enable'] = TRUE;
+  $handler->display->display_options['arguments']['field_periods_target_id']['title'] = 'Les animations se déroulant à cette période';
+  $handler->display->display_options['arguments']['field_periods_target_id']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['field_periods_target_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_periods_target_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_periods_target_id']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_periods_target_id']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['field_periods_target_id']['validate']['type'] = 'node';
+  $handler->display->display_options['arguments']['field_periods_target_id']['validate_options']['types'] = array(
+    'period' => 'period',
+  );
   $translatables['lessons'] = array(
     t('Master'),
     t('Les animations'),
@@ -142,6 +237,16 @@ function ligue_lesson_views_default_views() {
     t('Title'),
     t('Objectif'),
     t('Page - All Lessons'),
+    t('Lessons with person'),
+    t('Entité Contenu réferencée par field_peoples'),
+    t('Tout'),
+    t('Les animations avec %1'),
+    t('Lessons in location'),
+    t('Entité Contenu réferencée par field_locations'),
+    t('Les animations en lien avec ce lieu'),
+    t('Lessons in period'),
+    t('Entité Contenu réferencée par field_periods'),
+    t('Les animations se déroulant à cette période'),
   );
   $export['lessons'] = $view;
 

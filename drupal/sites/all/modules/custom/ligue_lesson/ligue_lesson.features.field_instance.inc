@@ -424,6 +424,98 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
     ),
   );
 
+  // Exported field_instance: 'node-lesson-field_pages_from'.
+  $field_instances['node-lesson-field_pages_from'] = array(
+    'bundle' => 'lesson',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_integer',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_pages_from',
+    'label' => 'Pages: De',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => 0,
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 20,
+    ),
+  );
+
+  // Exported field_instance: 'node-lesson-field_pages_to'.
+  $field_instances['node-lesson-field_pages_to'] = array(
+    'bundle' => 'lesson',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_integer',
+        'weight' => 13,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_pages_to',
+    'label' => 'À',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => 0,
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 21,
+    ),
+  );
+
   // Exported field_instance: 'node-lesson-field_peoples'.
   $field_instances['node-lesson-field_peoples'] = array(
     'bundle' => 'lesson',
@@ -1391,6 +1483,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
   t('Numéro de l\'animation');
   t('Numéro du tome');
   t('Objectif');
+  t('Pages: De');
   t('Personnages');
   t('Périodes');
   t('Selon le lectionnaire « les explorateurs ».');
@@ -1400,6 +1493,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
   t('Type');
   t('Versets de la semaine');
   t('Versets “clé”');
+  t('À');
   t('Étape');
 
   return $field_instances;

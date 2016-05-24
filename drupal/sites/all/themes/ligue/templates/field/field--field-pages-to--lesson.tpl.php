@@ -43,17 +43,7 @@
  *
  * @ingroup themeable
  */
-
 ?>
-<div class="<?php print $classes; ?>"<?php print $attributes; ?>>
-  <?php if (!$label_hidden): ?>
-    <h3 class="field-label"<?php print $title_attributes; ?>><?php print $label ?></h3>
-  <?php endif; ?>
-  <div class="panel-group" id="activities-accordion" role="tablist" aria-multiselectable="true"<?php print $content_attributes; ?>>
-    <?php foreach ($items as $delta => $item): ?>
-      <div class="panel panel-warning <?php print $classes; ?>"<?php print $attributes; ?>>
-        <?php print render($item); ?>
-      </div>
-    <?php endforeach; ?>
-  </div>
-</div>
+<?php foreach ($items as $delta => $item): ?>
+  <span class="text-lowercase"><?php print $label ?></span> <span class="field-item"<?php print $item_attributes[$delta]; ?>><?php print render($item); ?></span>
+<?php endforeach; ?>

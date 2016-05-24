@@ -98,40 +98,50 @@
   <div class="row">
     <div class="col-md-6">
 
-      <div class="panel panel-info">
-        <div class="panel-heading">
-          <h3 class="panel-title field-label"><?php print t('Dans le livre'); ?></h3>
-        </div>
-        <div class="panel-body">
-          <?php
-            // the bible__field module is ugly, so we have to be ugly too. :(
-            unset($content['field_verses_week']['#title']);
-            unset($content['field_verses_lesson']['#title']);
-            unset($content['field_verses_key']['#title']);
-          ?>
-          <div class="row">
-            <div class="col-sm-6">
-              <h4 class="h5 field-label media-heading"><?php print t('Versets de la semaine'); ?></h4>
-              <?php print render($content['field_verses_week']); ?>
-              <h4 class="h5 field-label media-heading"><?php print t('Textes bibliques'); ?></h4>
-              <?php print render($content['field_verses_lesson']); ?>
-              <h4 class="h5 field-label media-heading"><?php print t('Versets "clé"'); ?></h4>
-              <?php print render($content['field_verses_key']); ?>
-            </div>
-            <div class="col-sm-6">
-              (pages?)
-            </div>
-          </div>
-        </div>
-      </div>
-
       <?php
         // Hide comments, tags, and links now so that we can render them later.
         hide($content['comments']);
         hide($content['links']);
         hide($content['field_activities']);
+        hide($content['field_verses_week']);
+        hide($content['field_verses_lesson']);
+        hide($content['field_verses_key']);
+        hide($content['field_pages_to']);
+        hide($content['field_pages_from']);
 
         print render($content); ?>
+
+        <div class="spacer spacer-sm"></div>
+
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title field-label"><?php print t('Dans le livre'); ?></h3>
+          </div>
+          <div class="panel-body">
+            <?php
+              // the bible__field module is ugly, so we have to be ugly too. :(
+              unset($content['field_verses_week']['#title']);
+              unset($content['field_verses_lesson']['#title']);
+              unset($content['field_verses_key']['#title']);
+            ?>
+            <div class="row">
+              <div class="col-sm-6">
+                <h4 class="h5 field-label media-heading"><?php print t('Versets de la semaine'); ?></h4>
+                <?php print render($content['field_verses_week']); ?>
+                <h4 class="h5 field-label media-heading"><?php print t('Textes bibliques'); ?></h4>
+                <?php print render($content['field_verses_lesson']); ?>
+                <h4 class="h5 field-label media-heading"><?php print t('Versets "clé"'); ?></h4>
+                <?php print render($content['field_verses_key']); ?>
+              </div>
+              <div class="col-sm-6">
+                <?php if (!empty($content['field_pages_from'])): ?>
+                  <?php print t('Pages'); ?>
+                  <?php print render($content['field_pages_from']); ?>—<?php print render($content['field_pages_to']); ?>
+                <?php endif ?>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
     <div class="col-md-6">
       <?php print render($content['field_activities']); ?>

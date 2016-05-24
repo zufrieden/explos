@@ -106,8 +106,10 @@
         hide($content['field_verses_week']);
         hide($content['field_verses_lesson']);
         hide($content['field_verses_key']);
-        hide($content['field_pages_to']);
-        hide($content['field_pages_from']);
+        if (!empty($content['field_pages_from'])) {
+          hide($content['field_pages_to']);
+          hide($content['field_pages_from']);
+        }
 
         print render($content); ?>
 

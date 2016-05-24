@@ -44,7 +44,9 @@ function ligue_preprocess_field(&$variables) {
   $element = $variables['element'];
   if ($element['#bundle'] == 'lesson' && $element['#field_type'] == 'entityreference' && $element['#formatter'] == 'entityreference_label') {
     foreach ($variables['items'] as $key => $item) {
-      $variables['items'][$key]['#markup'] = l($item['#markup'], 'node/' . $element['#items'][$key]['target_id'], array('attributes' => array('class' => 'btn btn-primary btn-xs')));
+      // Temporary remove the link
+      // $variables['items'][$key]['#markup'] = l($item['#markup'], 'node/' . $element['#items'][$key]['target_id'], array('attributes' => array('class' => 'btn btn-primary btn-xs')));
+      $variables['items'][$key]['#markup'] = '<span class="label label-primary">' . $item['#markup'] . '</span>';
     }
   }
 

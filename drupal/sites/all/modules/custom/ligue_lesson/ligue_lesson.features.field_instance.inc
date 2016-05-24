@@ -256,7 +256,7 @@ Comment, avec quoi, pourquoi,…
     'bundle' => 'lesson',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Explique ici en une dizaine de phrases ce qui va être vécu durant la leçon, afin que l\'enseignant puisse avoir une idée globale de ce qu\'il devra préparer.',
+    'description' => 'Explique ici en une dizaine de phrases ce qui va être vécu durant l\'animation, afin que l\'enseignant puisse avoir une idée globale de ce qu\'il devra préparer.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -301,7 +301,7 @@ Comment, avec quoi, pourquoi,…
     'bundle' => 'lesson',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'C’est ici que tu vas indiquer ce qui va être fait pendant la leçon… il y aura plusieurs activités. Tu peux en ajouter autant qu’il faut en cliquant sous « ajouter un autre élément », sous la rubrique activités. Tu peux aussi les disposer dans l’ordre que tu veux via la petite étoile sur le côté droit.',
+    'description' => 'C’est ici que tu vas indiquer ce qui va être fait pendant l\'animation… il y aura plusieurs activités. Tu peux en ajouter autant qu’il faut en cliquant sous « ajouter un autre élément », sous la rubrique activités. Tu peux aussi les disposer dans l’ordre que tu veux via la petite étoile sur le côté droit.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -344,7 +344,7 @@ Comment, avec quoi, pourquoi,…
     'bundle' => 'lesson',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Expliquer quel est l’objectif de la leçon.
+    'description' => 'Expliquer quel est l’objectif de l\'animation.
 Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre aux enfants.
 ',
     'display' => array(
@@ -513,7 +513,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
     'bundle' => 'lesson',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indique le verset clé de la leçon, le verset à retenir !
+    'description' => 'Indique le verset clé de l\'animation, le verset à retenir !
 Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubrique « textes bibliques ».
 ',
     'display' => array(
@@ -555,7 +555,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     'bundle' => 'lesson',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indique le(s) passage(s) biblique(s) qui va(vont)  être thématiser dans la leçon.',
+    'description' => 'Indique le(s) passage(s) biblique(s) qui va(vont)  être thématiser dans l\'animation.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -635,7 +635,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     'bundle' => 'lesson',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Indique le numéro de la leçon, selon le lectionnaire. ',
+    'description' => 'Indique le numéro de l\'animation, selon le lectionnaire. ',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -658,7 +658,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     ),
     'entity_type' => 'node',
     'field_name' => 'field_week_number',
-    'label' => 'Numéro de la leçon',
+    'label' => 'Numéro de l\'animation',
     'required' => 0,
     'settings' => array(
       'max' => 30,
@@ -1356,7 +1356,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
   t('Activités');
   t('Bio');
   t('Body');
-  t('C’est ici que tu vas indiquer ce qui va être fait pendant la leçon… il y aura plusieurs activités. Tu peux en ajouter autant qu’il faut en cliquant sous « ajouter un autre élément », sous la rubrique activités. Tu peux aussi les disposer dans l’ordre que tu veux via la petite étoile sur le côté droit.');
+  t('C’est ici que tu vas indiquer ce qui va être fait pendant l\'animation… il y aura plusieurs activités. Tu peux en ajouter autant qu’il faut en cliquant sous « ajouter un autre élément », sous la rubrique activités. Tu peux aussi les disposer dans l’ordre que tu veux via la petite étoile sur le côté droit.');
   t('C’est le corps de l’activité, la partie principale :
 Indique ce qui va se dire, se vivre,…
 Comment, avec quoi, pourquoi,…
@@ -1372,23 +1372,23 @@ Comment, avec quoi, pourquoi,…
   t('Durée');
   t('Déroulement de l\'animation');
   t('Estime le temps que va durer cette activité.');
-  t('Explique ici en une dizaine de phrases ce qui va être vécu durant la leçon, afin que l\'enseignant puisse avoir une idée globale de ce qu\'il devra préparer.');
-  t('Expliquer quel est l’objectif de la leçon.
+  t('Explique ici en une dizaine de phrases ce qui va être vécu durant l\'animation, afin que l\'enseignant puisse avoir une idée globale de ce qu\'il devra préparer.');
+  t('Expliquer quel est l’objectif de l\'animation.
 Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre aux enfants.
 ');
   t('Indique la (ou les) période dans laquelle se passe l’histoire. ');
-  t('Indique le numéro de la leçon, selon le lectionnaire. ');
+  t('Indique le numéro de l\'animation, selon le lectionnaire. ');
   t('Indique le numéro du tome');
-  t('Indique le verset clé de la leçon, le verset à retenir !
+  t('Indique le verset clé de l\'animation, le verset à retenir !
 Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubrique « textes bibliques ».
 ');
   t('Indique le(s) différent(s) lieu(x) où se passe l’histoire.');
-  t('Indique le(s) passage(s) biblique(s) qui va(vont)  être thématiser dans la leçon.');
+  t('Indique le(s) passage(s) biblique(s) qui va(vont)  être thématiser dans l\'animation.');
   t('Indique les différents personnages principaux qui interviennent dans l’histoire.');
   t('Lieux');
   t('Localisation');
   t('Media');
-  t('Numéro de la leçon');
+  t('Numéro de l\'animation');
   t('Numéro du tome');
   t('Objectif');
   t('Personnages');

@@ -73,7 +73,7 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['fields']['field_year_number']['table'] = 'field_data_field_year_number';
   $handler->display->display_options['fields']['field_year_number']['field'] = 'field_year_number';
   $handler->display->display_options['fields']['field_year_number']['label'] = 'Tome';
-  /* Field: Content: Numéro de la leçon */
+  /* Field: Content: Numéro de l'animation */
   $handler->display->display_options['fields']['field_week_number']['id'] = 'field_week_number';
   $handler->display->display_options['fields']['field_week_number']['table'] = 'field_data_field_week_number';
   $handler->display->display_options['fields']['field_week_number']['field'] = 'field_week_number';

@@ -35,7 +35,7 @@ function ligue_lesson_views_api($module = NULL, $api = NULL) {
 function ligue_lesson_node_info() {
   $items = array(
     'lesson' => array(
-      'name' => t('Leçon'),
+      'name' => t('Animation'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

@@ -337,7 +337,7 @@ function ligue_lesson_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Détails leçon',
+    'label' => 'Détails animation',
     'weight' => '2',
     'children' => array(
       0 => 'body',
@@ -361,7 +361,7 @@ function ligue_lesson_field_group_info() {
   // Included for use with string extractors like potx.
   t('Activités');
   t('Contenu');
-  t('Détails leçon');
+  t('Détails animation');
   t('Image');
   t('Titre, Objectif et Versets');
 

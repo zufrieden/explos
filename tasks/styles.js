@@ -22,7 +22,7 @@ module.exports = function() {
    * Build styles from SCSS files
    * With error reporting on compiling (so that there's no crash)
    */
-  gulp.task('styles', function() {
+  return gulp.task('styles', function() {
     if (argv.production) { $.util.log('[styles] Production mode' ); }
     else { $.util.log('[styles] Dev mode'); }
 

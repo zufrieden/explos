@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
 // init:
-@import '../../node_modules/bootswatch/sandstone/variables';
+@import '../../../../../../../node_modules/bootswatch/sandstone/variables';
 @import 'main-variables';
 @import 'bootstrap';
-@import '../../node_modules/bootswatch/sandstone/bootswatch';
+@import '../../../../../../../node_modules/bootswatch/sandstone/bootswatch';
 
 @import 'helpers';
 @import 'drupal';

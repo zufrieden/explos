@@ -3,6 +3,7 @@ core = 7.x
 package = Features
 version = 7.x-1.0-beta1
 project = ligue_lesson
+dependencies[] = better_exposed_filters
 dependencies[] = bible__field
 dependencies[] = context
 dependencies[] = ctools

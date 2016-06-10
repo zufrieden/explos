@@ -44,6 +44,7 @@ dependencies[] = transliteration
 dependencies[] = unique_field
 dependencies[] = user
 dependencies[] = views
+dependencies[] = webform
 dependencies[] = workbench
 dependencies[] = workbench_moderation
 features[ckeditor_profile][] = Advanced

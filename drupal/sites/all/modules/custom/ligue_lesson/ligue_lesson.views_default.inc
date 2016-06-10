@@ -37,10 +37,10 @@ function ligue_lesson_views_default_views() {
     'title' => 'title',
     'field_goal' => 'field_goal',
   );
-  $handler->display->display_options['style_options']['default'] = 'field_year_number';
+  $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
     'field_year_number' => array(
-      'sortable' => 1,
+      'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
@@ -54,7 +54,7 @@ function ligue_lesson_views_default_views() {
       'empty_column' => 0,
     ),
     'title' => array(
-      'sortable' => 1,
+      'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
@@ -92,18 +92,20 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['fields']['field_goal']['id'] = 'field_goal';
   $handler->display->display_options['fields']['field_goal']['table'] = 'field_data_field_goal';
   $handler->display->display_options['fields']['field_goal']['field'] = 'field_goal';
-  /* Sort criterion: Content: Post date */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Sort criterion: Content: Numéro du tome (field_year_number) */
+  $handler->display->display_options['sorts']['field_year_number_value']['id'] = 'field_year_number_value';
+  $handler->display->display_options['sorts']['field_year_number_value']['table'] = 'field_data_field_year_number';
+  $handler->display->display_options['sorts']['field_year_number_value']['field'] = 'field_year_number_value';
+  /* Sort criterion: Content: Numéro de l&#039;animation (field_week_number) */
+  $handler->display->display_options['sorts']['field_week_number_value']['id'] = 'field_week_number_value';
+  $handler->display->display_options['sorts']['field_week_number_value']['table'] = 'field_data_field_week_number';
+  $handler->display->display_options['sorts']['field_week_number_value']['field'] = 'field_week_number_value';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['value'] = '1';
   $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -111,6 +113,7 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'lesson' => 'lesson',
   );
+  $handler->display->display_options['filters']['type']['group'] = 1;
 
   /* Display: Page - All Lessons */
   $handler = $view->new_display('page', 'Page - All Lessons', 'page');

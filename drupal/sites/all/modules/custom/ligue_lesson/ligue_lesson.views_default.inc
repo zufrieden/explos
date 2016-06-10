@@ -37,7 +37,7 @@ function ligue_lesson_views_default_views() {
     'title' => 'title',
     'field_goal' => 'field_goal',
   );
-  $handler->display->display_options['style_options']['default'] = 'field_week_number';
+  $handler->display->display_options['style_options']['default'] = 'field_year_number';
   $handler->display->display_options['style_options']['info'] = array(
     'field_year_number' => array(
       'sortable' => 1,
@@ -47,7 +47,7 @@ function ligue_lesson_views_default_views() {
       'empty_column' => 0,
     ),
     'field_week_number' => array(
-      'sortable' => 1,
+      'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',

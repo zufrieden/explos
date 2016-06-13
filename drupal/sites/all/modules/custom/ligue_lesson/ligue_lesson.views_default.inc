@@ -108,12 +108,20 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '20';
   $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'title',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
   $handler->display->display_options['style_options']['columns'] = array(
     'nid' => 'nid',
     'field_title' => 'field_title',
     'title' => 'title',
-    'field_year_number' => 'title',
-    'field_week_number' => 'title',
+    'field_duration' => 'field_duration',
+    'rendered_entity' => 'rendered_entity',
+    'field_lesson_stage' => 'field_lesson_stage',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
@@ -138,14 +146,19 @@ function ligue_lesson_views_default_views() {
       'separator' => ', ',
       'empty_column' => 0,
     ),
-    'field_year_number' => array(
+    'field_duration' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_week_number' => array(
+    'rendered_entity' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_lesson_stage' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -184,29 +197,28 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['relationship'] = 'field_activities_node';
   $handler->display->display_options['fields']['title']['label'] = 'Animation';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['text'] = '<a href="node/[nid]">[title]</a>';
-  /* Field: Content: Numéro du tome */
-  $handler->display->display_options['fields']['field_year_number']['id'] = 'field_year_number';
-  $handler->display->display_options['fields']['field_year_number']['table'] = 'field_data_field_year_number';
-  $handler->display->display_options['fields']['field_year_number']['field'] = 'field_year_number';
-  $handler->display->display_options['fields']['field_year_number']['relationship'] = 'field_activities_node';
-  $handler->display->display_options['fields']['field_year_number']['label'] = '';
-  $handler->display->display_options['fields']['field_year_number']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_year_number']['alter']['text'] = 'tome [field_year_number]';
-  $handler->display->display_options['fields']['field_year_number']['element_label_colon'] = FALSE;
-  /* Field: Content: Numéro de l'animation */
-  $handler->display->display_options['fields']['field_week_number']['id'] = 'field_week_number';
-  $handler->display->display_options['fields']['field_week_number']['table'] = 'field_data_field_week_number';
-  $handler->display->display_options['fields']['field_week_number']['field'] = 'field_week_number';
-  $handler->display->display_options['fields']['field_week_number']['relationship'] = 'field_activities_node';
-  $handler->display->display_options['fields']['field_week_number']['label'] = '';
-  $handler->display->display_options['fields']['field_week_number']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['field_week_number']['alter']['text'] = 'n° [field_week_number]';
-  $handler->display->display_options['fields']['field_week_number']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_week_number']['settings'] = array(
-    'thousand_separator' => '',
-    'prefix_suffix' => 1,
+  /* Field: Field collection item: Durée */
+  $handler->display->display_options['fields']['field_duration']['id'] = 'field_duration';
+  $handler->display->display_options['fields']['field_duration']['table'] = 'field_data_field_duration';
+  $handler->display->display_options['fields']['field_duration']['field'] = 'field_duration';
+  $handler->display->display_options['fields']['field_duration']['settings'] = array(
+    'format' => 'h:mm',
+    'leading_zero' => 1,
   );
+  /* Field: Field collection item: Rendered Field collection item */
+  $handler->display->display_options['fields']['rendered_entity']['id'] = 'rendered_entity';
+  $handler->display->display_options['fields']['rendered_entity']['table'] = 'views_entity_field_collection_item';
+  $handler->display->display_options['fields']['rendered_entity']['field'] = 'rendered_entity';
+  $handler->display->display_options['fields']['rendered_entity']['label'] = 'Type d\'entité Field collection item rendu';
+  $handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 0;
+  $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
+  /* Field: Field collection item: Étape */
+  $handler->display->display_options['fields']['field_lesson_stage']['id'] = 'field_lesson_stage';
+  $handler->display->display_options['fields']['field_lesson_stage']['table'] = 'field_data_field_lesson_stage';
+  $handler->display->display_options['fields']['field_lesson_stage']['field'] = 'field_lesson_stage';
   /* Sort criterion: Content: Numéro du tome (field_year_number) */
   $handler->display->display_options['sorts']['field_year_number_value']['id'] = 'field_year_number_value';
   $handler->display->display_options['sorts']['field_year_number_value']['table'] = 'field_data_field_year_number';
@@ -268,8 +280,9 @@ function ligue_lesson_views_default_views() {
     t('<a '),
     t('Animation'),
     t('<a href="node/[nid]">[title]</a>'),
-    t('tome [field_year_number]'),
-    t('n° [field_week_number]'),
+    t('Durée'),
+    t('Type d\'entité Field collection item rendu'),
+    t('Étape'),
     t('Tome'),
     t('Page'),
   );

@@ -104,3 +104,9 @@ function ligue_preprocess_comment(&$variables) {
 function ligue_menu_tree__secondary(&$variables) {
   return '<ul class="menu nav navbar-nav secondary navbar-right">' . $variables['tree'] . '</ul>';
 }
+
+function ligue_video_embed_handler_info_alter(&$info) {
+  foreach ($info as $service) {
+    $service['defaults']['class'] = 'embed-responsive-item';
+  }
+}

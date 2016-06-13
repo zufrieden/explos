@@ -740,7 +740,7 @@ function ligue_lesson_field_default_field_bases() {
     'locked' => 0,
     'module' => 'bible__field',
     'settings' => array(
-      'bible' => 1,
+      'bible' => 2,
       'book_display' => 'fname',
       'granularity' => 'verse',
       'showending' => 'chapter',
@@ -764,7 +764,7 @@ function ligue_lesson_field_default_field_bases() {
     'locked' => 0,
     'module' => 'bible__field',
     'settings' => array(
-      'bible' => 1,
+      'bible' => 2,
       'book_display' => 'fname',
       'granularity' => 'verse',
       'showending' => 'chapter',
@@ -788,7 +788,7 @@ function ligue_lesson_field_default_field_bases() {
     'locked' => 0,
     'module' => 'bible__field',
     'settings' => array(
-      'bible' => 1,
+      'bible' => 2,
       'book_display' => 'fname',
       'granularity' => 'verse',
       'showending' => 'chapter',

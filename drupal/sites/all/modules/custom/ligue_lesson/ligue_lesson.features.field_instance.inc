@@ -353,7 +353,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 3,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -565,7 +565,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
           'granularity' => 'verse',
         ),
         'type' => 'bible__field_ref_list',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -605,7 +605,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
           'granularity' => 'verse',
         ),
         'type' => 'bible__field_ref_list',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -646,7 +646,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
           'video_style' => 'normal',
         ),
         'type' => 'video_embed_field',
-        'weight' => 14,
+        'weight' => 12,
       ),
       'teaser' => array(
         'label' => 'above',

@@ -108,13 +108,26 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['pager']['options']['items_per_page'] = '20';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
+    'views_bulk_operations' => 'views_bulk_operations',
     'field_year_number' => 'field_year_number',
     'field_week_number' => 'field_week_number',
     'title' => 'title',
-    'field_goal' => 'field_goal',
+    'timestamp' => 'title',
+    'published' => 'published',
+    'changed' => 'changed',
+    'state' => 'state',
+    'moderation_actions' => 'moderation_actions',
+    'edit_node' => 'edit_node',
+    'delete_node' => 'delete_node',
+    'views_ctools_dropbutton' => 'views_ctools_dropbutton',
   );
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
+    'views_bulk_operations' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
     'field_year_number' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
@@ -133,12 +146,51 @@ function ligue_lesson_views_default_views() {
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
+      'separator' => ' - ',
+      'empty_column' => 0,
+    ),
+    'timestamp' => array(
+      'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_goal' => array(
+    'published' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'changed' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'state' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'moderation_actions' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'edit_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'delete_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'views_ctools_dropbutton' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -176,6 +228,10 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['sorts']['field_week_number_value']['id'] = 'field_week_number_value';
   $handler->display->display_options['sorts']['field_week_number_value']['table'] = 'field_data_field_week_number';
   $handler->display->display_options['sorts']['field_week_number_value']['field'] = 'field_week_number_value';
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -312,6 +368,311 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['arguments']['field_periods_target_id']['validate_options']['types'] = array(
     'period' => 'period',
   );
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page_admin_lessons');
+  $handler->display->display_options['defaults']['access'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['perm'] = 'access administration menu';
+  $handler->display->display_options['defaults']['query'] = FALSE;
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['distinct'] = TRUE;
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'views_bulk_operations' => 'views_bulk_operations',
+    'field_year_number' => 'field_year_number',
+    'field_week_number' => 'field_week_number',
+    'title' => 'title',
+    'timestamp' => 'title',
+    'published' => 'published',
+    'changed' => 'changed',
+    'state' => 'state',
+    'moderation_actions' => 'moderation_actions',
+    'edit_node' => 'edit_node',
+    'delete_node' => 'delete_node',
+    'views_ctools_dropbutton' => 'views_ctools_dropbutton',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'views_bulk_operations' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_year_number' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_week_number' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => ' - ',
+      'empty_column' => 0,
+    ),
+    'timestamp' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'published' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'changed' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'state' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'moderation_actions' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'edit_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'delete_node' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'views_ctools_dropbutton' => array(
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Bulk operations: Content */
+  $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
+  $handler->display->display_options['fields']['views_bulk_operations']['table'] = 'node';
+  $handler->display->display_options['fields']['views_bulk_operations']['field'] = 'views_bulk_operations';
+  $handler->display->display_options['fields']['views_bulk_operations']['label'] = '';
+  $handler->display->display_options['fields']['views_bulk_operations']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['display_type'] = '0';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['enable_select_all_pages'] = 1;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['row_clickable'] = 1;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['force_single'] = 0;
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_settings']['entity_load_capacity'] = '10';
+  $handler->display->display_options['fields']['views_bulk_operations']['vbo_operations'] = array(
+    'action::node_unpublish_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_save_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::node_publish_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+    'action::workbench_moderation_set_state_action' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 1,
+      'label' => 'Modérer',
+    ),
+    'action::views_bulk_operations_delete_item' => array(
+      'selected' => 1,
+      'postpone_processing' => 0,
+      'skip_confirmation' => 0,
+      'override_label' => 0,
+      'label' => '',
+    ),
+  );
+  /* Field: Content: Numéro du tome */
+  $handler->display->display_options['fields']['field_year_number']['id'] = 'field_year_number';
+  $handler->display->display_options['fields']['field_year_number']['table'] = 'field_data_field_year_number';
+  $handler->display->display_options['fields']['field_year_number']['field'] = 'field_year_number';
+  $handler->display->display_options['fields']['field_year_number']['label'] = 'Tome';
+  /* Field: Content: Numéro de l'animation */
+  $handler->display->display_options['fields']['field_week_number']['id'] = 'field_week_number';
+  $handler->display->display_options['fields']['field_week_number']['table'] = 'field_data_field_week_number';
+  $handler->display->display_options['fields']['field_week_number']['field'] = 'field_week_number';
+  $handler->display->display_options['fields']['field_week_number']['label'] = 'Numéro';
+  $handler->display->display_options['fields']['field_week_number']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Has new content */
+  $handler->display->display_options['fields']['timestamp']['id'] = 'timestamp';
+  $handler->display->display_options['fields']['timestamp']['table'] = 'history';
+  $handler->display->display_options['fields']['timestamp']['field'] = 'timestamp';
+  $handler->display->display_options['fields']['timestamp']['label'] = '';
+  $handler->display->display_options['fields']['timestamp']['element_label_colon'] = FALSE;
+  /* Field: Workbench Moderation: Published */
+  $handler->display->display_options['fields']['published']['id'] = 'published';
+  $handler->display->display_options['fields']['published']['table'] = 'workbench_moderation_node_history';
+  $handler->display->display_options['fields']['published']['field'] = 'published';
+  $handler->display->display_options['fields']['published']['label'] = 'Publié';
+  $handler->display->display_options['fields']['published']['not'] = 0;
+  /* Field: Content: Updated date */
+  $handler->display->display_options['fields']['changed']['id'] = 'changed';
+  $handler->display->display_options['fields']['changed']['table'] = 'node';
+  $handler->display->display_options['fields']['changed']['field'] = 'changed';
+  $handler->display->display_options['fields']['changed']['label'] = 'Mise à jour';
+  $handler->display->display_options['fields']['changed']['date_format'] = 'short';
+  $handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
+  /* Field: Workbench Moderation: State */
+  $handler->display->display_options['fields']['state']['id'] = 'state';
+  $handler->display->display_options['fields']['state']['table'] = 'workbench_moderation_node_history';
+  $handler->display->display_options['fields']['state']['field'] = 'state';
+  $handler->display->display_options['fields']['state']['label'] = 'État';
+  $handler->display->display_options['fields']['state']['machine_name'] = 0;
+  /* Field: Workbench Moderation: Moderation links */
+  $handler->display->display_options['fields']['moderation_actions']['id'] = 'moderation_actions';
+  $handler->display->display_options['fields']['moderation_actions']['table'] = 'workbench_moderation_node_history';
+  $handler->display->display_options['fields']['moderation_actions']['field'] = 'moderation_actions';
+  $handler->display->display_options['fields']['moderation_actions']['label'] = 'Modération';
+  /* Field: Content: Edit link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = 'Éditer';
+  $handler->display->display_options['fields']['edit_node']['exclude'] = TRUE;
+  /* Field: Content: Delete link */
+  $handler->display->display_options['fields']['delete_node']['id'] = 'delete_node';
+  $handler->display->display_options['fields']['delete_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['delete_node']['field'] = 'delete_node';
+  $handler->display->display_options['fields']['delete_node']['label'] = 'Supprimer';
+  $handler->display->display_options['fields']['delete_node']['exclude'] = TRUE;
+  /* Field: Global: Ctools dropbutton */
+  $handler->display->display_options['fields']['views_ctools_dropbutton']['id'] = 'views_ctools_dropbutton';
+  $handler->display->display_options['fields']['views_ctools_dropbutton']['table'] = 'views';
+  $handler->display->display_options['fields']['views_ctools_dropbutton']['field'] = 'views_ctools_dropbutton';
+  $handler->display->display_options['fields']['views_ctools_dropbutton']['label'] = 'Opérations';
+  $handler->display->display_options['fields']['views_ctools_dropbutton']['fields'] = array(
+    'edit_node' => 'edit_node',
+    'delete_node' => 'delete_node',
+    'views_bulk_operations' => 0,
+    'field_year_number' => 0,
+    'field_week_number' => 0,
+    'title' => 0,
+    'published' => 0,
+    'changed' => 0,
+    'state' => 0,
+    'moderation_actions' => 0,
+  );
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'lesson' => 'lesson',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: Content: Numéro du tome (field_year_number) */
+  $handler->display->display_options['filters']['field_year_number_value']['id'] = 'field_year_number_value';
+  $handler->display->display_options['filters']['field_year_number_value']['table'] = 'field_data_field_year_number';
+  $handler->display->display_options['filters']['field_year_number_value']['field'] = 'field_year_number_value';
+  $handler->display->display_options['filters']['field_year_number_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_year_number_value']['expose']['operator_id'] = 'field_year_number_value_op';
+  $handler->display->display_options['filters']['field_year_number_value']['expose']['label'] = 'Tome';
+  $handler->display->display_options['filters']['field_year_number_value']['expose']['operator'] = 'field_year_number_value_op';
+  $handler->display->display_options['filters']['field_year_number_value']['expose']['identifier'] = 'tome';
+  $handler->display->display_options['filters']['field_year_number_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+  );
+  $handler->display->display_options['filters']['field_year_number_value']['reduce_duplicates'] = TRUE;
+  /* Filter criterion: Workbench Moderation: Current */
+  $handler->display->display_options['filters']['is_current']['id'] = 'is_current';
+  $handler->display->display_options['filters']['is_current']['table'] = 'workbench_moderation_node_history';
+  $handler->display->display_options['filters']['is_current']['field'] = 'is_current';
+  $handler->display->display_options['filters']['is_current']['value'] = '1';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '0';
+  $handler->display->display_options['filters']['status']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['status']['expose']['operator_id'] = '';
+  $handler->display->display_options['filters']['status']['expose']['label'] = 'Publié';
+  $handler->display->display_options['filters']['status']['expose']['operator'] = 'status_op';
+  $handler->display->display_options['filters']['status']['expose']['identifier'] = 'status';
+  $handler->display->display_options['filters']['status']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+  );
+  /* Filter criterion: Workbench Moderation: State */
+  $handler->display->display_options['filters']['state']['id'] = 'state';
+  $handler->display->display_options['filters']['state']['table'] = 'workbench_moderation_node_history';
+  $handler->display->display_options['filters']['state']['field'] = 'state';
+  $handler->display->display_options['filters']['state']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['state']['expose']['operator_id'] = 'state_op';
+  $handler->display->display_options['filters']['state']['expose']['label'] = 'État';
+  $handler->display->display_options['filters']['state']['expose']['operator'] = 'state_op';
+  $handler->display->display_options['filters']['state']['expose']['identifier'] = 'state';
+  $handler->display->display_options['filters']['state']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+  );
+  $handler->display->display_options['path'] = 'admin/workbench/content/lessons';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Animations';
+  $handler->display->display_options['menu']['weight'] = '-10';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
+  $handler->display->display_options['tab_options']['title'] = 'Animations';
+  $handler->display->display_options['tab_options']['weight'] = '0';
   $translatables['lessons'] = array(
     t('Master'),
     t('Les animations'),
@@ -346,6 +707,16 @@ function ligue_lesson_views_default_views() {
     t('Lessons in period'),
     t('Entité Contenu réferencée par field_periods'),
     t('Les animations se déroulant à cette période'),
+    t('Page'),
+    t('- Choose an operation -'),
+    t('Modérer'),
+    t('Publié'),
+    t('Mise à jour'),
+    t('État'),
+    t('Modération'),
+    t('Éditer'),
+    t('Supprimer'),
+    t('Opérations'),
   );
   $export['lessons'] = $view;
 

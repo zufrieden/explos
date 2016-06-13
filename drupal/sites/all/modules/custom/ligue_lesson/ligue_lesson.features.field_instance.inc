@@ -292,7 +292,7 @@ Comment, avec quoi, pourquoi,…
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 6,
+      'weight' => 23,
     ),
   );
 
@@ -420,99 +420,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 8,
-    ),
-  );
-
-  // Exported field_instance: 'node-lesson-field_pages_from'.
-  $field_instances['node-lesson-field_pages_from'] = array(
-    'bundle' => 'lesson',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_integer',
-        'weight' => 12,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_pages_from',
-    'label' => 'Pages: De',
-    'required' => 0,
-    'settings' => array(
-      'max' => '',
-      'min' => 0,
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 20,
-    ),
-  );
-
-  // Exported field_instance: 'node-lesson-field_pages_to'.
-  $field_instances['node-lesson-field_pages_to'] = array(
-    'bundle' => 'lesson',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => '',
-        ),
-        'type' => 'number_integer',
-        'weight' => 13,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_pages_to',
-    'label' => 'À',
-    'required' => 0,
-    'settings' => array(
-      'max' => '',
-      'min' => 0,
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 21,
+      'weight' => 25,
     ),
   );
 
@@ -555,7 +463,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 7,
+      'weight' => 24,
     ),
   );
 
@@ -596,7 +504,7 @@ Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre a
         'apply_chosen' => 1,
       ),
       'type' => 'multiple_selects',
-      'weight' => 9,
+      'weight' => 26,
     ),
   );
 
@@ -719,6 +627,53 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
       'settings' => array(),
       'type' => 'bible__field_dropdown',
       'weight' => 17,
+    ),
+  );
+
+  // Exported field_instance: 'node-lesson-field_video'.
+  $field_instances['node-lesson-field_video'] = array(
+    'bundle' => 'lesson',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'video_embed_field',
+        'settings' => array(
+          'description' => 1,
+          'description_position' => 'bottom',
+          'video_style' => 'normal',
+        ),
+        'type' => 'video_embed_field',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_video',
+    'label' => 'Vidéo',
+    'required' => 0,
+    'settings' => array(
+      'allowed_providers' => array(
+        'vimeo' => 'vimeo',
+        'youtube' => 'youtube',
+      ),
+      'description_field' => 0,
+      'description_length' => 128,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'video_embed_field',
+      'settings' => array(),
+      'type' => 'video_embed_field_video',
+      'weight' => 22,
     ),
   );
 
@@ -1483,7 +1438,6 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
   t('Numéro de l\'animation');
   t('Numéro du tome');
   t('Objectif');
-  t('Pages: De');
   t('Personnages');
   t('Périodes');
   t('Selon le lectionnaire « les explorateurs ».');
@@ -1493,7 +1447,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
   t('Type');
   t('Versets de la semaine');
   t('Versets “clé”');
-  t('À');
+  t('Vidéo');
   t('Étape');
 
   return $field_instances;

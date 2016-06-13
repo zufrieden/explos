@@ -106,7 +106,17 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
   $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'filtered_html';
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '20';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '50';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Éléments par page';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Tout -';
+  $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Décalage';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« premier';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ précédent';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'suivant ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'dernier »';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['grouping'] = array(
     0 => array(
@@ -219,6 +229,17 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['fields']['field_lesson_stage']['id'] = 'field_lesson_stage';
   $handler->display->display_options['fields']['field_lesson_stage']['table'] = 'field_data_field_lesson_stage';
   $handler->display->display_options['fields']['field_lesson_stage']['field'] = 'field_lesson_stage';
+  /* Field: Field: Media */
+  $handler->display->display_options['fields']['field_media']['id'] = 'field_media';
+  $handler->display->display_options['fields']['field_media']['table'] = 'field_data_field_media';
+  $handler->display->display_options['fields']['field_media']['field'] = 'field_media';
+  $handler->display->display_options['fields']['field_media']['label'] = 'Média';
+  $handler->display->display_options['fields']['field_media']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_media']['type'] = 'file_table';
+  $handler->display->display_options['fields']['field_media']['settings'] = array(
+    'image_style' => 'thumbnail',
+  );
+  $handler->display->display_options['fields']['field_media']['delta_offset'] = '0';
   /* Sort criterion: Content: Numéro du tome (field_year_number) */
   $handler->display->display_options['sorts']['field_year_number_value']['id'] = 'field_year_number_value';
   $handler->display->display_options['sorts']['field_year_number_value']['table'] = 'field_data_field_year_number';
@@ -248,6 +269,38 @@ function ligue_lesson_views_default_views() {
     5 => 0,
   );
   $handler->display->display_options['filters']['field_year_number_value']['reduce_duplicates'] = TRUE;
+  /* Filter criterion: Field: Media (field_media:fid) */
+  $handler->display->display_options['filters']['field_media_fid']['id'] = 'field_media_fid';
+  $handler->display->display_options['filters']['field_media_fid']['table'] = 'field_data_field_media';
+  $handler->display->display_options['filters']['field_media_fid']['field'] = 'field_media_fid';
+  $handler->display->display_options['filters']['field_media_fid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_media_fid']['expose']['operator_id'] = 'field_media_fid_op';
+  $handler->display->display_options['filters']['field_media_fid']['expose']['label'] = 'Media (field_media:fid)';
+  $handler->display->display_options['filters']['field_media_fid']['expose']['operator'] = 'field_media_fid_op';
+  $handler->display->display_options['filters']['field_media_fid']['expose']['identifier'] = 'field_media_fid';
+  $handler->display->display_options['filters']['field_media_fid']['is_grouped'] = TRUE;
+  $handler->display->display_options['filters']['field_media_fid']['group_info']['label'] = 'Médias';
+  $handler->display->display_options['filters']['field_media_fid']['group_info']['identifier'] = 'medias';
+  $handler->display->display_options['filters']['field_media_fid']['group_info']['group_items'] = array(
+    1 => array(
+      'title' => 'Avec des médias',
+      'operator' => 'not empty',
+      'value' => array(
+        'value' => '#',
+        'min' => '',
+        'max' => '',
+      ),
+    ),
+    2 => array(
+      'title' => 'Sans médias',
+      'operator' => 'empty',
+      'value' => array(
+        'value' => '#',
+        'min' => '',
+        'max' => '',
+      ),
+    ),
+  );
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -268,13 +321,13 @@ function ligue_lesson_views_default_views() {
     t('Desc'),
     t('Options avancées'),
     t('Select any filter and click on Apply to see results'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
+    t('Éléments par page'),
+    t('- Tout -'),
+    t('Décalage'),
+    t('« premier'),
+    t('‹ précédent'),
+    t('suivant ›'),
+    t('dernier »'),
     t('field_activities'),
     t('Activité'),
     t('<a '),
@@ -283,7 +336,10 @@ function ligue_lesson_views_default_views() {
     t('Durée'),
     t('Type d\'entité Field collection item rendu'),
     t('Étape'),
+    t('Média'),
     t('Tome'),
+    t('Media (field_media:fid)'),
+    t('Médias'),
     t('Page'),
   );
   $export['activites'] = $view;

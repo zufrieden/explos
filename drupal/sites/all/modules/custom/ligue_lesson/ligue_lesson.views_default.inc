@@ -11,6 +11,271 @@ function ligue_lesson_views_default_views() {
   $export = array();
 
   $view = new view();
+  $view->name = 'activites';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'field_collection_item';
+  $view->human_name = 'Activités';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Activités';
+  $handler->display->display_options['use_more_always'] = FALSE;
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['perm'] = 'access administration menu';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Appliquer';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Réinitialiser';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Trier par';
+  $handler->display->display_options['exposed_form']['options']['expose_sort_order'] = FALSE;
+  $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'allow_secondary' => 0,
+      'secondary_label' => 'Options avancées',
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
+    'field_year_number_value' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+            'secondary_label' => NULL,
+            'collapsible_label' => NULL,
+            'combine_rewrite' => NULL,
+            'reset_label' => NULL,
+            'bef_filter_description' => NULL,
+            'any_label' => NULL,
+            'filter_rewrite_values' => NULL,
+          ),
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+          'filter_rewrite_values' => NULL,
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+          'secondary_label' => NULL,
+          'collapsible_label' => NULL,
+          'combine_rewrite' => NULL,
+          'reset_label' => NULL,
+          'bef_filter_description' => NULL,
+          'any_label' => NULL,
+        ),
+        'secondary_label' => NULL,
+        'collapsible_label' => NULL,
+        'combine_rewrite' => NULL,
+        'reset_label' => NULL,
+        'filter_rewrite_values' => NULL,
+      ),
+      'secondary_label' => NULL,
+      'collapsible_label' => NULL,
+      'combine_rewrite' => NULL,
+      'reset_label' => NULL,
+      'bef_filter_description' => NULL,
+      'any_label' => NULL,
+      'filter_rewrite_values' => NULL,
+    ),
+    'secondary_label' => NULL,
+    'collapsible_label' => NULL,
+    'combine_rewrite' => NULL,
+    'reset_label' => NULL,
+    'bef_filter_description' => NULL,
+    'any_label' => NULL,
+    'filter_rewrite_values' => NULL,
+  );
+  $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
+  $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'filtered_html';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '20';
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'nid' => 'nid',
+    'field_title' => 'field_title',
+    'title' => 'title',
+    'field_year_number' => 'title',
+    'field_week_number' => 'title',
+  );
+  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['info'] = array(
+    'nid' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_title' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'title' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => ', ',
+      'empty_column' => 0,
+    ),
+    'field_year_number' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_week_number' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  /* Relationship: Field collection item: Entity with the Activités (field_activities) */
+  $handler->display->display_options['relationships']['field_activities_node']['id'] = 'field_activities_node';
+  $handler->display->display_options['relationships']['field_activities_node']['table'] = 'field_collection_item';
+  $handler->display->display_options['relationships']['field_activities_node']['field'] = 'field_activities_node';
+  $handler->display->display_options['relationships']['field_activities_node']['required'] = TRUE;
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['relationship'] = 'field_activities_node';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Field collection item: Titre */
+  $handler->display->display_options['fields']['field_title']['id'] = 'field_title';
+  $handler->display->display_options['fields']['field_title']['table'] = 'field_data_field_title';
+  $handler->display->display_options['fields']['field_title']['field'] = 'field_title';
+  $handler->display->display_options['fields']['field_title']['label'] = 'Activité';
+  $handler->display->display_options['fields']['field_title']['alter']['text'] = '<a ';
+  $handler->display->display_options['fields']['field_title']['type'] = 'title_linked';
+  $handler->display->display_options['fields']['field_title']['settings'] = array(
+    'title_style' => '_none',
+    'title_link' => 'content',
+    'title_class' => '',
+  );
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['relationship'] = 'field_activities_node';
+  $handler->display->display_options['fields']['title']['label'] = 'Animation';
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<a href="node/[nid]">[title]</a>';
+  /* Field: Content: Numéro du tome */
+  $handler->display->display_options['fields']['field_year_number']['id'] = 'field_year_number';
+  $handler->display->display_options['fields']['field_year_number']['table'] = 'field_data_field_year_number';
+  $handler->display->display_options['fields']['field_year_number']['field'] = 'field_year_number';
+  $handler->display->display_options['fields']['field_year_number']['relationship'] = 'field_activities_node';
+  $handler->display->display_options['fields']['field_year_number']['label'] = '';
+  $handler->display->display_options['fields']['field_year_number']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_year_number']['alter']['text'] = 'tome [field_year_number]';
+  $handler->display->display_options['fields']['field_year_number']['element_label_colon'] = FALSE;
+  /* Field: Content: Numéro de l'animation */
+  $handler->display->display_options['fields']['field_week_number']['id'] = 'field_week_number';
+  $handler->display->display_options['fields']['field_week_number']['table'] = 'field_data_field_week_number';
+  $handler->display->display_options['fields']['field_week_number']['field'] = 'field_week_number';
+  $handler->display->display_options['fields']['field_week_number']['relationship'] = 'field_activities_node';
+  $handler->display->display_options['fields']['field_week_number']['label'] = '';
+  $handler->display->display_options['fields']['field_week_number']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_week_number']['alter']['text'] = 'n° [field_week_number]';
+  $handler->display->display_options['fields']['field_week_number']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_week_number']['settings'] = array(
+    'thousand_separator' => '',
+    'prefix_suffix' => 1,
+  );
+  /* Sort criterion: Content: Numéro du tome (field_year_number) */
+  $handler->display->display_options['sorts']['field_year_number_value']['id'] = 'field_year_number_value';
+  $handler->display->display_options['sorts']['field_year_number_value']['table'] = 'field_data_field_year_number';
+  $handler->display->display_options['sorts']['field_year_number_value']['field'] = 'field_year_number_value';
+  $handler->display->display_options['sorts']['field_year_number_value']['relationship'] = 'field_activities_node';
+  /* Sort criterion: Content: Numéro de l&#039;animation (field_week_number) */
+  $handler->display->display_options['sorts']['field_week_number_value']['id'] = 'field_week_number_value';
+  $handler->display->display_options['sorts']['field_week_number_value']['table'] = 'field_data_field_week_number';
+  $handler->display->display_options['sorts']['field_week_number_value']['field'] = 'field_week_number_value';
+  $handler->display->display_options['sorts']['field_week_number_value']['relationship'] = 'field_activities_node';
+  /* Filter criterion: tome */
+  $handler->display->display_options['filters']['field_year_number_value']['id'] = 'field_year_number_value';
+  $handler->display->display_options['filters']['field_year_number_value']['table'] = 'field_data_field_year_number';
+  $handler->display->display_options['filters']['field_year_number_value']['field'] = 'field_year_number_value';
+  $handler->display->display_options['filters']['field_year_number_value']['relationship'] = 'field_activities_node';
+  $handler->display->display_options['filters']['field_year_number_value']['ui_name'] = 'tome';
+  $handler->display->display_options['filters']['field_year_number_value']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_year_number_value']['expose']['operator_id'] = 'field_year_number_value_op';
+  $handler->display->display_options['filters']['field_year_number_value']['expose']['label'] = 'Tome';
+  $handler->display->display_options['filters']['field_year_number_value']['expose']['operator'] = 'field_year_number_value_op';
+  $handler->display->display_options['filters']['field_year_number_value']['expose']['identifier'] = 'field_year_number_value';
+  $handler->display->display_options['filters']['field_year_number_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+  );
+  $handler->display->display_options['filters']['field_year_number_value']['reduce_duplicates'] = TRUE;
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['path'] = 'admin/workbench/content/activities';
+  $handler->display->display_options['menu']['type'] = 'tab';
+  $handler->display->display_options['menu']['title'] = 'Activités';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
+  $translatables['activites'] = array(
+    t('Master'),
+    t('Activités'),
+    t('more'),
+    t('Appliquer'),
+    t('Réinitialiser'),
+    t('Trier par'),
+    t('Asc'),
+    t('Desc'),
+    t('Options avancées'),
+    t('Select any filter and click on Apply to see results'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('field_activities'),
+    t('Activité'),
+    t('<a '),
+    t('Animation'),
+    t('<a href="node/[nid]">[title]</a>'),
+    t('tome [field_year_number]'),
+    t('n° [field_week_number]'),
+    t('Tome'),
+    t('Page'),
+  );
+  $export['activites'] = $view;
+
+  $view = new view();
   $view->name = 'lessons';
   $view->description = '';
   $view->tag = 'default';
@@ -22,7 +287,7 @@ function ligue_lesson_views_default_views() {
 
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
-  $handler->display->display_options['title'] = 'Les animations';
+  $handler->display->display_options['title'] = 'Animation';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -369,8 +634,8 @@ function ligue_lesson_views_default_views() {
     'period' => 'period',
   );
 
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page_admin_lessons');
+  /* Display: Page Admin */
+  $handler = $view->new_display('page', 'Page Admin', 'page_admin_lessons');
   $handler->display->display_options['defaults']['access'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['access']['perm'] = 'access administration menu';
@@ -673,9 +938,46 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['menu']['context_only_inline'] = 0;
   $handler->display->display_options['tab_options']['title'] = 'Animations';
   $handler->display->display_options['tab_options']['weight'] = '0';
+
+  /* Display: Related Lesson for field collection */
+  $handler = $view->new_display('block', 'Related Lesson for field collection', 'block_4');
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content: Activités (field_activities) */
+  $handler->display->display_options['relationships']['field_activities_value']['id'] = 'field_activities_value';
+  $handler->display->display_options['relationships']['field_activities_value']['table'] = 'field_data_field_activities';
+  $handler->display->display_options['relationships']['field_activities_value']['field'] = 'field_activities_value';
+  $handler->display->display_options['relationships']['field_activities_value']['delta'] = '-1';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Field collection item: Field collection item ID */
+  $handler->display->display_options['arguments']['item_id']['id'] = 'item_id';
+  $handler->display->display_options['arguments']['item_id']['table'] = 'field_collection_item';
+  $handler->display->display_options['arguments']['item_id']['field'] = 'item_id';
+  $handler->display->display_options['arguments']['item_id']['relationship'] = 'field_activities_value';
+  $handler->display->display_options['arguments']['item_id']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['item_id']['exception']['title'] = 'Tout';
+  $handler->display->display_options['arguments']['item_id']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['item_id']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['item_id']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['item_id']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '1';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'lesson' => 'lesson',
+  );
+  $handler->display->display_options['filters']['type']['group'] = 1;
   $translatables['lessons'] = array(
     t('Master'),
-    t('Les animations'),
+    t('Animation'),
     t('more'),
     t('Appliquer'),
     t('Réinitialiser'),
@@ -707,7 +1009,7 @@ function ligue_lesson_views_default_views() {
     t('Lessons in period'),
     t('Entité Contenu réferencée par field_periods'),
     t('Les animations se déroulant à cette période'),
-    t('Page'),
+    t('Page Admin'),
     t('- Choose an operation -'),
     t('Modérer'),
     t('Publié'),
@@ -717,6 +1019,8 @@ function ligue_lesson_views_default_views() {
     t('Éditer'),
     t('Supprimer'),
     t('Opérations'),
+    t('Related Lesson for field collection'),
+    t('field collection item from field_activities'),
   );
   $export['lessons'] = $view;
 

@@ -74,7 +74,6 @@ function ligue_site_user_default_permissions() {
     'name' => 'access comments',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'comment',

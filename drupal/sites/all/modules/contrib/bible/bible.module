@@ -1953,8 +1953,22 @@ function _bible_blsanchorize($text = '', $filter, $format, $langcode, $cache, $c
     if (preg_match($split_regex, $value)) {
       $linked_text .= $value; // If it is an HTML element or within a link, just leave it as is.
     }
-    else {
-      $linked_text .= _bible_blsaddLink($value);
+    elseif (strlen($value) > 1) {
+      $book_regex = '/(.*?)[:. ]\d{1,3}/';
+      preg_match($book_regex, $value, $book);
+      $verses = explode(', ', str_replace($book[1].' ', '', $value));
+
+      $last_key = end(array_keys($verses));
+      foreach ($verses as $key => $verse) {
+        if (!empty($verse) && $verse !== ' ') {
+          $verse = $book[1] . ' ' . $verse;
+          $linked_text .= _bible_blsaddLink($verse);
+          $linked_text .= '</li>';
+          if ($key != $last_key) {
+            $linked_text .= '<li>';
+          }
+        }
+      }
     }
   }
   return $linked_text;
@@ -1963,7 +1977,7 @@ function _bible_blsanchorize($text = '', $filter, $format, $langcode, $cache, $c
 function _bible_blsaddLink($text = '') {
   global $book_list, $book_namelist;
   $book_regex = $book_list .'|'. str_replace(';', '|', $book_namelist);
-  $pattern_regex = '/('. $book_regex .')[:. ]+(\d{1,3}):(\d{1,3}(?:-\d{1,3})?)([#\^]\w+)?([\&]\w+)?(\s?)/e';
+  $pattern_regex = '/('. $book_regex .')[:. ]+(\d{1,3}):(\d{1,3}(?:-\d{1,3})?)([#\^]\w+)?([\&]\w+)?(\s?)/ie';
   $replacement_regex = '_bible_blsdivhtml("\1", "\2", "\3", "\4", "\5", "\6")';
   $text = preg_replace($pattern_regex, $replacement_regex, $text);
   return $text;

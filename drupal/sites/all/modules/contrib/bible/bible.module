@@ -38,16 +38,22 @@ function bible_boot() {
   $book_namelist .= '1 Chr|1 Chro|1 Chron|1 Chronicles|1 Chroniques;';
   $book_namelist .= '2 Chr|2 Chro|2 Chron|2 Chronicles|2 Chroniques;';
   $book_namelist .= 'Ezra|Esd|Esdras;';
+  $book_namelist .= 'Tob|Tobit|Tobie;';
+  $book_namelist .= 'Jdt|Judith;';
   $book_namelist .= 'Neh|Nehemiah|Néhémie;';
   $book_namelist .= 'Est|Esther;';
   $book_namelist .= 'Job;';
   $book_namelist .= 'Ps|Psa|Psm|Psalm|Psalms|Psaume|Psaumes;';
+  $book_namelist .= 'Psalm 151;';
   $book_namelist .= 'Pro|Prov|Proverbs|Proverbes;';
   $book_namelist .= 'Ecc|Ecclesiastes|Ecclésiaste;';
   $book_namelist .= 'Song|Song of Solomon|Can|Cantique|Cantique des cantiques|Cantique de Salomon;';
+  $book_namelist .= 'Wis|Wisdom|Sagesse;';
+  $book_namelist .= 'Sir|Sirach|Ecq|Siracide;';
   $book_namelist .= 'Isa|Isaiah|Isaie|Ésaïe;';
   $book_namelist .= 'Jer|Jeremiah|Jérémie;';
   $book_namelist .= 'Lam|Lamentations;';
+  $book_namelist .= 'Bar|Baruch;';
   $book_namelist .= 'Eze|Ezek|Ezekiel|Ezékiel;';
   $book_namelist .= 'Dan|Daniel;';
   $book_namelist .= 'Hos|Hosea|Osée;';
@@ -89,6 +95,15 @@ function bible_boot() {
   $book_namelist .= '3 John|3 Jn|3 Jean;';
   $book_namelist .= 'Jud|Jude;';
   $book_namelist .= 'Rev|Revelation|Apo|Apocalypse;';
+  $book_namelist .= '1 Esdras;';
+  $book_namelist .= '2 Esdras;';
+  $book_namelist .= 'Epistle of Jeremiah;';
+  $book_namelist .= 'Prayer of Azariah;';
+  $book_namelist .= 'Susanna;';
+  $book_namelist .= 'Bel and the Dragon;';
+  $book_namelist .= 'Prayer of Manasseh;';
+  $book_namelist .= 'Psalm of Solomon;';
+  $book_namelist .= 'Odes';
   global $bdtypelist;
   $bdtypelist = array ( 'commentary' => t('Commentary'),
                         'music' => t('Music'),
@@ -1958,12 +1973,12 @@ function _bible_blsdivhtml($book, $chap, $verse, $para, $func, $tail) {
 	if ($para != "") {
 		$paracmd = substr($para, 0, 1);
 		$bid = _bible_get_bible_id(trim(substr($para, 1)));
-		if ($bid == "") {
-			$bid = _bible_get_select_bid();
-		}
-	}
-	else {
-		$bid = _bible_get_select_bid();
+    if ($bid == "") {
+      $bid = _bible_get_select_bid();
+    }
+  }
+  else {
+    $bid = _bible_get_select_bid();
 	}
 
   if ($para == "" || $paracmd == "^") {

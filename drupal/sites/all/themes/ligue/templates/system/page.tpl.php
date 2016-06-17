@@ -168,8 +168,7 @@ $navbar_classes = str_replace('container ', '', $navbar_classes);
     <div class="spacer spacer-sm"></div>
     <?php print render($page['footer']); ?>
     <div class="text-center">
-      <p class="small">Ligue pour la lecture de la Bible — <a href="tel:+41216512010">+41 41 651 20 10</a> — <a href="mailto:info@ligue.ch">info@ligue.ch</a></p>
-      <p class="small">L'Armée du Salut — <a href="tel:+41313880591">+41 31 388 05 91</a> — <a href="mailto:sylvain_riard@armeedusalut.ch">sylvain_riard@armeedusalut.ch</a></p>
+      <p class="small"><a target="_blank" href="http://www.ligue.ch/">Ligue pour la lecture de la Bible</a> - <a target="_blank" href="http://www.armeedusalut.ch/">Armée du Salut</a> - <a target="_blank" href="http://www.cjms.ch/index.php/fr/">CJMS</a> - <a target="_blank" href="http://lafree.ch/">La FREE</a></p>
     </div>
   </div>
 </footer>

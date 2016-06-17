@@ -129,11 +129,11 @@
             <div class="row">
               <div class="col-sm-6">
                 <h4 class="h5 field-label media-heading"><?php print t('Versets de la semaine'); ?></h4>
-                <?php print render($content['field_verses_week']); ?>
+                <?php print check_markup(render($content['field_verses_week']), 'filtered_html'); ?>
                 <h4 class="h5 field-label media-heading"><?php print t('Textes bibliques'); ?></h4>
-                <?php print render($content['field_verses_lesson']); ?>
+                <?php print check_markup(render($content['field_verses_lesson']), 'filtered_html'); ?>
                 <h4 class="h5 field-label media-heading"><?php print t('Versets "clé"'); ?></h4>
-                <?php print render($content['field_verses_key']); ?>
+                <?php print check_markup(render($content['field_verses_key']), 'filtered_html'); ?>
               </div>
               <div class="col-sm-6">
                 <?php if (!empty($content['field_pages_from'])): ?>

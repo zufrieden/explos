@@ -168,7 +168,7 @@ $navbar_classes = str_replace('container ', '', $navbar_classes);
     <div class="spacer spacer-sm"></div>
     <?php print render($page['footer']); ?>
     <div class="text-center">
-      <p class="small"><a href="http://www.ligue.ch/">Ligue pour la lecture de la Bible</a> - <a href="http://www.armeedusalut.ch/">Armée du Salut</a> - <a href="http://www.cjms.ch/index.php/fr/">CJMS</a> - <a href="http://lafree.ch/">La FREE</a></p>
+      <p class="small"><a target="_blank" href="http://www.ligue.ch/">Ligue pour la lecture de la Bible</a> - <a target="_blank" href="http://www.armeedusalut.ch/">Armée du Salut</a> - <a target="_blank" href="http://www.cjms.ch/index.php/fr/">CJMS</a> - <a target="_blank" href="http://lafree.ch/">La FREE</a></p>
     </div>
   </div>
 </footer>

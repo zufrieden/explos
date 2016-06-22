@@ -1964,7 +1964,7 @@ function _bible_blsaddLink($text = '') {
   global $book_list, $book_namelist;
   $book_regex = $book_list .'|'. str_replace(';', '|', $book_namelist);
 
-  $pattern_regex = '/('. $book_regex .')[:. ]+(\d{1,3}):(\d{1,3}(?:-\d{1,3})?)([#\^]\w+)?([\&]\w+)?(\s?)/ie';
+  $pattern_regex = '/('. $book_regex .')[:. ]+(\d{1,3}):(\d{1,3}(?:-\d{1,3})?)([#\^]\w+)?([\&]\w+)?(\s?):?/ie';
   $replacement_regex = '_bible_blsdivhtml("\1", "\2", "\3", "\4", "\5", "\6")';
 
   preg_match($pattern_regex, $text, $found);
@@ -1993,6 +1993,12 @@ function _bible_blsdivhtml($book, $chap, $verse, $para, $func, $tail) {
   else {
     $bid = _bible_get_select_bid();
 	}
+
+  // rewrite verse if it's only one
+  $single_pattern = '/\d{1,3}-0/';
+  if (preg_match($single_pattern, $verse)) {
+    $verse = preg_replace('/-0/', '', $verse);
+  }
 
   if ($para == "" || $paracmd == "^") {
     $usec = explode(' ', microtime());

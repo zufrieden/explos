@@ -9,7 +9,7 @@ define('BIBLE_BLS_POPUP_STYLE', 'border-style:ridge;border-color:#00AAFF;border-
 function bible_boot() {
   global $book_list;
   $book_list = 'GEN|EXO|LEV|NUM|DEU|';
-  $book_list .= 'JOS|JUG|RUT|1SM|2SM|1KG|2KG|1CH|2CH|EZR|NEH|TOB|JDT|EST|1MC|2MC|3MC|4MC|';
+  $book_list .= 'JOS|JUG|RUT|1SM|2SM|1KG|2KG|1CH|2CH|EZR|TOB|JDT|NEH|EST|';
   $book_list .= 'JOB|PS|PSA|PRO|ECC|SON|WIS|SIR|';
   $book_list .= 'ISA|JER|LAM|BAR|EZE|DAN|';
   $book_list .= 'HOS|JOE|AMO|OBA|JON|MIC|NAH|HAB|ZEP|HAG|ZEC|MAL|';

@@ -1976,8 +1976,10 @@ function _bible_blsaddLink($text = '') {
       $other_verse = $i == 0 ? $verses[$i] : ', '. $book . ':' . $verses[$i];
       $new_text .= preg_replace($pattern_regex, $replacement_regex, $other_verse);
     }
+    return $new_text;
+  } else {
+    return $text;
   }
-  return $new_text;
 }
 
 function _bible_blsdivhtml($book, $chap, $verse, $para, $func, $tail) {

@@ -23,87 +23,87 @@ function bible_boot() {
   $book_list .= 'REV|';
   $book_list .= '1ES|2ES|EJR|AZA|SUS|BEL|MAN|PSS|ODE';
   global $book_namelist;
-  $book_namelist = 'Gn|Gen|Genesis|Genèse;';
-  $book_namelist .= 'Exo|Exodus|Exode;';
-  $book_namelist .= 'Lev|Leviticus|Lévitique;';
-  $book_namelist .= 'Num|Numbers|Nom|Nombres;';
-  $book_namelist .= 'Deu|Deuteronomy|Deutéronome;';
-  $book_namelist .= 'Jos|Josh|Joshua|Josué;';
-  $book_namelist .= 'Jug|Judges|Jug|Juges;';
-  $book_namelist .= 'Rut|Ruth;';
-  $book_namelist .= '1 Sam|1 Samuel;';
-  $book_namelist .= '2 Sam|2 Samuel;';
-  $book_namelist .= '1 Ki|1 Kings|1 Ro|1 Roi|1 Rois;';
-  $book_namelist .= '2 Ki|2 Kings|2 Ro|2 Roi|2 Rois;';
-  $book_namelist .= '1 Chr|1 Chro|1 Chron|1 Chronicles|1 Chroniques;';
-  $book_namelist .= '2 Chr|2 Chro|2 Chron|2 Chronicles|2 Chroniques;';
-  $book_namelist .= 'Ezra|Esd|Esdras;';
-  $book_namelist .= 'Tob|Tobit|Tobie;';
-  $book_namelist .= 'Jdt|Judith;';
-  $book_namelist .= 'Neh|Nehemiah|Néhémie;';
-  $book_namelist .= 'Est|Esther;';
-  $book_namelist .= 'Job;';
-  $book_namelist .= 'Ps|Psa|Psm|Psalm|Psalms|Psaume|Psaumes;';
-  $book_namelist .= 'Psalm 151;';
-  $book_namelist .= 'Pro|Prov|Proverbs|Proverbes;';
-  $book_namelist .= 'Ecc|Ecclesiastes|Ecclésiaste;';
-  $book_namelist .= 'Song|Song of Solomon|Can|Cantique|Cantique des cantiques|Cantique de Salomon;';
-  $book_namelist .= 'Wis|Wisdom|Sagesse;';
-  $book_namelist .= 'Sir|Sirach|Ecq|Siracide;';
-  $book_namelist .= 'Isa|Isaiah|Isaie|Ésaïe;';
-  $book_namelist .= 'Jer|Jeremiah|Jérémie;';
-  $book_namelist .= 'Lam|Lamentations;';
-  $book_namelist .= 'Bar|Baruch;';
-  $book_namelist .= 'Eze|Ezek|Ezekiel|Ezékiel;';
-  $book_namelist .= 'Dan|Daniel;';
-  $book_namelist .= 'Hos|Hosea|Osée;';
-  $book_namelist .= 'Joel|Joël;';
-  $book_namelist .= 'Amo|Amos;';
-  $book_namelist .= 'Obad|Obadiah|Abd|Abdi|Abdias;';
-  $book_namelist .= 'Jona|Jonah|Jonas;';
-  $book_namelist .= 'Mic|Micah|Michée;';
-  $book_namelist .= 'Nah|Nahum|Nahoum;';
-  $book_namelist .= 'Hab|Habakkuk|Habaccuc|Habacuc;';
-  $book_namelist .= 'Zep|Zephaniah|Sop|Sophonie;';
-  $book_namelist .= 'Hag|Haggai|Agg|Aggée;';
-  $book_namelist .= 'Zec|Zech|Zechariah|Zac|Zacharie|Zakarie;';
-  $book_namelist .= 'Mal|Malachi|Malachie;';
-  $book_namelist .= 'Mat|Matt|Matthew|Matthieu;';
-  $book_namelist .= 'Mar|Mark|Marc;';
-  $book_namelist .= 'Luke|Luc;';
-  $book_namelist .= 'John|Jn|Jean;';
-  $book_namelist .= 'Act|Acts|Actes;';
-  $book_namelist .= 'Rom|Romans|Romains;';
-  $book_namelist .= '1 Cor|1 Corinthians|1 Corinthiens;';
-  $book_namelist .= '2 Cor|2 Corinthians|2 Corinthiens;';
-  $book_namelist .= 'Gal|Galatians|Galates;';
-  $book_namelist .= 'Eph|Ephesians|Éphésiens;';
-  $book_namelist .= 'Phi|Phil|Phili|Philippians|Philippiens;';
-  $book_namelist .= 'Col|Colossians|Colossiens;';
-  $book_namelist .= '1 Thes|1 Thessalonians|1 Thessaloniciens;';
-  $book_namelist .= '2 Thes|2 Thessalonians|2 Thessaloniciens;';
-  $book_namelist .= '1 Tim|1 Timothy|1 Timothée;';
-  $book_namelist .= '2 Tim|2 Timothy|2 Timothée;';
-  $book_namelist .= 'Tit|Titus|Tite;';
-  $book_namelist .= 'Phm|Philemon|Philémon;';
-  $book_namelist .= 'Heb|Hebrews|Hébreux;';
-  $book_namelist .= 'Jam|James|Jac|Jacques;';
-  $book_namelist .= '1 Pet|1 Peter|1 Pi|1 Pie|1 Pierre;';
-  $book_namelist .= '2 Pet|2 Peter|2 Pi|2 Pie|2 Pierre;';
-  $book_namelist .= '1 John|1 Jn|1 Jean;';
-  $book_namelist .= '2 John|2 Jn|2 Jean;';
-  $book_namelist .= '3 John|3 Jn|3 Jean;';
-  $book_namelist .= 'Jud|Jude;';
-  $book_namelist .= 'Rev|Revelation|Apo|Apocalypse;';
-  $book_namelist .= '1 Esdras;';
-  $book_namelist .= '2 Esdras;';
-  $book_namelist .= 'Epistle of Jeremiah;';
-  $book_namelist .= 'Prayer of Azariah;';
-  $book_namelist .= 'Susanna;';
-  $book_namelist .= 'Bel and the Dragon;';
-  $book_namelist .= 'Prayer of Manasseh;';
-  $book_namelist .= 'Psalm of Solomon;';
-  $book_namelist .= 'Odes';
+  $book_namelist = 'gn|gen|genesis|genèse|Gn|Gen|Genesis|Genèse;';
+  $book_namelist .= 'exo|exodus|exode|Exo|Exodus|Exode;';
+  $book_namelist .= 'lev|leviticus|lévitique|Lev|Leviticus|Lévitique;';
+  $book_namelist .= 'num|numbers|nom|nombres|Num|Numbers|Nom|Nombres;';
+  $book_namelist .= 'deu|deuteronomy|deutéronome|Deu|Deuteronomy|Deutéronome;';
+  $book_namelist .= 'jos|josh|joshua|josué|Jos|Josh|Joshua|Josué;';
+  $book_namelist .= 'jug|judges|jug|juges|Jug|Judges|Jug|Juges;';
+  $book_namelist .= 'rut|ruth|Rut|Ruth;';
+  $book_namelist .= '1 sam|1 samuel|1 Sam|1 Samuel;';
+  $book_namelist .= '2 sam|2 samuel|2 Sam|2 Samuel;';
+  $book_namelist .= '1 ki|1 kings|1 ro|1 roi|1 rois|1 Ki|1 Kings|1 Ro|1 Roi|1 Rois;';
+  $book_namelist .= '2 ki|2 kings|2 ro|2 roi|2 rois|2 Ki|2 Kings|2 Ro|2 Roi|2 Rois;';
+  $book_namelist .= '1 chr|1 chro|1 chron|1 chronicles|1 chroniques|1 Chr|1 Chro|1 Chron|1 Chronicles|1 Chroniques;';
+  $book_namelist .= '2 chr|2 chro|2 chron|2 chronicles|2 chroniques|2 Chr|2 Chro|2 Chron|2 Chronicles|2 Chroniques;';
+  $book_namelist .= 'ezra|esd|esdras|Ezra|Esd|Esdras;';
+  $book_namelist .= 'tob|tobit|tobie|Tob|Tobit|Tobie;';
+  $book_namelist .= 'jdt|judith|Jdt|Judith;';
+  $book_namelist .= 'neh|nehemiah|néhémie|Neh|Nehemiah|Néhémie;';
+  $book_namelist .= 'est|esther|Est|Esther;';
+  $book_namelist .= 'job|Job;';
+  $book_namelist .= 'ps|psa|psm|psalm|psalms|psaume|psaumes|Ps|Psa|Psm|Psalm|Psalms|Psaume|Psaumes;';
+  $book_namelist .= 'psalm 151|Psalm 151;';
+  $book_namelist .= 'pro|prov|proverbs|proverbes|Pro|Prov|Proverbs|Proverbes;';
+  $book_namelist .= 'ecc|ecclesiastes|ecclésiaste|Ecc|Ecclesiastes|Ecclésiaste;';
+  $book_namelist .= 'song|song of solomon|can|cantique|cantique des cantiques|cantique de salomon|Song|Song of Solomon|Can|Cantique|Cantique des cantiques|Cantique de Salomon;';
+  $book_namelist .= 'wis|wisdom|sagesse|Wis|Wisdom|Sagesse;';
+  $book_namelist .= 'sir|sirach|ecq|siracide|Sir|Sirach|Ecq|Siracide;';
+  $book_namelist .= 'isa|isaiah|isaie|ésaïe|Isa|Isaiah|Isaie|Ésaïe;';
+  $book_namelist .= 'jer|jeremiah|jérémie|Jer|Jeremiah|Jérémie;';
+  $book_namelist .= 'lam|lamentations|Lam|Lamentations;';
+  $book_namelist .= 'bar|baruch|Bar|Baruch;';
+  $book_namelist .= 'eze|ezek|ezekiel|ezékiel|Eze|Ezek|Ezekiel|Ezékiel;';
+  $book_namelist .= 'dan|daniel|Dan|Daniel;';
+  $book_namelist .= 'hos|hosea|osée|Hos|Hosea|Osée;';
+  $book_namelist .= 'joel|joël|Joel|Joël;';
+  $book_namelist .= 'amo|amos|Amo|Amos;';
+  $book_namelist .= 'obad|obadiah|abd|abdi|abdias|Obad|Obadiah|Abd|Abdi|Abdias;';
+  $book_namelist .= 'jona|jonah|jonas|Jona|Jonah|Jonas;';
+  $book_namelist .= 'mic|micah|michée|Mic|Micah|Michée;';
+  $book_namelist .= 'nah|nahum|nahoum|Nah|Nahum|Nahoum;';
+  $book_namelist .= 'hab|habakkuk|habaccuc|habacuc|Hab|Habakkuk|Habaccuc|Habacuc;';
+  $book_namelist .= 'zep|zephaniah|sop|sophonie|Zep|Zephaniah|Sop|Sophonie;';
+  $book_namelist .= 'hag|haggai|agg|aggée|Hag|Haggai|Agg|Aggée;';
+  $book_namelist .= 'zec|zech|zechariah|zac|zacharie|zakarie|Zec|Zech|Zechariah|Zac|Zacharie|Zakarie;';
+  $book_namelist .= 'mal|malachi|malachie|Mal|Malachi|Malachie;';
+  $book_namelist .= 'mat|matt|matthew|matthieu|Mat|Matt|Matthew|Matthieu;';
+  $book_namelist .= 'mar|mark|marc|Mar|Mark|Marc;';
+  $book_namelist .= 'luke|luc|Luke|Luc;';
+  $book_namelist .= 'john|jn|jean|John|Jn|Jean;';
+  $book_namelist .= 'act|acts|actes|Act|Acts|Actes;';
+  $book_namelist .= 'rom|romans|romains|Rom|Romans|Romains;';
+  $book_namelist .= '1 cor|1 corinthians|1 corinthiens|1 Cor|1 Corinthians|1 Corinthiens;';
+  $book_namelist .= '2 cor|2 corinthians|2 corinthiens|2 Cor|2 Corinthians|2 Corinthiens;';
+  $book_namelist .= 'gal|galatians|galates|Gal|Galatians|Galates;';
+  $book_namelist .= 'eph|ephesians|éphésiens|Eph|Ephesians|Éphésiens;';
+  $book_namelist .= 'phi|phil|phili|philippians|philippiens|Phi|Phil|Phili|Philippians|Philippiens;';
+  $book_namelist .= 'col|colossians|colossiens|Col|Colossians|Colossiens;';
+  $book_namelist .= '1 thes|1 thessalonians|1 thessaloniciens|1 Thes|1 Thessalonians|1 Thessaloniciens;';
+  $book_namelist .= '2 thes|2 thessalonians|2 thessaloniciens|2 Thes|2 Thessalonians|2 Thessaloniciens;';
+  $book_namelist .= '1 tim|1 timothy|1 timothée|1 Tim|1 Timothy|1 Timothée;';
+  $book_namelist .= '2 tim|2 timothy|2 timothée|2 Tim|2 Timothy|2 Timothée;';
+  $book_namelist .= 'tit|titus|tite|Tit|Titus|Tite;';
+  $book_namelist .= 'phm|philemon|philémon|Phm|Philemon|Philémon;';
+  $book_namelist .= 'heb|hebrews|hébreux|Heb|Hebrews|Hébreux;';
+  $book_namelist .= 'jam|james|jac|jacques|Jam|James|Jac|Jacques;';
+  $book_namelist .= '1 pet|1 peter|1 pi|1 pie|1 pierre|1 Pet|1 Peter|1 Pi|1 Pie|1 Pierre;';
+  $book_namelist .= '2 pet|2 peter|2 pi|2 pie|2 pierre|2 Pet|2 Peter|2 Pi|2 Pie|2 Pierre;';
+  $book_namelist .= '1 john|1 jn|1 jean|1 John|1 Jn|1 Jean;';
+  $book_namelist .= '2 john|2 jn|2 jean|2 John|2 Jn|2 Jean;';
+  $book_namelist .= '3 john|3 jn|3 jean|3 John|3 Jn|3 Jean;';
+  $book_namelist .= 'jud|jude|Jud|Jude;';
+  $book_namelist .= 'rev|revelation|apo|apocalypse|Rev|Revelation|Apo|Apocalypse;';
+  $book_namelist .= '1 esdras|1 Esdras;';
+  $book_namelist .= '2 esdras|2 Esdras;';
+  $book_namelist .= 'epistle of jeremiah|Epistle of Jeremiah;';
+  $book_namelist .= 'prayer of azariah|Prayer of Azariah;';
+  $book_namelist .= 'susanna|Susanna;';
+  $book_namelist .= 'bel and the dragon|Bel and the Dragon;';
+  $book_namelist .= 'prayer of manasseh|Prayer of Manasseh;';
+  $book_namelist .= 'psalm of solomon|Psalm of Solomon;';
+  $book_namelist .= 'odes|Odes';
   global $bdtypelist;
   $bdtypelist = array ( 'commentary' => t('Commentary'),
                         'music' => t('Music'),
@@ -2012,12 +2012,13 @@ function _bible_blsdivhtml($book, $chap, $verse, $chap2, $verse2, $para, $func) 
     if ($bid == "") $bid = _bible_get_select_bid();
 
     global $book_list, $book_namelist;
-    if (preg_match('/'.$book_list.'/', $book)) {
+    if (preg_match('/'.$book_list.'/', $book, $matches)) {
       // For Reguler BLS, Ex: GEN:1:1
-      $bls = _bible_get_chapter_sname($bid, $book). ':'. $chap. ':'. $verse;
+      $bls = _bible_get_chapter_sname($bid, $matches[0]). ':'. $chap. ':'. $verse;
       if ($chap2 != "" && $verse2 != "") {
         $bls2 = '-'. $chap2. ':'. $verse2;
       }
+      $book = $matches[0];
     }
     else {
       // For other naming, Ex: Gen.1:2
@@ -2027,7 +2028,7 @@ function _bible_blsdivhtml($book, $chap, $verse, $chap2, $verse2, $para, $func) 
       }
       $patt_array = explode(';', '/'. str_replace(';', '%/A;/', str_replace('|', '%|', $book_namelist)). '/');
       $book_array = explode('|', $book_list);
-      $book = preg_replace($patt_array, $book_array, $book.'%');
+      $book = preg_replace($patt_array, $book_array, strtolower($book).'%');
     }
     $html = '<span class="bls" id="'. $idname. '"';
     $html .= '>'. $bls;
@@ -2045,6 +2046,7 @@ function _bible_blsdivhtml($book, $chap, $verse, $chap2, $verse2, $para, $func) 
     $html .= 'visibility:hidden;z-index:999;overflow-x:hidden;overflow-y:auto;'.$blspopupstyle.'"';
     $pattern_regex = '/(\[\d{1,3}\])/';
     $replacement_regex = '<font color="green">\1</font>';
+
     if ($chap2 == "" && $verse2 == "") {
       $html .= '>'. preg_replace($pattern_regex, $replacement_regex, _bible_get_verse_content2($book .':'. $chap .':'. $verse, $bid));
     } else {

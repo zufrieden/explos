@@ -1,0 +1,7 @@
+@charset 'UTF-8';
+
+.popup {
+  @extend .well;
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  padding: 12px 25px !important;
+}

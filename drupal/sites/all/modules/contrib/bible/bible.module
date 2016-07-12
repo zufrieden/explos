@@ -23,7 +23,7 @@ function bible_boot() {
   $book_list .= 'REV|';
   $book_list .= '1ES|2ES|EJR|AZA|SUS|BEL|MAN|PSS|ODE';
   global $book_namelist;
-  $book_namelist = 'Gen|Genesis|Genèse;';
+  $book_namelist = 'Gn|Gen|Genesis|Genèse;';
   $book_namelist .= 'Exo|Exodus|Exode;';
   $book_namelist .= 'Lev|Leviticus|Lévitique;';
   $book_namelist .= 'Num|Numbers|Nom|Nombres;';

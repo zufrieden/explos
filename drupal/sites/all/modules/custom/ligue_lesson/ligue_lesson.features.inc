@@ -44,6 +44,7 @@ function ligue_lesson_node_info() {
 <ul>
 <li><a href="http://ligue.alwaysdata.net/sites/default/files/infos_redacteurs_0.pdf" target=_blank>Quelques infos générales...</a></li>
 <li><a href="http://ligue.alwaysdata.net/sites/default/files/banque_multimedias.pdf" target=_blank>Quelques infos concernant les droits d\'auteurs pour les médias</a></li>
+<li><strong>Pour afficher une infobulle avec les versets, formatez de cette manière: <em>Livre:Chapitre:Verset-Verset</em> ou <em>Livre:ChapitreA:Verset-ChapitreB-Verset</em>. Des espaces ou des points peuvent aussi être utilisés.</strong></li>
 </ol>'),
     ),
     'location' => array(

@@ -50,9 +50,10 @@ function ligue_lesson_field_default_field_instances() {
     'bundle' => 'field_activities',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'C’est le corps de l’activité, la partie principale :
-Indique ce qui va se dire, se vivre,…
-Comment, avec quoi, pourquoi,…
+    'description' => 'C’est le corps de l’activité, la partie principale :<br>
+Indique ce qui va se dire, se vivre,…<br>
+Comment, avec quoi, pourquoi,…<br>
+Pour afficher une infobulle avec les versets, formatez de cette manière: <em>Livre:Chapitre:Verset-Verset</em> ou <em>Livre:ChapitreA:Verset-ChapitreB-Verset</em>. Des espaces ou des points peuvent aussi être utilisés.
 ',
     'display' => array(
       'default' => array(
@@ -256,7 +257,8 @@ Comment, avec quoi, pourquoi,…
     'bundle' => 'lesson',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Explique ici en une dizaine de phrases ce qui va être vécu durant l\'animation, afin que l\'enseignant puisse avoir une idée globale de ce qu\'il devra préparer.',
+    'description' => 'Explique ici en une dizaine de phrases ce qui va être vécu durant l\'animation, afin que l\'enseignant puisse avoir une idée globale de ce qu\'il devra préparer.<br>
+Pour afficher une infobulle avec les versets, formatez de cette manière: <em>Livre:Chapitre:Verset-Verset</em> ou <em>Livre:ChapitreA:Verset-ChapitreB-Verset</em>. Des espaces ou des points peuvent aussi être utilisés.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -301,7 +303,8 @@ Comment, avec quoi, pourquoi,…
     'bundle' => 'lesson',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'C’est ici que tu vas indiquer ce qui va être fait pendant l\'animation… il y aura plusieurs activités. Tu peux en ajouter autant qu’il faut en cliquant sous « ajouter un autre élément », sous la rubrique activités. Tu peux aussi les disposer dans l’ordre que tu veux via la petite étoile sur le côté droit.',
+    'description' => 'C’est ici que tu vas indiquer ce qui va être fait pendant l\'animation… il y aura plusieurs activités. Tu peux en ajouter autant qu’il faut en cliquant sous « ajouter un autre élément », sous la rubrique activités. Tu peux aussi les disposer dans l’ordre que tu veux via la petite étoile sur le côté droit.<br>
+Pour afficher une infobulle avec les versets, formatez de cette manière: <em>Livre:Chapitre:Verset-Verset</em> ou <em>Livre:ChapitreA:Verset-ChapitreB-Verset</em>. Des espaces ou des points peuvent aussi être utilisés.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -344,8 +347,9 @@ Comment, avec quoi, pourquoi,…
     'bundle' => 'lesson',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Expliquer quel est l’objectif de l\'animation.
-Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre aux enfants.
+    'description' => 'Expliquer quel est l’objectif de l\'animation.<br>
+Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre aux enfants.<br>
+Pour afficher une infobulle avec les versets, formatez de cette manière: <em>Livre:Chapitre:Verset-Verset</em> ou <em>Livre:ChapitreA:Verset-ChapitreB-Verset</em>. Des espaces ou des points peuvent aussi être utilisés.
 ',
     'display' => array(
       'default' => array(
@@ -1403,10 +1407,12 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
   t('Activités');
   t('Bio');
   t('Body');
-  t('C’est ici que tu vas indiquer ce qui va être fait pendant l\'animation… il y aura plusieurs activités. Tu peux en ajouter autant qu’il faut en cliquant sous « ajouter un autre élément », sous la rubrique activités. Tu peux aussi les disposer dans l’ordre que tu veux via la petite étoile sur le côté droit.');
-  t('C’est le corps de l’activité, la partie principale :
-Indique ce qui va se dire, se vivre,…
-Comment, avec quoi, pourquoi,…
+  t('C’est ici que tu vas indiquer ce qui va être fait pendant l\'animation… il y aura plusieurs activités. Tu peux en ajouter autant qu’il faut en cliquant sous « ajouter un autre élément », sous la rubrique activités. Tu peux aussi les disposer dans l’ordre que tu veux via la petite étoile sur le côté droit.<br>
+Pour afficher une infobulle avec les versets, formatez de cette manière: <em>Livre:Chapitre:Verset-Verset</em> ou <em>Livre:ChapitreA:Verset-ChapitreB-Verset</em>. Des espaces ou des points peuvent aussi être utilisés.');
+  t('C’est le corps de l’activité, la partie principale :<br>
+Indique ce qui va se dire, se vivre,…<br>
+Comment, avec quoi, pourquoi,…<br>
+Pour afficher une infobulle avec les versets, formatez de cette manière: <em>Livre:Chapitre:Verset-Verset</em> ou <em>Livre:ChapitreA:Verset-ChapitreB-Verset</em>. Des espaces ou des points peuvent aussi être utilisés.
 ');
   t('Date');
   t('Date de décès');
@@ -1419,9 +1425,11 @@ Comment, avec quoi, pourquoi,…
   t('Durée');
   t('Déroulement de l\'animation');
   t('Estime le temps que va durer cette activité.');
-  t('Explique ici en une dizaine de phrases ce qui va être vécu durant l\'animation, afin que l\'enseignant puisse avoir une idée globale de ce qu\'il devra préparer.');
-  t('Expliquer quel est l’objectif de l\'animation.
-Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre aux enfants.
+  t('Explique ici en une dizaine de phrases ce qui va être vécu durant l\'animation, afin que l\'enseignant puisse avoir une idée globale de ce qu\'il devra préparer.<br>
+Pour afficher une infobulle avec les versets, formatez de cette manière: <em>Livre:Chapitre:Verset-Verset</em> ou <em>Livre:ChapitreA:Verset-ChapitreB-Verset</em>. Des espaces ou des points peuvent aussi être utilisés.');
+  t('Expliquer quel est l’objectif de l\'animation.<br>
+Le moniteur qui lira cette partie doit comprendre ce qu’il devra transmettre aux enfants.<br>
+Pour afficher une infobulle avec les versets, formatez de cette manière: <em>Livre:Chapitre:Verset-Verset</em> ou <em>Livre:ChapitreA:Verset-ChapitreB-Verset</em>. Des espaces ou des points peuvent aussi être utilisés.
 ');
   t('Indique la (ou les) période dans laquelle se passe l’histoire. ');
   t('Indique le numéro de l\'animation, selon le lectionnaire. ');

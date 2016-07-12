@@ -1964,7 +1964,7 @@ function _bible_blsaddLink($text = '') {
   global $book_list, $book_namelist;
   $book_regex = $book_list .'|'. str_replace(';', '|', $book_namelist);
 
-  $pattern_regex = '/('. $book_regex .')[:. ]+(\d{1,3})[:. ]+(\d{1,3}(?:-\d{1,3}(?![:.]))? ?(?:-0:)?)([#\^]\w+)?([\&]\w+)?(\s?)/ie';
+  $pattern_regex = '/('. $book_regex .')[:.\s]+(\d{1,3})[:.\s]+(\d{1,3}(?:\s?-\s?\d{1,3}(?![:.]))?(?:-0:)?)(?:[-\s]+(\d{1,3})[:.\s]+(\d{1,3}))?([#\^]\w+)?([\&]\w+)?/ie';
   $replacement_regex = '_bible_blsdivhtml("\1", "\2", "\3", "\4", "\5", "\6")';
 
   preg_match($pattern_regex, $text, $found);
@@ -1982,7 +1982,12 @@ function _bible_blsaddLink($text = '') {
   }
 }
 
-function _bible_blsdivhtml($book, $chap, $verse, $para, $func, $tail) {
+function _bible_blsdivhtml($book, $chap, $verse, $chap2, $verse2, $para, $func) {
+
+  // trim spaces
+  $verse = str_replace(' ', '', $verse);
+  $verse2 = str_replace(' ', '', $verse2);
+
 	if ($para != "") {
 		$paracmd = substr($para, 0, 1);
 		$bid = _bible_get_bible_id(trim(substr($para, 1)));
@@ -1994,9 +1999,9 @@ function _bible_blsdivhtml($book, $chap, $verse, $para, $func, $tail) {
     $bid = _bible_get_select_bid();
 	}
 
-  // rewrite verse if it's only one
+  // rewrite verse if it's only one with a -0
   $single_pattern = '/\d{1,3}-0:/';
-  if (preg_match($single_pattern, $verse)) {
+  if (preg_match($single_pattern, $verse) && $chap2 == '') {
     $verse = preg_replace('/-0:/', '', $verse);
   }
 
@@ -2010,16 +2015,25 @@ function _bible_blsdivhtml($book, $chap, $verse, $para, $func, $tail) {
     if (preg_match('/'.$book_list.'/', $book)) {
       // For Reguler BLS, Ex: GEN:1:1
       $bls = _bible_get_chapter_sname($bid, $book). ':'. $chap. ':'. $verse;
+      if ($chap2 != "" && $verse2 != "") {
+        $bls2 = '-'. $chap2. ':'. $verse2;
+      }
     }
     else {
       // For other naming, Ex: Gen.1:2
       $bls = $book. ':'. $chap. ':'. $verse;
+      if ($chap2 != "" && $verse2 != "") {
+        $bls2 = '-'. $chap2. ':'. $verse2;
+      }
       $patt_array = explode(';', '/'. str_replace(';', '%/A;/', str_replace('|', '%|', $book_namelist)). '/');
       $book_array = explode('|', $book_list);
       $book = preg_replace($patt_array, $book_array, $book.'%');
     }
     $html = '<span class="bls" id="'. $idname. '"';
     $html .= '>'. $bls;
+    if ($chap2 != "" && $verse2 != "") {
+      $html .= $bls2;
+    }
     $html .= '</span>';
     $blspopupstyle = variable_get('bible_bls_popup_style', BIBLE_BLS_POPUP_STYLE);
     if ($blspopupstyle == '') {
@@ -2031,7 +2045,16 @@ function _bible_blsdivhtml($book, $chap, $verse, $para, $func, $tail) {
     $html .= 'visibility:hidden;z-index:999;overflow-x:hidden;overflow-y:auto;'.$blspopupstyle.'"';
     $pattern_regex = '/(\[\d{1,3}\])/';
     $replacement_regex = '<font color="green">\1</font>';
-    $html .= '>'. preg_replace($pattern_regex, $replacement_regex, _bible_get_verse_content2($book .':'. $chap .':'. $verse, $bid));
+    if ($chap2 == "" && $verse2 == "") {
+      $html .= '>'. preg_replace($pattern_regex, $replacement_regex, _bible_get_verse_content2($book .':'. $chap .':'. $verse, $bid));
+    } else {
+      $max_verse_count = count(_bible_get_chapter($bid, $book, $chap));
+      $verse .= '-'.$max_verse_count;
+      $verse2 = '1-'.$verse2;
+      $html .= '>'. preg_replace($pattern_regex, $replacement_regex, _bible_get_verse_content2($book .':'. $chap .':'. $verse, $bid));
+      $html .= preg_replace($pattern_regex, $replacement_regex, _bible_get_verse_content2($book .':'. $chap2 .':'. $verse2, $bid));
+    }
+
     if (variable_get('bible_bls_popup_morelink', '0') == 1) {
       $morelink = _bible_morelink($bid, $book, $chap, $verse);
       $html .= '<br /><a href="'. $morelink. '">'. t("See All..."). '</a>';
@@ -2058,7 +2081,7 @@ function _bible_blsdivhtml($book, $chap, $verse, $para, $func, $tail) {
 				break;
 		}
 	}
-	return _bible_sn_replace($html). $func_text .$tail;
+	return _bible_sn_replace($html). $func_text;
 }
 
 // Common Functions

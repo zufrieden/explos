@@ -1,0 +1,46 @@
+@charset 'UTF-8';
+
+@media print {
+  .panel {
+    .panel-heading {
+      display: block !important;
+      color: #000 !important;
+    }
+
+    .panel-title {
+      float: left;
+      color: #000 !important;
+      width: 50%;
+      font-weight: bold;
+      font-size: 14px;
+
+      a { color: #000; }
+    }
+
+    .field-name-field-duration,
+    .field-name-field-activity-type {
+      float: right;
+      width: 20%;
+    }
+  }
+
+  .panel-info { border-color: #000 !important; }
+  .panel-warning {
+    margin-top: 20px;
+    border-color: #666 !important;
+
+    .panel-heading {
+      border-bottom: 1px solid #666 !important;
+    }
+  }
+
+  .panel-body {
+    .spacer { display: none !important; }
+  }
+
+  .popup { display: none !important; }
+
+  .collapse {
+    display: block !important;
+  }
+}

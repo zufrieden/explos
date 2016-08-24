@@ -639,7 +639,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
     'bundle' => 'lesson',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Coller ici le lien vers une vidéo Youtube ou Vimeo (Par exemple: https://www.youtube.com/watch?v=3p4MZJsexEs)',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -1407,6 +1407,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
   t('Activités');
   t('Bio');
   t('Body');
+  t('Coller ici le lien vers une vidéo Youtube ou Vimeo (Par exemple: https://www.youtube.com/watch?v=3p4MZJsexEs)');
   t('C’est ici que tu vas indiquer ce qui va être fait pendant l\'animation… il y aura plusieurs activités. Tu peux en ajouter autant qu’il faut en cliquant sous « ajouter un autre élément », sous la rubrique activités. Tu peux aussi les disposer dans l’ordre que tu veux via la petite étoile sur le côté droit.<br>
 Pour afficher une infobulle avec les versets, formatez de cette manière: <em>Livre:Chapitre:Verset-Verset</em> ou <em>Livre:ChapitreA:Verset-ChapitreB-Verset</em>. Des espaces ou des points peuvent aussi être utilisés.');
   t('C’est le corps de l’activité, la partie principale :<br>

@@ -95,6 +95,14 @@
     <hr>
   </header>
 
+  <div class="row hidden-print">
+    <div class="col-sm-12">
+      <p class="pull-right">
+        <a href="/printpdf/<?php print $node->path['source']; ?>">Version PDF</a>
+      </p>
+    </div>
+  </div>
+
   <div class="row">
     <div class="col-md-6">
 

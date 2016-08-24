@@ -1985,7 +1985,7 @@ function _bible_blsaddLink($text = '') {
   }
 }
 
-function _bible_blsdivhtml($book, $chap, $verse, $chap2, $verse2, $para, $func) {
+function _bible_blsdivhtml($book, $chap, $verse, $chap2, $verse2, $para = '', $func = '') {
   // trim spaces
   $verse = str_replace(' ', '', $verse);
   $verse2 = str_replace(' ', '', $verse2);

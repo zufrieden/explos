@@ -121,10 +121,11 @@
         hide($content['field_verses_lesson']);
         hide($content['field_verses_key']);
         hide($content['field_video']);
-        if (!empty($content['field_pages_from'])) {
-          hide($content['field_pages_to']);
-          hide($content['field_pages_from']);
-        }
+        hide($content['field_pages']);
+
+        hide($content['field_peoples']);
+        hide($content['field_locations']);
+        hide($content['field_periods']);
 
         print render($content['field_goal']); ?>
 
@@ -157,6 +158,10 @@
               <div class="col-sm-12">
                 <h4 class="h5 field-label media-heading"><?php print t('Versets de la semaine'); ?></h4>
                 <?php print check_markup(render($content['field_verses_week']), 'filtered_html'); ?>
+                <h4 class="h5 field-label media-heading"><?php print t('Pages'); ?></h4>
+                <p>
+                  <span class="badge"><?php print $content['field_pages']['#items'][0]['value'];  ?> à <?php print $content['field_pages']['#items'][1]['value'];  ?></span>
+                </p>
               </div>
             </div>
           </div>

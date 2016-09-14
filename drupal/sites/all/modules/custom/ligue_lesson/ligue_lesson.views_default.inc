@@ -196,12 +196,12 @@ function ligue_lesson_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* Field: Content: Numéro du tome */
+  /* Field: Nœud: Numéro du tome */
   $handler->display->display_options['fields']['field_year_number']['id'] = 'field_year_number';
   $handler->display->display_options['fields']['field_year_number']['table'] = 'field_data_field_year_number';
   $handler->display->display_options['fields']['field_year_number']['field'] = 'field_year_number';
   $handler->display->display_options['fields']['field_year_number']['label'] = 'Tome';
-  /* Field: Content: Numéro de l'animation */
+  /* Field: Nœud: Numéro de l'animation */
   $handler->display->display_options['fields']['field_week_number']['id'] = 'field_week_number';
   $handler->display->display_options['fields']['field_week_number']['table'] = 'field_data_field_week_number';
   $handler->display->display_options['fields']['field_week_number']['field'] = 'field_week_number';
@@ -216,15 +216,15 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Objectif */
+  /* Field: Nœud: Objectif */
   $handler->display->display_options['fields']['field_goal']['id'] = 'field_goal';
   $handler->display->display_options['fields']['field_goal']['table'] = 'field_data_field_goal';
   $handler->display->display_options['fields']['field_goal']['field'] = 'field_goal';
-  /* Sort criterion: Content: Numéro du tome (field_year_number) */
+  /* Sort criterion: Nœud: Numéro du tome (field_year_number) */
   $handler->display->display_options['sorts']['field_year_number_value']['id'] = 'field_year_number_value';
   $handler->display->display_options['sorts']['field_year_number_value']['table'] = 'field_data_field_year_number';
   $handler->display->display_options['sorts']['field_year_number_value']['field'] = 'field_year_number_value';
-  /* Sort criterion: Content: Numéro de l&#039;animation (field_week_number) */
+  /* Sort criterion: Nœud: Numéro de l&#039;animation (field_week_number) */
   $handler->display->display_options['sorts']['field_week_number_value']['id'] = 'field_week_number_value';
   $handler->display->display_options['sorts']['field_week_number_value']['table'] = 'field_data_field_week_number';
   $handler->display->display_options['sorts']['field_week_number_value']['field'] = 'field_week_number_value';
@@ -246,7 +246,7 @@ function ligue_lesson_views_default_views() {
     'lesson' => 'lesson',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Numéro du tome (field_year_number) */
+  /* Filter criterion: Nœud: Numéro du tome (field_year_number) */
   $handler->display->display_options['filters']['field_year_number_value']['id'] = 'field_year_number_value';
   $handler->display->display_options['filters']['field_year_number_value']['table'] = 'field_data_field_year_number';
   $handler->display->display_options['filters']['field_year_number_value']['field'] = 'field_year_number_value';
@@ -284,7 +284,7 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['relationships']['field_peoples_target_id']['label'] = 'Entité Contenu réferencée par field_peoples';
   $handler->display->display_options['relationships']['field_peoples_target_id']['required'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Personnages (field_peoples) */
+  /* Contextual filter: Nœud: Personnages (field_peoples) */
   $handler->display->display_options['arguments']['field_peoples_target_id']['id'] = 'field_peoples_target_id';
   $handler->display->display_options['arguments']['field_peoples_target_id']['table'] = 'field_data_field_peoples';
   $handler->display->display_options['arguments']['field_peoples_target_id']['field'] = 'field_peoples_target_id';
@@ -315,7 +315,7 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['relationships']['field_locations_target_id']['label'] = 'Entité Contenu réferencée par field_locations';
   $handler->display->display_options['relationships']['field_locations_target_id']['required'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Localisation (field_location) - proximity */
+  /* Contextual filter: Nœud: Localisation (field_location) - proximity */
   $handler->display->display_options['arguments']['field_geofield_distance']['id'] = 'field_geofield_distance';
   $handler->display->display_options['arguments']['field_geofield_distance']['table'] = 'field_data_field_location';
   $handler->display->display_options['arguments']['field_geofield_distance']['field'] = 'field_geofield_distance';
@@ -351,7 +351,7 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['relationships']['field_periods_target_id']['label'] = 'Entité Contenu réferencée par field_periods';
   $handler->display->display_options['relationships']['field_periods_target_id']['required'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Périodes (field_periods) */
+  /* Contextual filter: Nœud: Périodes (field_periods) */
   $handler->display->display_options['arguments']['field_periods_target_id']['id'] = 'field_periods_target_id';
   $handler->display->display_options['arguments']['field_periods_target_id']['table'] = 'field_data_field_periods';
   $handler->display->display_options['arguments']['field_periods_target_id']['field'] = 'field_periods_target_id';
@@ -374,9 +374,6 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['defaults']['access'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['access']['perm'] = 'access administration menu';
-  $handler->display->display_options['defaults']['query'] = FALSE;
-  $handler->display->display_options['query']['type'] = 'views_query';
-  $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
@@ -408,7 +405,7 @@ function ligue_lesson_views_default_views() {
       'empty_column' => 0,
     ),
     'field_week_number' => array(
-      'sortable' => 0,
+      'sortable' => 1,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
@@ -521,12 +518,12 @@ function ligue_lesson_views_default_views() {
       'label' => '',
     ),
   );
-  /* Field: Content: Numéro du tome */
+  /* Field: Nœud: Numéro du tome */
   $handler->display->display_options['fields']['field_year_number']['id'] = 'field_year_number';
   $handler->display->display_options['fields']['field_year_number']['table'] = 'field_data_field_year_number';
   $handler->display->display_options['fields']['field_year_number']['field'] = 'field_year_number';
   $handler->display->display_options['fields']['field_year_number']['label'] = 'Tome';
-  /* Field: Content: Numéro de l'animation */
+  /* Field: Nœud: Numéro de l'animation */
   $handler->display->display_options['fields']['field_week_number']['id'] = 'field_week_number';
   $handler->display->display_options['fields']['field_week_number']['table'] = 'field_data_field_week_number';
   $handler->display->display_options['fields']['field_week_number']['field'] = 'field_week_number';
@@ -541,12 +538,6 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Content: Has new content */
-  $handler->display->display_options['fields']['timestamp']['id'] = 'timestamp';
-  $handler->display->display_options['fields']['timestamp']['table'] = 'history';
-  $handler->display->display_options['fields']['timestamp']['field'] = 'timestamp';
-  $handler->display->display_options['fields']['timestamp']['label'] = '';
-  $handler->display->display_options['fields']['timestamp']['element_label_colon'] = FALSE;
   /* Field: Workbench Moderation: Published */
   $handler->display->display_options['fields']['published']['id'] = 'published';
   $handler->display->display_options['fields']['published']['table'] = 'workbench_moderation_node_history';
@@ -610,7 +601,7 @@ function ligue_lesson_views_default_views() {
     'lesson' => 'lesson',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Content: Numéro du tome (field_year_number) */
+  /* Filter criterion: Nœud: Numéro du tome (field_year_number) */
   $handler->display->display_options['filters']['field_year_number_value']['id'] = 'field_year_number_value';
   $handler->display->display_options['filters']['field_year_number_value']['table'] = 'field_data_field_year_number';
   $handler->display->display_options['filters']['field_year_number_value']['field'] = 'field_year_number_value';
@@ -627,16 +618,11 @@ function ligue_lesson_views_default_views() {
     5 => 0,
   );
   $handler->display->display_options['filters']['field_year_number_value']['reduce_duplicates'] = TRUE;
-  /* Filter criterion: Workbench Moderation: Current */
-  $handler->display->display_options['filters']['is_current']['id'] = 'is_current';
-  $handler->display->display_options['filters']['is_current']['table'] = 'workbench_moderation_node_history';
-  $handler->display->display_options['filters']['is_current']['field'] = 'is_current';
-  $handler->display->display_options['filters']['is_current']['value'] = '1';
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = '0';
+  $handler->display->display_options['filters']['status']['value'] = 'All';
   $handler->display->display_options['filters']['status']['exposed'] = TRUE;
   $handler->display->display_options['filters']['status']['expose']['operator_id'] = '';
   $handler->display->display_options['filters']['status']['expose']['label'] = 'Publié';
@@ -665,6 +651,11 @@ function ligue_lesson_views_default_views() {
     4 => 0,
     5 => 0,
   );
+  /* Filter criterion: Workbench Moderation: Current */
+  $handler->display->display_options['filters']['is_current']['id'] = 'is_current';
+  $handler->display->display_options['filters']['is_current']['table'] = 'workbench_moderation_node_history';
+  $handler->display->display_options['filters']['is_current']['field'] = 'is_current';
+  $handler->display->display_options['filters']['is_current']['value'] = '1';
   $handler->display->display_options['path'] = 'admin/workbench/lessons';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Animations';
@@ -677,7 +668,7 @@ function ligue_lesson_views_default_views() {
   /* Display: Related Lesson for field collection */
   $handler = $view->new_display('block', 'Related Lesson for field collection', 'block_4');
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Content: Activités (field_activities) */
+  /* Relationship: Nœud: Activités (field_activities) */
   $handler->display->display_options['relationships']['field_activities_value']['id'] = 'field_activities_value';
   $handler->display->display_options['relationships']['field_activities_value']['table'] = 'field_data_field_activities';
   $handler->display->display_options['relationships']['field_activities_value']['field'] = 'field_activities_value';

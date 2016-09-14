@@ -32,4 +32,5 @@ features[variable][] = diff_view_mode_preview_node_bible_text
 features[variable][] = diff_view_mode_preview_node_ev_nement_cl_
 features[variable][] = diff_view_mode_preview_node_page
 features[views_view][] = admin_ligue_content
+features[views_view][] = workbench_correction_content
 features_exclude[dependencies][ctools] = ctools

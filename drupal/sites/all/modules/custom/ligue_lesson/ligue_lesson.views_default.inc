@@ -381,9 +381,9 @@ function ligue_lesson_views_default_views() {
     'field_year_number' => 'field_year_number',
     'field_week_number' => 'field_week_number',
     'title' => 'title',
-    'timestamp' => 'title',
     'published' => 'published',
     'changed' => 'changed',
+    'name' => 'changed',
     'state' => 'state',
     'moderation_actions' => 'moderation_actions',
     'edit_node' => 'edit_node',
@@ -418,11 +418,6 @@ function ligue_lesson_views_default_views() {
       'separator' => ' - ',
       'empty_column' => 0,
     ),
-    'timestamp' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
     'published' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
@@ -432,6 +427,13 @@ function ligue_lesson_views_default_views() {
     ),
     'changed' => array(
       'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => ' - par ',
+      'empty_column' => 0,
+    ),
+    'name' => array(
+      'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
@@ -469,6 +471,11 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Content revision: User */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node_revision';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['label'] = 'utilisateur de la révision';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Bulk operations: Content */
   $handler->display->display_options['fields']['views_bulk_operations']['id'] = 'views_bulk_operations';
@@ -551,6 +558,13 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['fields']['changed']['label'] = 'Mise à jour';
   $handler->display->display_options['fields']['changed']['date_format'] = 'short';
   $handler->display->display_options['fields']['changed']['second_date_format'] = 'long';
+  /* Field: User: Name */
+  $handler->display->display_options['fields']['name']['id'] = 'name';
+  $handler->display->display_options['fields']['name']['table'] = 'users';
+  $handler->display->display_options['fields']['name']['field'] = 'name';
+  $handler->display->display_options['fields']['name']['relationship'] = 'uid';
+  $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   /* Field: Workbench Moderation: State */
   $handler->display->display_options['fields']['state']['id'] = 'state';
   $handler->display->display_options['fields']['state']['table'] = 'workbench_moderation_node_history';
@@ -736,6 +750,7 @@ function ligue_lesson_views_default_views() {
     t('Entité Contenu réferencée par field_periods'),
     t('Les animations se déroulant à cette période'),
     t('Page Admin'),
+    t('utilisateur de la révision'),
     t('- Choose an operation -'),
     t('Modérer'),
     t('Publié'),

@@ -31,7 +31,7 @@
 ?>
 <div class="panel-heading" role="tab" id="heading-<?php print $id; ?>">
   <h4 class="panel-title">
-    <a role="button" data-toggle="collapse" data-parent="#activities-accordion" href="#collapse-<?php print $id; ?>" aria-expanded="false" aria-controls="collapse-index">
+    <a role="button" data-toggle="collapse" href="#collapse-<?php print $id; ?>" aria-expanded="false" aria-controls="collapse-index">
       <?php print render($content['field_title']); ?>
     </a>
   </h4>

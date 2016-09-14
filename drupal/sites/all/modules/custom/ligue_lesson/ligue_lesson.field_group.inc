@@ -94,6 +94,7 @@ function ligue_lesson_field_group_info() {
     'children' => array(
       0 => 'field_week_number',
       1 => 'field_year_number',
+      2 => 'field_pages',
     ),
     'format_type' => 'div',
     'format_settings' => array(
@@ -195,8 +196,7 @@ function ligue_lesson_field_group_info() {
       3 => 'field_verses_week',
       4 => 'field_cover_image',
       5 => 'title',
-      6 => 'group_flex3',
-      7 => 'group_flex',
+      6 => 'group_flex',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

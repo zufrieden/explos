@@ -428,6 +428,46 @@ Pour afficher une infobulle avec les versets, formatez de cette manière: <em>Li
     ),
   );
 
+  // Exported field_instance: 'node-lesson-field_pages'.
+  $field_instances['node-lesson-field_pages'] = array(
+    'bundle' => 'lesson',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'De ... à ...',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 13,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_pages',
+    'label' => 'Pages',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 16,
+    ),
+  );
+
   // Exported field_instance: 'node-lesson-field_peoples'.
   $field_instances['node-lesson-field_peoples'] = array(
     'bundle' => 'lesson',
@@ -550,7 +590,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
       'module' => 'bible__field',
       'settings' => array(),
       'type' => 'bible__field_dropdown',
-      'weight' => 19,
+      'weight' => 18,
     ),
   );
 
@@ -590,7 +630,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
       'module' => 'bible__field',
       'settings' => array(),
       'type' => 'bible__field_dropdown',
-      'weight' => 18,
+      'weight' => 17,
     ),
   );
 
@@ -630,7 +670,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
       'module' => 'bible__field',
       'settings' => array(),
       'type' => 'bible__field_dropdown',
-      'weight' => 17,
+      'weight' => 19,
     ),
   );
 
@@ -1421,6 +1461,7 @@ Pour afficher une infobulle avec les versets, formatez de cette manière: <em>Li
   t('Date de naissance');
   t('Date de naissance approximative ?');
   t('Date perdiod');
+  t('De ... à ...');
   t('Description');
   t('Donne le titre que va porter cette activité.');
   t('Durée');
@@ -1447,6 +1488,7 @@ Il peut-être dans un autre passage que celui proposé ci-dessus dans la rubriqu
   t('Numéro de l\'animation');
   t('Numéro du tome');
   t('Objectif');
+  t('Pages');
   t('Personnages');
   t('Périodes');
   t('Selon le lectionnaire « les explorateurs ».');

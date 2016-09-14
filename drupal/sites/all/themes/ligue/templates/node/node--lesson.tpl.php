@@ -104,7 +104,7 @@
   <div class="row hidden-print">
     <div class="col-sm-12">
       <p class="pull-right">
-        <a href="/printpdf/<?php print $node->path['source']; ?>">Version PDF</a>
+        <a target="_blank" href="/printpdf/<?php print $node->path['source']; ?>">Version PDF</a>
       </p>
     </div>
   </div>

@@ -2010,6 +2010,12 @@ function _bible_blsaddLink($text = '') {
 }
 
 function _bible_blsdivhtml($book, $chap, $verse, $chap2, $verse2, $para = '', $func = '') {
+
+  if (!$verse2) {
+    $verse = $chap2 ? "$verse-$chap2" : $verse;
+    $chap2 = '';
+  }
+
   // trim spaces
   $verse = str_replace(' ', '', $verse);
   $verse2 = str_replace(' ', '', $verse2);
@@ -2078,9 +2084,15 @@ function _bible_blsdivhtml($book, $chap, $verse, $chap2, $verse2, $para = '', $f
     } else {
       $max_verse_count = count(_bible_get_chapter($bid, $book, $chap));
       $verse .= '-'.$max_verse_count;
-      $verse2 = '1-'.$verse2;
       $html .= '>'. preg_replace($pattern_regex, $replacement_regex, _bible_get_verse_content2($book .':'. $chap .':'. $verse, $bid));
-      $html .= preg_replace($pattern_regex, $replacement_regex, _bible_get_verse_content2($book .':'. $chap2 .':'. $verse2, $bid));
+      for ($i = $chap + 1; $i <= $chap2; $i++) {
+        if ($i < $chap2) {
+          $max_verse_count = '1-'.count(_bible_get_chapter($bid, $book, $i));
+        } else {
+          $max_verse_count = '1-'.$verse2;
+        }
+        $html .= preg_replace($pattern_regex, $replacement_regex, _bible_get_verse_content2($book .':'. $i .':'. $max_verse_count, $bid));
+      }
     }
 
     if (variable_get('bible_bls_popup_morelink', '0') == 1) {

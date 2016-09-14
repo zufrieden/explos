@@ -79,6 +79,12 @@
  * @ingroup templates
  */
 ?>
+<?php
+  // the bible__field module is ugly, so we have to be ugly too. :(
+  unset($content['field_verses_week']['#title']);
+  unset($content['field_verses_lesson']['#title']);
+  unset($content['field_verses_key']['#title']);
+?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <header>
@@ -119,29 +125,34 @@
           hide($content['field_pages_from']);
         }
 
-        print render($content); ?>
-
-        <div class="spacer spacer-sm"></div>
+        print render($content['field_goal']); ?>
 
         <div class="panel panel-info">
           <div class="panel-heading">
             <h3 class="panel-title field-label"><?php print t('Dans le livre'); ?></h3>
           </div>
           <div class="panel-body">
-            <?php
-              // the bible__field module is ugly, so we have to be ugly too. :(
-              unset($content['field_verses_week']['#title']);
-              unset($content['field_verses_lesson']['#title']);
-              unset($content['field_verses_key']['#title']);
-            ?>
             <div class="row">
               <div class="col-sm-12">
-                <h4 class="h5 field-label media-heading"><?php print t('Versets de la semaine'); ?></h4>
-                <?php print check_markup(render($content['field_verses_week']), 'filtered_html'); ?>
                 <h4 class="h5 field-label media-heading"><?php print t('Textes bibliques'); ?></h4>
                 <?php print check_markup(render($content['field_verses_lesson']), 'filtered_html'); ?>
                 <h4 class="h5 field-label media-heading"><?php print t('Versets "clé"'); ?></h4>
                 <?php print check_markup(render($content['field_verses_key']), 'filtered_html'); ?>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <?php print render($content); ?>
+
+        <div class="spacer spacer-sm"></div>
+
+        <div class="panel panel-info">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-sm-12">
+                <h4 class="h5 field-label media-heading"><?php print t('Versets de la semaine'); ?></h4>
+                <?php print check_markup(render($content['field_verses_week']), 'filtered_html'); ?>
               </div>
             </div>
           </div>

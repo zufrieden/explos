@@ -110,3 +110,31 @@ function ligue_video_embed_handler_info_alter(&$info) {
     $service['defaults']['class'] = 'embed-responsive-item';
   }
 }
+
+function ligue_form_views_exposed_form_alter(&$form, $form_state) {
+
+  $query = new EntityFieldQuery();
+
+  $query->entityCondition('entity_type', 'node')
+    ->entityCondition('bundle', 'lesson')
+    ->propertyCondition('status', 1);
+
+  $result = $query->execute();
+  $tome = [];
+  foreach ($result['node'] as $node) {
+    $node = node_load($node->nid);
+    $tome[] = field_get_items('node', $node, 'field_year_number')[0]['value'];
+  }
+  $tome = array_unique($tome);
+
+  foreach($form['#info'] as $field){
+    $field_id = $field['value'];
+    if ($form[$field_id]["#type"]=="select"){
+      foreach($form[$field_id]["#options"] as $optionvalue){
+        if (!in_array($optionvalue, $tome)){
+          unset ($form[$field_id]["#options"][$optionvalue]);
+        }
+      }
+    }
+  }
+}

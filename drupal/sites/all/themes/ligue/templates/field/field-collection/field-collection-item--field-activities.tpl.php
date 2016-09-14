@@ -36,7 +36,9 @@
     </a>
   </h4>
   <?php print render($content['field_duration']); ?>
-  <?php print render($content['field_activity_type']); ?>
+  <?php if ($content['field_activity_type']['#items'][0]['tid'] != 16): ?>
+    <?php print render($content['field_activity_type']); ?>
+  <?php endif; ?>
 </div>
 <div class="panel-collapse collapse" id="collapse-<?php print $id; ?>" role="tabpanel" aria-labelledby="heading-<?php print $id; ?>">
   <div class="panel-body">

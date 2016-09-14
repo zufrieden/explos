@@ -28,6 +28,7 @@
  * @see template_process()
  */
 
+hide($content['field_activity_type']);
 ?>
 <div class="panel-heading" role="tab" id="heading-<?php print $id; ?>">
   <h4 class="panel-title">

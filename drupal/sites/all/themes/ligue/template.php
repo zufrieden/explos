@@ -60,7 +60,6 @@ function ligue_preprocess_field(&$variables) {
     $number = array();
     preg_match($regex, $label, $number);
     $variables['label'] = preg_replace($regex, "", $label);
-    $variables['number'] = str_replace(" ", "", $number[0]);
   }
 
   if ($variables['element']['#entity_type'] == 'field_collection_item') {

@@ -45,8 +45,7 @@
  */
 ?>
 <?php foreach ($items as $delta => $item): ?>
-  <p>
-    <span class="label label-warning"><?php print $number; ?></span>
-    <?php print $label; ?>
-  </p>
+  <h4>
+    <strong><?php print $label; ?></strong>
+  </h4>
 <?php endforeach; ?>

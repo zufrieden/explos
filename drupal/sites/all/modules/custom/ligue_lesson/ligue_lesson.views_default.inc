@@ -196,12 +196,12 @@ function ligue_lesson_views_default_views() {
       'empty_column' => 0,
     ),
   );
-  /* Field: Nœud: Numéro du tome */
+  /* Field: Content: Numéro du tome */
   $handler->display->display_options['fields']['field_year_number']['id'] = 'field_year_number';
   $handler->display->display_options['fields']['field_year_number']['table'] = 'field_data_field_year_number';
   $handler->display->display_options['fields']['field_year_number']['field'] = 'field_year_number';
   $handler->display->display_options['fields']['field_year_number']['label'] = 'Tome';
-  /* Field: Nœud: Numéro de l'animation */
+  /* Field: Content: Numéro de l'animation */
   $handler->display->display_options['fields']['field_week_number']['id'] = 'field_week_number';
   $handler->display->display_options['fields']['field_week_number']['table'] = 'field_data_field_week_number';
   $handler->display->display_options['fields']['field_week_number']['field'] = 'field_week_number';
@@ -216,15 +216,15 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Field: Nœud: Objectif */
+  /* Field: Content: Objectif */
   $handler->display->display_options['fields']['field_goal']['id'] = 'field_goal';
   $handler->display->display_options['fields']['field_goal']['table'] = 'field_data_field_goal';
   $handler->display->display_options['fields']['field_goal']['field'] = 'field_goal';
-  /* Sort criterion: Nœud: Numéro du tome (field_year_number) */
+  /* Sort criterion: Content: Numéro du tome (field_year_number) */
   $handler->display->display_options['sorts']['field_year_number_value']['id'] = 'field_year_number_value';
   $handler->display->display_options['sorts']['field_year_number_value']['table'] = 'field_data_field_year_number';
   $handler->display->display_options['sorts']['field_year_number_value']['field'] = 'field_year_number_value';
-  /* Sort criterion: Nœud: Numéro de l&#039;animation (field_week_number) */
+  /* Sort criterion: Content: Numéro de l&#039;animation (field_week_number) */
   $handler->display->display_options['sorts']['field_week_number_value']['id'] = 'field_week_number_value';
   $handler->display->display_options['sorts']['field_week_number_value']['table'] = 'field_data_field_week_number';
   $handler->display->display_options['sorts']['field_week_number_value']['field'] = 'field_week_number_value';
@@ -246,7 +246,7 @@ function ligue_lesson_views_default_views() {
     'lesson' => 'lesson',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Nœud: Numéro du tome (field_year_number) */
+  /* Filter criterion: Content: Numéro du tome (field_year_number) */
   $handler->display->display_options['filters']['field_year_number_value']['id'] = 'field_year_number_value';
   $handler->display->display_options['filters']['field_year_number_value']['table'] = 'field_data_field_year_number';
   $handler->display->display_options['filters']['field_year_number_value']['field'] = 'field_year_number_value';
@@ -284,7 +284,7 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['relationships']['field_peoples_target_id']['label'] = 'Entité Contenu réferencée par field_peoples';
   $handler->display->display_options['relationships']['field_peoples_target_id']['required'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Nœud: Personnages (field_peoples) */
+  /* Contextual filter: Content: Personnages (field_peoples) */
   $handler->display->display_options['arguments']['field_peoples_target_id']['id'] = 'field_peoples_target_id';
   $handler->display->display_options['arguments']['field_peoples_target_id']['table'] = 'field_data_field_peoples';
   $handler->display->display_options['arguments']['field_peoples_target_id']['field'] = 'field_peoples_target_id';
@@ -315,7 +315,7 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['relationships']['field_locations_target_id']['label'] = 'Entité Contenu réferencée par field_locations';
   $handler->display->display_options['relationships']['field_locations_target_id']['required'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Nœud: Localisation (field_location) - proximity */
+  /* Contextual filter: Content: Localisation (field_location) - proximity */
   $handler->display->display_options['arguments']['field_geofield_distance']['id'] = 'field_geofield_distance';
   $handler->display->display_options['arguments']['field_geofield_distance']['table'] = 'field_data_field_location';
   $handler->display->display_options['arguments']['field_geofield_distance']['field'] = 'field_geofield_distance';
@@ -351,7 +351,7 @@ function ligue_lesson_views_default_views() {
   $handler->display->display_options['relationships']['field_periods_target_id']['label'] = 'Entité Contenu réferencée par field_periods';
   $handler->display->display_options['relationships']['field_periods_target_id']['required'] = TRUE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Nœud: Périodes (field_periods) */
+  /* Contextual filter: Content: Périodes (field_periods) */
   $handler->display->display_options['arguments']['field_periods_target_id']['id'] = 'field_periods_target_id';
   $handler->display->display_options['arguments']['field_periods_target_id']['table'] = 'field_data_field_periods';
   $handler->display->display_options['arguments']['field_periods_target_id']['field'] = 'field_periods_target_id';
@@ -390,7 +390,7 @@ function ligue_lesson_views_default_views() {
     'delete_node' => 'delete_node',
     'views_ctools_dropbutton' => 'views_ctools_dropbutton',
   );
-  $handler->display->display_options['style_options']['default'] = '-1';
+  $handler->display->display_options['style_options']['default'] = 'changed';
   $handler->display->display_options['style_options']['info'] = array(
     'views_bulk_operations' => array(
       'align' => '',
@@ -427,7 +427,7 @@ function ligue_lesson_views_default_views() {
     ),
     'changed' => array(
       'sortable' => 1,
-      'default_sort_order' => 'asc',
+      'default_sort_order' => 'desc',
       'align' => '',
       'separator' => ' - par ',
       'empty_column' => 0,
@@ -525,12 +525,12 @@ function ligue_lesson_views_default_views() {
       'label' => '',
     ),
   );
-  /* Field: Nœud: Numéro du tome */
+  /* Field: Content: Numéro du tome */
   $handler->display->display_options['fields']['field_year_number']['id'] = 'field_year_number';
   $handler->display->display_options['fields']['field_year_number']['table'] = 'field_data_field_year_number';
   $handler->display->display_options['fields']['field_year_number']['field'] = 'field_year_number';
   $handler->display->display_options['fields']['field_year_number']['label'] = 'Tome';
-  /* Field: Nœud: Numéro de l'animation */
+  /* Field: Content: Numéro de l'animation */
   $handler->display->display_options['fields']['field_week_number']['id'] = 'field_week_number';
   $handler->display->display_options['fields']['field_week_number']['table'] = 'field_data_field_week_number';
   $handler->display->display_options['fields']['field_week_number']['field'] = 'field_week_number';
@@ -605,6 +605,24 @@ function ligue_lesson_views_default_views() {
     'state' => 0,
     'moderation_actions' => 0,
   );
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Content: Updated date */
+  $handler->display->display_options['sorts']['changed']['id'] = 'changed';
+  $handler->display->display_options['sorts']['changed']['table'] = 'node';
+  $handler->display->display_options['sorts']['changed']['field'] = 'changed';
+  $handler->display->display_options['sorts']['changed']['order'] = 'DESC';
+  /* Sort criterion: Content: Numéro du tome (field_year_number) */
+  $handler->display->display_options['sorts']['field_year_number_value']['id'] = 'field_year_number_value';
+  $handler->display->display_options['sorts']['field_year_number_value']['table'] = 'field_data_field_year_number';
+  $handler->display->display_options['sorts']['field_year_number_value']['field'] = 'field_year_number_value';
+  /* Sort criterion: Content: Numéro de l&#039;animation (field_week_number) */
+  $handler->display->display_options['sorts']['field_week_number_value']['id'] = 'field_week_number_value';
+  $handler->display->display_options['sorts']['field_week_number_value']['table'] = 'field_data_field_week_number';
+  $handler->display->display_options['sorts']['field_week_number_value']['field'] = 'field_week_number_value';
+  /* Sort criterion: Content: Title */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Type */
@@ -615,7 +633,7 @@ function ligue_lesson_views_default_views() {
     'lesson' => 'lesson',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
-  /* Filter criterion: Nœud: Numéro du tome (field_year_number) */
+  /* Filter criterion: Content: Numéro du tome (field_year_number) */
   $handler->display->display_options['filters']['field_year_number_value']['id'] = 'field_year_number_value';
   $handler->display->display_options['filters']['field_year_number_value']['table'] = 'field_data_field_year_number';
   $handler->display->display_options['filters']['field_year_number_value']['field'] = 'field_year_number_value';
@@ -682,7 +700,7 @@ function ligue_lesson_views_default_views() {
   /* Display: Related Lesson for field collection */
   $handler = $view->new_display('block', 'Related Lesson for field collection', 'block_4');
   $handler->display->display_options['defaults']['relationships'] = FALSE;
-  /* Relationship: Nœud: Activités (field_activities) */
+  /* Relationship: Content: Activités (field_activities) */
   $handler->display->display_options['relationships']['field_activities_value']['id'] = 'field_activities_value';
   $handler->display->display_options['relationships']['field_activities_value']['table'] = 'field_data_field_activities';
   $handler->display->display_options['relationships']['field_activities_value']['field'] = 'field_activities_value';

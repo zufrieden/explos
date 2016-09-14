@@ -134,9 +134,9 @@
           <div class="panel-body">
             <div class="row">
               <div class="col-sm-12">
-                <h4 class="h5 field-label media-heading"><?php print t('Textes bibliques'); ?></h4>
+                <h4 class="h5 field-label media-heading"><?php print t('Texte(s) biblique(s)'); ?></h4>
                 <?php print check_markup(render($content['field_verses_lesson']), 'filtered_html'); ?>
-                <h4 class="h5 field-label media-heading"><?php print t('Versets "clé"'); ?></h4>
+                <h4 class="h5 field-label media-heading"><?php print t('Verset(s) clé(s)'); ?></h4>
                 <?php print check_markup(render($content['field_verses_key']), 'filtered_html'); ?>
               </div>
             </div>

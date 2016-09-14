@@ -120,6 +120,7 @@
         hide($content['field_verses_week']);
         hide($content['field_verses_lesson']);
         hide($content['field_verses_key']);
+        hide($content['field_video']);
         if (!empty($content['field_pages_from'])) {
           hide($content['field_pages_to']);
           hide($content['field_pages_from']);
@@ -144,6 +145,9 @@
         </div>
 
         <?php print render($content); ?>
+        <div class="hidden-print">
+          <?php print render($content['field_video']); ?>
+        </div>
 
         <div class="spacer spacer-sm"></div>
 

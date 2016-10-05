@@ -16,6 +16,12 @@ function ligue_site_user_default_roles() {
     'weight' => 3,
   );
 
+  // Exported role: Manager Notifs.
+  $roles['Manager Notifs'] = array(
+    'name' => 'Manager Notifs',
+    'weight' => 5,
+  );
+
   // Exported role: Writer.
   $roles['Writer'] = array(
     'name' => 'Writer',

@@ -26,6 +26,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'access administration menu',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
@@ -37,6 +38,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'access administration pages',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
@@ -73,6 +75,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'access bible content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'Writer' => 'Writer',
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
@@ -106,6 +109,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'access content overview',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -143,6 +147,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'access user profiles',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
@@ -154,6 +159,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'access workbench',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
@@ -246,6 +252,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'administer files',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'file_entity',
@@ -292,6 +299,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'administer menu',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'menu',
@@ -320,6 +328,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'administer nodes',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -330,6 +339,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'administer permissions',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'user',
@@ -367,6 +377,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'administer taxonomy',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'taxonomy',
@@ -395,6 +406,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'administer users',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'user',
@@ -448,6 +460,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'bypass node access',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -467,6 +480,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'cancel account',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'user',
@@ -477,6 +491,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'change own username',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
@@ -497,6 +512,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'create files',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
@@ -517,6 +533,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'create url aliases',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'path',
@@ -590,6 +607,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'delete revisions',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -627,6 +645,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'edit any page content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -656,6 +675,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'edit own page content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -675,6 +695,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'flush caches',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'admin_menu',
@@ -694,6 +715,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'moderate content from draft to needs_review',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
@@ -705,6 +727,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'moderate content from needs_review to draft',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'workbench_moderation',
@@ -715,6 +738,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'moderate content from needs_review to published',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'workbench_moderation',
@@ -753,6 +777,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'revert revisions',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -792,6 +817,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'translate admin strings',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'i18n_string',
@@ -802,6 +828,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'translate interface',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'locale',
@@ -812,6 +839,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'translate user-defined strings',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'i18n_string',
@@ -840,6 +868,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'use advanced search',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'search',
@@ -870,6 +899,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'use workbench_moderation my drafts tab',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
@@ -881,6 +911,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'use workbench_moderation needs review tab',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
@@ -892,6 +923,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'view all unpublished content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
@@ -903,6 +935,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'view files',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
@@ -914,6 +947,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'view moderation history',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
@@ -925,6 +959,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'view moderation messages',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
@@ -936,6 +971,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'view own files',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
@@ -947,6 +983,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'view own private files',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),
@@ -978,6 +1015,7 @@ function ligue_site_user_default_permissions() {
     'name' => 'view the administration theme',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'Writer' => 'Writer',
       'administrator' => 'administrator',
     ),

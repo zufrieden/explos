@@ -24,6 +24,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'create location content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -34,6 +35,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'create people content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -44,6 +46,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'create period content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -54,6 +57,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'delete any lesson content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -64,6 +68,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'delete any location content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -74,6 +79,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'delete any people content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -84,6 +90,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'delete any period content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -103,6 +110,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'delete own location content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -113,6 +121,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'delete own people content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -123,6 +132,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'delete own period content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -133,6 +143,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'delete terms in activity_type',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'taxonomy',
@@ -143,6 +154,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'delete terms in lesson_stage',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'taxonomy',
@@ -153,6 +165,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'edit any lesson content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -163,6 +176,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'edit any location content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -173,6 +187,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'edit any people content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -183,6 +198,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'edit any period content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -202,6 +218,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'edit own location content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -212,6 +229,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'edit own people content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -222,6 +240,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'edit own period content',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -232,6 +251,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'edit terms in activity_type',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'taxonomy',
@@ -242,6 +262,7 @@ function ligue_lesson_user_default_permissions() {
     'name' => 'edit terms in lesson_stage',
     'roles' => array(
       'Manager' => 'Manager',
+      'Manager Notifs' => 'Manager Notifs',
       'administrator' => 'administrator',
     ),
     'module' => 'taxonomy',

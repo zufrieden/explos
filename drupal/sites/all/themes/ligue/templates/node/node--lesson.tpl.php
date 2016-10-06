@@ -158,10 +158,15 @@
               <div class="col-sm-12">
                 <h4 class="h5 field-label media-heading"><?php print t('Versets de la semaine'); ?></h4>
                 <?php print check_markup(render($content['field_verses_week']), 'filtered_html'); ?>
-                <h4 class="h5 field-label media-heading"><?php print t('Pages'); ?></h4>
-                <p>
-                  <span class="badge"><?php print $content['field_pages']['#items'][0]['value'];  ?> à <?php print $content['field_pages']['#items'][1]['value'];  ?></span>
-                </p>
+                <?php if (!empty($content['field_pages']['#items'][0]['value'])): ?>
+                  <h4 class="h5 field-label media-heading"><?php print t('Pages'); ?></h4>
+                  <p>
+                    <span class="badge"><?php print $content['field_pages']['#items'][0]['value'];  ?>
+                      <?php if (isset($content['field_pages']['#items'][1])): ?>
+                        à <?php print $content['field_pages']['#items'][1]['value'];  ?>
+                      <?php endif; ?></span>
+                  </p>
+                <?php endif; ?>
               </div>
             </div>
           </div>

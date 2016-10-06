@@ -19,6 +19,7 @@ dependencies[] = field_group
 dependencies[] = file_entity
 dependencies[] = filter
 dependencies[] = genpass
+dependencies[] = honeypot
 dependencies[] = i18n_field
 dependencies[] = i18n_string
 dependencies[] = image

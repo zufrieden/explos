@@ -266,6 +266,8 @@ function ligue_lesson_views_default_views() {
 
   /* Display: Page - All Lessons */
   $handler = $view->new_display('page', 'Page - All Lessons', 'page');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Les Animations';
   $handler->display->display_options['path'] = 'les-animations';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Les animations';
@@ -757,6 +759,7 @@ function ligue_lesson_views_default_views() {
     t('Title'),
     t('Objectif'),
     t('Page - All Lessons'),
+    t('Les Animations'),
     t('Lessons with person'),
     t('Entité Contenu réferencée par field_peoples'),
     t('Tout'),

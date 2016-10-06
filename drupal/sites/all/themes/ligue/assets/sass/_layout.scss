@@ -9,3 +9,8 @@ body {
 .footer {
   margin-top: auto;
 }
+
+// form
+.help-block, .control-group .help-inline {
+  color: $gray;
+}

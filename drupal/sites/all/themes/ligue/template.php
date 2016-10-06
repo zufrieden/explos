@@ -137,3 +137,15 @@ function ligue_form_views_exposed_form_alter(&$form, $form_state) {
     }
   }
 }
+
+function ligue_preprocess_page(&$variables) {
+  if ($variables['theme_hook_suggestions'][0] === 'page__user') {
+    $variables['page_user'] = true;
+  }
+}
+
+function ligue_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id === 'user_register_form' && isset($form['field_phone']) ) {
+    $form['field_phone']['#access'] = TRUE;
+  }
+}

@@ -130,7 +130,7 @@ $navbar_classes = str_replace('container ', '', $navbar_classes);
         </aside>  <!-- /#sidebar-first -->
       <?php endif; ?>
 
-      <section class="col-sm-12">
+      <section class="<?php if (isset($page_user) && $page_user): ?>col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-3<?php else: ?>col-sm-12<?php endif; ?>">
         <?php if (!empty($page['highlighted'])): ?>
           <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
         <?php endif; ?>

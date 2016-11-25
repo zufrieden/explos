@@ -23,10 +23,19 @@
     $ git commit ...
 
 
-## Generate make file
-    $ cd drupal
-    $ drush generate-makefile ../bata.make
+## Build all assets
+    # install all node dependencies
+    $ npm install
+    # build all assets and watch files
+    $ gulp serve
+    # build all assets
+    $ gulp build
+    # build all assets for production
+    $ gulp build --production
+    # list all gulp tasks
+    $ gulp -T
 
+The config for all gulp tasks is in the `gulp_config.json` file.
 
 ## Deploy with capistrano
 

@@ -28,17 +28,15 @@
     $ drush generate-makefile ../bata.make
 
 
-# Deploy with capistrano
+## Deploy with capistrano
 
-gem install capdrupal
-# After installation update the script with https://github.com/antistatique/capdrupal
+  $ bundle install
+  $ bundle exec cap prod deploy
+  # list all tasks
+  $ bundle exec cap -T
 
 ## Documentations
 
 http://drush.ws/
 http://drupal.org/theme-guide/6-7
 http://api.drupal.org/api/drupal/7
-
-
-## Image styles
-

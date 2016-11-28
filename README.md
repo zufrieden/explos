@@ -1,4 +1,4 @@
-# Explos du dimanche – Content management System
+# Expl'or – Content management System
 
 
 ## Quick install
